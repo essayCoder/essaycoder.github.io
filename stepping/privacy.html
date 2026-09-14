@@ -46,103 +46,142 @@
   a{color:var(--teal-d)}
   footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;
     color:var(--muted);font-size:13px}
-  /* ---- 四语切换 ---- */
-  .zh,.en,.ja,.ko{display:block}
-  .en,.ja,.ko{display:none}
-  body[data-lang="en"] .zh,body[data-lang="en"] .ja,body[data-lang="en"] .ko{display:none}
-  body[data-lang="en"] .en{display:block}
-  body[data-lang="ja"] .zh,body[data-lang="ja"] .en,body[data-lang="ja"] .ko{display:none}
-  body[data-lang="ja"] .ja{display:block}
-  body[data-lang="ko"] .zh,body[data-lang="ko"] .en,body[data-lang="ko"] .ja{display:none}
-  body[data-lang="ko"] .ko{display:block}
-  /* 表格单元格内联语种 */
-  td span.zh,td span.en,td span.ja,td span.ko{display:block}
-  td span.en,td span.ja,td span.ko{display:none}
-  body[data-lang="en"] td span.zh,body[data-lang="en"] td span.ja,body[data-lang="en"] td span.ko{display:none}
-  body[data-lang="en"] td span.en{display:block}
-  body[data-lang="ja"] td span.zh,body[data-lang="ja"] td span.en,body[data-lang="ja"] td span.ko{display:none}
-  body[data-lang="ja"] td span.ja{display:block}
-  body[data-lang="ko"] td span.zh,body[data-lang="ko"] td span.en,body[data-lang="ko"] td span.ja{display:none}
-  body[data-lang="ko"] td span.ko{display:block}
-  th span.zh,th span.en,th span.ja,th span.ko{display:block}
-  th span.en,th span.ja,th span.ko{display:none}
-  body[data-lang="en"] th span.zh,body[data-lang="en"] th span.ja,body[data-lang="en"] th span.ko{display:none}
-  body[data-lang="en"] th span.en{display:block}
-  body[data-lang="ja"] th span.zh,body[data-lang="ja"] th span.en,body[data-lang="ja"] th span.ko{display:none}
-  body[data-lang="ja"] th span.ja{display:block}
-  body[data-lang="ko"] th span.zh,body[data-lang="ko"] th span.en,body[data-lang="ko"] th span.ja{display:none}
-  body[data-lang="ko"] th span.ko{display:block}
-</style>
+  /* ---- 多语切换（zh / zht / en / ja / ko / de） ---- */
+  .zh,.zht,.en,.ja,.ko,.de{display:none}
+  body[data-lang="zh"] .zh,
+  body[data-lang="zht"] .zht,
+  body[data-lang="en"] .en,
+  body[data-lang="ja"] .ja,
+  body[data-lang="ko"] .ko,
+  body[data-lang="de"] .de{display:block}</style>
 </head>
 <body data-lang="zh">
 <div class="wrap">
   <header>
     <div class="toggle">
       <button id="btnZh" class="active" onclick="setLang('zh')">中文</button>
+      <button id="btnZht" onclick="setLang('zht')">繁體</button>
       <button id="btnEn" onclick="setLang('en')">English</button>
       <button id="btnJa" onclick="setLang('ja')">日本語</button>
       <button id="btnKo" onclick="setLang('ko')">한국어</button>
+      <button id="btnDe" onclick="setLang('de')">Deutsch</button>
     </div>
     <h1 class="zh">Stepping 隐私政策</h1>
+    <h1 class="zht">Stepping 隱私政策</h1>
     <h1 class="en">Stepping Privacy Policy</h1>
     <h1 class="ja">Stepping プライバシーポリシー</h1>
     <h1 class="ko">Stepping 개인정보처리방침</h1>
+    <h1 class="de">Stepping Datenschutzerklärung</h1>
     <p class="meta zh">最后更新：2026-09-13 · 生效日期：2026-09-13</p>
+    <p class="meta zht">最後更新：2026-09-13 · 生效日期：2026-09-13</p>
     <p class="meta en">Last updated: 2026-09-13 · Effective: 2026-09-13</p>
     <p class="meta ja">最終更新：2026-09-13 · 効力発生日：2026-09-13</p>
     <p class="meta ko">최종 업데이트：2026-09-13 · 시행일：2026-09-13</p>
+    <p class="meta de">Zuletzt aktualisiert: 2026-09-13 · In Kraft seit: 2026-09-13</p>
   </header>
 
   <!-- ============ 摘要 ============ -->
   <div class="card">
     <p class="zh"><strong>一句话：</strong>你的任务、心情和设置<strong>只存在你自己的手机里</strong>，Stepping 没有账号、没有云、不卖数据。唯一会离开设备的数据，是你主动使用 AI 功能时输入的文字（经我们的代理转发给大模型），以及语音速记时由 Apple 处理的音频。</p>
+    <p class="zht"><strong>一句話：</strong>你的任務、心情和設定<strong>只存在你自己的手機裡</strong>，Stepping 沒有帳號、沒有雲、不賣資料。唯一會離開裝置的資料，是你主動使用 AI 功能時輸入的文字（經我們的代理轉發給大模型），以及語音速記時由 Apple 處理的音訊。</p>
     <p class="en"><strong>In short:</strong> Your tasks, mood records and settings <strong>live only on your own device</strong>. Stepping has no account, no cloud, and sells no data. The only data that leaves your device is (a) the text you type into AI features (forwarded through our proxy to an LLM), and (b) audio processed by Apple when you use voice dictation.</p>
     <p class="ja"><strong>一言で言うと：</strong>あなたのタスク・気分・設定は<strong>あなた自身の iPhone 内にのみ保存</strong>されます。Stepping にアカウントもクラウドもなく、データを販売することもありません。端末から外部へ出るデータは、(a) AI 機能を使う際に入力したテキスト（プロキシ経由で LLM へ転送）、および (b) 音声メモ時に Apple が処理する音声、のみです。</p>
     <p class="ko"><strong>한 줄로 말하자면:</strong> 회원님의 할 일·기분·설정은 <strong>본인의 iPhone 내부에만 저장</strong>됩니다. Stepping에는 계정도 클라우드도 없으며 데이터를 판매하지 않습니다. 기기 밖으로 나가는 유일한 데이터는 (a) AI 기능 사용 시 입력한 텍스트(프록시를 거쳐 LLM으로 전송)와 (b) 음성 메모 시 Apple이 처리하는 오디오뿐입니다.</p>
+    <p class="de"><strong>Kurz gesagt:</strong> Deine Aufgaben, Stimmungsnotizen und Einstellungen <strong>liegen nur auf deinem eigenen Gerät</strong>. Stepping hat kein Konto, keine Cloud und verkauft keine Daten. Die einzigen Daten, die dein Gerät verlassen, sind der Text, den du bei AI-Funktionen eingibst (über unseren Proxy an ein LLM weitergeleitet), sowie Audio, das Apple beim Sprachdiktat verarbeitet.</p>
   </div>
 
   <!-- ============ 1. 我们收集什么 ============ -->
   <h2 class="zh">1. 我们收集和处理的数据</h2>
+  <h2 class="zht">1. 我們收集和處理的資料</h2>
   <h2 class="en">1. Data We Collect &amp; Process</h2>
   <h2 class="ja">1. 収集・処理するデータ</h2>
   <h2 class="ko">1. 수집 및 처리하는 데이터</h2>
+  <h2 class="de">1. Daten, die wir erheben und verarbeiten</h2>
 
   <h3 class="zh">1.1 仅存储在你设备本地（不会上传）</h3>
+  <h3 class="zht">1.1 僅儲存在你裝置本機（不會上傳）</h3>
   <h3 class="en">1.1 Stored only on your device (never uploaded)</h3>
   <h3 class="ja">1.1 端末ローカルにのみ保存（アップロードしません）</h3>
   <h3 class="ko">1.1 기기 로컬에만 저장(업로드하지 않음)</h3>
+  <h3 class="de">1.1 Nur lokal auf deinem Gerät gespeichert (wird nicht hochgeladen)</h3>
   <p class="zh">以下数据由 iOS 本地存储（UserDefaults、App 沙盒文件、SwiftData、Keychain）保存，Stepping 的服务器不接收、不备份、不读取：</p>
+  <p class="zht">以下資料由 iOS 儲存在本機（UserDefaults、App 沙盒檔案、SwiftData、Keychain），Stepping 的伺服器不接收、不備份、不讀取：</p>
   <p class="en">The following are kept in iOS local storage (UserDefaults, app sandbox files, SwiftData, Keychain). Stepping's servers never receive, back up, or read them:</p>
   <p class="ja">以下は iOS のローカルストレージ（UserDefaults、アプリサンドボックス、SwiftData、Keychain）に保存され、Stepping のサーバーは受信・バックアップ・読み取りを一切行いません：</p>
   <p class="ko">다음 데이터는 iOS 로컬 저장소(UserDefaults, 앱 샌드박스, SwiftData, Keychain)에 보관되며, Stepping 서버는 수신·백업·읽기를 일절 하지 않습니다:</p>
+  <p class="de">Die folgenden Daten werden im lokalen iOS-Speicher abgelegt (UserDefaults, App-Sandbox-Dateien, SwiftData, Keychain). Die Server von Stepping empfangen, sichern oder lesen sie nicht:</p>
   <table>
-    <tr><th><span class="zh">数据类型</span><span class="en">Data</span><span class="ja">データ種別</span><span class="ko">데이터 유형</span></th><th><span class="zh">说明</span><span class="en">Notes</span><span class="ja">説明</span><span class="ko">설명</span></th></tr>
-    <tr><td><span class="zh">任务与步骤</span><span class="en">Tasks &amp; steps</span><span class="ja">タスクとステップ</span><span class="ko">작업과 단계</span></td><td><span class="zh">标题、拆解步骤、备注、完成状态、创建时间</span><span class="en">Titles, breakdown steps, notes, completion, created time</span><span class="ja">タイトル・分解ステップ・メモ・完了状態・作成日時</span><span class="ko">제목·분해 단계·메모·완료 상태·생성 시간</span></td></tr>
-    <tr><td><span class="zh">今日聚焦 / 带入今天</span><span class="en">Today Focus</span><span class="ja">今日のフォーカス</span><span class="ko">오늘의 집중</span></td><td><span class="zh">你手动标记的当日重点任务</span><span class="en">Tasks you manually star for the day</span><span class="ja">当日の重要タスクとして手動で星を付けたもの</span><span class="ko">직접 별표한 당일 중점 작업</span></td></tr>
-    <tr><td><span class="zh">心情记录</span><span class="en">Mood log</span><span class="ja">気分記録</span><span class="ko">기분 기록</span></td><td><span class="zh">最近 90 天的心情条目（本地文件，自动过期）</span><span class="en">Last 90 days, local file, auto-expires</span><span class="ja">直近90日分（ローカルファイル、自動期限切れ）</span><span class="ko">최근 90일(로컬 파일, 자동 만료)</span></td></tr>
-    <tr><td><span class="zh">规划校准</span><span class="en">Planning calibration</span><span class="ja">計画キャリブレーション</span><span class="ko">계획 보정</span></td><td><span class="zh">个人预估偏差系数（反向规划用）</span><span class="en">Personal estimate-bias factor</span><span class="ja">個人の見積もりバイアス係数（逆算計画用）</span><span class="ko">개인 추정 편차 계수(역산 계획용)</span></td></tr>
-    <tr><td><span class="zh">偏好设置</span><span class="en">Preferences</span><span class="ja">設定</span><span class="ko">환경설정</span></td><td><span class="zh">难度偏好、精力时段、通知、字体缩放、语言</span><span class="en">Spice level, energy pattern, notifications, font, language</span><span class="ja">難易度・エネルギー帯・通知・文字サイズ・言語</span><span class="ko">난이도·에너지 시간대·알림·글자 크기·언어</span></td></tr>
-    <tr><td><span class="zh">使用额度</span><span class="en">Usage quota</span><span class="ja">利用枠</span><span class="ko">사용 할당</span></td><td><span class="zh">每日 AI / 引导次数（本地计数）</span><span class="en">Daily AI / guidance counts (local)</span><span class="ja">毎日のAI／ガイド回数（ローカル集計）</span><span class="ko">매일 AI/가이드 횟수(로컬 집계)</span></td></tr>
-    <tr><td><span class="zh">订阅与试用状态</span><span class="en">Subscription state</span><span class="ja">購読・試用状態</span><span class="ko">구독 및 체험 상태</span></td><td><span class="zh">首装时间存于 Keychain（防卸载重装重置试用）</span><span class="en">Install date in Keychain (trial anti-reset)</span><span class="ja">初回インストール日時をKeychainに保存（再インストールでのリセット防止）</span><span class="ko">최초 설치 시점을 Keychain에 저장(재설치 리셋 방지)</span></td></tr>
+    <tr><th><span class="zh">数据类型</span>
+    <span class="zht">資料類型</span><span class="en">Data</span><span class="ja">データ種別</span><span class="ko">데이터 유형</span>
+    <span class="de">Datenart</span></th><th><span class="zh">说明</span>
+    <span class="zht">說明</span><span class="en">Notes</span><span class="ja">説明</span><span class="ko">설명</span>
+    <span class="de">Erläuterung</span></th></tr>
+    <tr><td><span class="zh">任务与步骤</span>
+    <span class="zht">任務與步驟</span><span class="en">Tasks &amp; steps</span><span class="ja">タスクとステップ</span><span class="ko">작업과 단계</span>
+    <span class="de">Aufgaben &amp; Schritte</span></td><td><span class="zh">标题、拆解步骤、备注、完成状态、创建时间</span>
+    <span class="zht">標題、拆解步驟、備註、完成狀態、建立時間</span><span class="en">Titles, breakdown steps, notes, completion, created time</span><span class="ja">タイトル・分解ステップ・メモ・完了状態・作成日時</span><span class="ko">제목·분해 단계·메모·완료 상태·생성 시간</span>
+    <span class="de">Titel, Zerlegungsschritte, Notizen, Erledigt-Status, Erstellzeitpunkt</span></td></tr>
+    <tr><td><span class="zh">今日聚焦 / 带入今天</span>
+    <span class="zht">今日聚焦 / 帶入今天</span><span class="en">Today Focus</span><span class="ja">今日のフォーカス</span><span class="ko">오늘의 집중</span>
+    <span class="de">Heute im Fokus / Auf heute holen</span></td><td><span class="zh">你手动标记的当日重点任务</span>
+    <span class="zht">你手動標記的當日重點任務</span><span class="en">Tasks you manually star for the day</span><span class="ja">当日の重要タスクとして手動で星を付けたもの</span><span class="ko">직접 별표한 당일 중점 작업</span>
+    <span class="de">Aufgaben, die du manuell für den Tag markierst</span></td></tr>
+    <tr><td><span class="zh">心情记录</span>
+    <span class="zht">心情記錄</span><span class="en">Mood log</span><span class="ja">気分記録</span><span class="ko">기분 기록</span>
+    <span class="de">Stimmungsprotokoll</span></td><td><span class="zh">最近 90 天的心情条目（本地文件，自动过期）</span>
+    <span class="zht">最近 90 天的心情條目（本機檔案，自動過期）</span><span class="en">Last 90 days, local file, auto-expires</span><span class="ja">直近90日分（ローカルファイル、自動期限切れ）</span><span class="ko">최근 90일(로컬 파일, 자동 만료)</span>
+    <span class="de">Einträge der letzten 90 Tage (lokale Datei, läuft automatisch ab)</span></td></tr>
+    <tr><td><span class="zh">规划校准</span>
+    <span class="zht">規劃校準</span><span class="en">Planning calibration</span><span class="ja">計画キャリブレーション</span><span class="ko">계획 보정</span>
+    <span class="de">Planungskalibrierung</span></td><td><span class="zh">个人预估偏差系数（反向规划用）</span>
+    <span class="zht">個人預估偏差係數（反向規劃用）</span><span class="en">Personal estimate-bias factor</span><span class="ja">個人の見積もりバイアス係数（逆算計画用）</span><span class="ko">개인 추정 편차 계수(역산 계획용)</span>
+    <span class="de">Persönlicher Schätzabweichungs-Faktor (für Rückwärtsplanung)</span></td></tr>
+    <tr><td><span class="zh">偏好设置</span>
+    <span class="zht">偏好設定</span><span class="en">Preferences</span><span class="ja">設定</span><span class="ko">환경설정</span>
+    <span class="de">Einstellungen</span></td><td><span class="zh">难度偏好、精力时段、通知、字体缩放、语言</span>
+    <span class="zht">難度偏好、精力時段、通知、字體縮放、語言</span><span class="en">Spice level, energy pattern, notifications, font, language</span><span class="ja">難易度・エネルギー帯・通知・文字サイズ・言語</span><span class="ko">난이도·에너지 시간대·알림·글자 크기·언어</span>
+    <span class="de">Schwierigkeitsgrad, Energiephasen, Mitteilungen, Schriftgröße, Sprache</span></td></tr>
+    <tr><td><span class="zh">使用额度</span>
+    <span class="zht">使用額度</span><span class="en">Usage quota</span><span class="ja">利用枠</span><span class="ko">사용 할당</span>
+    <span class="de">Nutzungskontingent</span></td><td><span class="zh">每日 AI / 引导次数（本地计数）</span>
+    <span class="zht">每日 AI / 引導次數（本機計數）</span><span class="en">Daily AI / guidance counts (local)</span><span class="ja">毎日のAI／ガイド回数（ローカル集計）</span><span class="ko">매일 AI/가이드 횟수(로컬 집계)</span>
+    <span class="de">Tägliche AI- / Begleit-Zähler (lokal gezählt)</span></td></tr>
+    <tr><td><span class="zh">订阅与试用状态</span>
+    <span class="zht">訂閱與試用狀態</span><span class="en">Subscription state</span><span class="ja">購読・試用状態</span><span class="ko">구독 및 체험 상태</span>
+    <span class="de">Abo- und Teststatus</span></td><td><span class="zh">首装时间存于 Keychain（防卸载重装重置试用）</span>
+    <span class="zht">首次安裝時間存於 Keychain（防止解除安裝後重新安裝而重設試用期）</span><span class="en">Install date in Keychain (trial anti-reset)</span><span class="ja">初回インストール日時をKeychainに保存（再インストールでのリセット防止）</span><span class="ko">최초 설치 시점을 Keychain에 저장(재설치 리셋 방지)</span>
+    <span class="de">Erstinstallationszeit in der Keychain (verhindert das Zurücksetzen der Testphase durch Neuinstallation)</span></td></tr>
   </table>
   <p class="zh"><span class="tag local">本地</span>卸载 App 即删除这些数据；也可在 App 内「设置 → 清除数据」一键清空。</p>
+  <p class="zht"><span class="tag local">本機</span>解除安裝 App 即刪除這些資料；也可在 App 內「設定 → 清除資料」一鍵清空。</p>
   <p class="en"><span class="tag local">On-device</span>Deleting the app removes this data; or use In-App Settings → Clear Data.</p>
   <p class="ja"><span class="tag local">端末内</span>アプリを削除すればこれらのデータも削除されます。またアプリ内の「設定 → データを消去」からワンタップで消去できます。</p>
   <p class="ko"><span class="tag local">기기 내</span>앱을 삭제하면 이 데이터도 삭제됩니다. 앱 내 '설정 → 데이터 지우기'에서도 한 번에 삭제할 수 있습니다.</p>
+  <p class="de"><span class="tag local">Lokal</span>Wenn du die App löschst, werden diese Daten entfernt; ebenso über „Einstellungen → Daten löschen“ in der App.</p>
 
   <h3 class="zh">1.2 使用 AI 功能时发送给第三方</h3>
+  <h3 class="zht">1.2 使用 AI 功能時傳送給第三方</h3>
   <h3 class="en">1.2 Sent to third parties when you use AI features</h3>
   <h3 class="ja">1.2 AI 機能利用時に第三者へ送信</h3>
   <h3 class="ko">1.2 AI 기능 사용 시 제3자로 전송</h3>
+  <h3 class="de">1.2 Weitergabe an Dritte bei Nutzung der AI-Funktionen</h3>
   <p class="zh">当你使用任务拆解、脑暴、语气分析、决策助手、语音速记的 AI 拆解等功能时，<strong>你输入给 AI 的文字内容</strong>会通过 Stepping 的 Cloudflare Worker 代理转发给大模型服务商（DeepSeek，或经 OpenRouter 路由的 OpenAI / Anthropic / Google 等模型）。</p>
+  <p class="zht">當你使用任務拆解、腦力激盪、語氣分析、決策助手、語音速記的 AI 拆解等功能時，<strong>你輸入給 AI 的文字內容</strong>會通過 Stepping 的 Cloudflare Worker 代理轉發給大模型服務商（DeepSeek，或經 OpenRouter 路由的 OpenAI / Anthropic / Google 等模型）。</p>
   <p class="en">When you use AI features (task breakdown, brainstorm, tone analysis, decision helper, voice AI breakdown, etc.), <strong>the text you enter</strong> is forwarded through Stepping's Cloudflare Worker proxy to an LLM provider (DeepSeek, or OpenRouter-routed OpenAI / Anthropic / Google models).</p>
   <p class="ja">タスク分解・ブレインストーミング・トーン分析・意思決定アシスタント・音声メモの AI 分解などの AI 機能を使う際、AI へ入力したテキストは Stepping の Cloudflare Worker プロキシを経て、LLM 提供元（DeepSeek、または OpenRouter 経由の OpenAI／Anthropic／Google などのモデル）へ転送されます。</p>
   <p class="ko">작업 분해·브레인스토밍·어조 분석·의사결정 도우미·음성 메모의 AI 분해 등 AI 기능을 사용할 때 AI에 입력한 텍스트는 Stepping의 Cloudflare Worker 프록시를 거쳐 LLM 제공업체(DeepSeek 또는 OpenRouter 경유 OpenAI/Anthropic/Google 등 모델)로 전송됩니다.</p>
+  <p class="de">Wenn du Funktionen wie Aufgabenzerlegung, Brainstorming, Tonanalyse, Entscheidungshilfe oder die AI-Zerlegung beim Sprachdiktat nutzt, wird <strong>der von dir eingegebene Text</strong> über den Cloudflare-Worker-Proxy von Stepping an einen LLM-Anbieter weitergeleitet (DeepSeek oder über OpenRouter geroutete Modelle von OpenAI / Anthropic / Google).</p>
   <ul class="zh">
     <li>该 Worker 是<strong>纯转发代理，不记录、不存储任何对话内容</strong>。</li>
     <li>传输过程启用 <strong>SSL 证书锁定（SSL Pinning）</strong>，防止中间人窃听。</li>
     <li>大模型服务商可能按其自身隐私政策留存并处理这些内容；我们不附加任何账号或身份标识。</li>
     <li>夜间 22:00–06:00 为无限模式， AI 调用不消耗次数，但内容仍按上述方式处理。</li>
+  </ul>
+  <ul class="zht">
+    <li>該 Worker 是<strong>純轉發代理，不記錄、不儲存任何對話內容</strong>。</li>
+    <li>傳輸過程啟用 <strong>SSL 憑證鎖定（SSL Pinning）</strong>，防止中間人竊聽。</li>
+    <li>大模型服務商可能按其自身隱私政策留存並處理這些內容；我們不附加任何帳號或身分標識。</li>
+    <li>夜間 22:00–06:00 為無限模式， AI 呼叫不消耗次數，但內容仍按上述方式處理。</li>
   </ul>
   <ul class="en">
     <li>The Worker is a <strong>pass-through proxy — it logs and stores nothing</strong>.</li>
@@ -162,29 +201,44 @@
     <li>LLM 제공업체는 자사 개인정보처리방침에 따라 이 내용을 보관·처리할 수 있습니다. 당사는 계정이나 신원 식별 정보를 일절 부여하지 않습니다.</li>
     <li>야간 22:00–06:00는 무제한 모드로 AI 횟수를 소비하지 않으나, 내용 처리는 위와 동일합니다.</li>
   </ul>
+  <ul class="de"><li>Der Worker ist ein <strong>reiner Weiterleitungs-Proxy und protokolliert oder speichert keine Gesprächsinhalte</strong>.</li> <li>Bei der Übertragung ist <strong>SSL-Zertifikats-Pinning aktiv</strong>, um Man-in-the-Middle-Angriffe zu verhindern.</li> <li>Der LLM-Anbieter kann diese Inhalte gemäß seiner eigenen Datenschutzrichtlinie speichern und verarbeiten; wir hängen keinerlei Konto- oder Identitätskennung an.</li> <li>Nachts von 22:00 bis 06:00 gilt der unbegrenzte Modus: AI-Aufrufe verbrauchen kein Kontingent, die Inhalte werden aber weiterhin wie oben beschrieben verarbeitet.</li></ul>
   <p class="zh"><span class="tag third">第三方</span>DeepSeek / OpenRouter 等模型的隐私条款见其官网。</p>
+  <p class="zht"><span class="tag third">第三方</span>DeepSeek / OpenRouter 等模型的隱私條款見其官網。</p>
   <p class="en"><span class="tag third">Third party</span>See each provider's policy on their site.</p>
   <p class="ja"><span class="tag third">第三者</span>DeepSeek / OpenRouter などの各モデルのプライバシー条項は各社の Web サイトをご参照ください。</p>
   <p class="ko"><span class="tag third">제3자</span>DeepSeek/OpenRouter 등 모델의 개인정보 처리방침은 각 사 홈페이지를 참고하세요.</p>
+  <p class="de"><span class="tag third">Drittanbieter</span>Die Datenschutzbestimmungen von DeepSeek / OpenRouter und weiteren Modellen findest du auf deren Websites.</p>
 
   <h3 class="zh">1.3 语音速记（Apple 处理）</h3>
+  <h3 class="zht">1.3 語音速記（Apple 處理）</h3>
   <h3 class="en">1.3 Voice dictation (handled by Apple)</h3>
   <h3 class="ja">1.3 音声メモ（Apple が処理）</h3>
   <h3 class="ko">1.3 음성 메모(Apple 처리)</h3>
+  <h3 class="de">1.3 Sprachdiktat (von Apple verarbeitet)</h3>
   <p class="zh">语音速记使用 Apple 的 <strong>Speech 框架</strong>进行语音识别，需你授权。根据 Apple 的隐私机制，录音可能会上传至 Apple 服务器用于识别（因语言/设备而异，部分可在端侧完成）。音频与识别结果受 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a> 约束。若你将识别文本继续用于 AI 功能，则按 1.2 节处理。</p>
+  <p class="zht">語音速記使用 Apple 的 <strong>Speech 框架</strong>進行語音辨識，需你授權。根據 Apple 的隱私機制，錄音可能會上傳至 Apple 伺服器用於辨識（因語言/裝置而異，部分可在裝置端完成）。音訊與辨識結果受 <a href="https://www.apple.com/legal/privacy/">Apple 隱私政策</a> 約束。若你將辨識文字繼續用於 AI 功能，則按 1.2 節處理。</p>
   <p class="en">Voice dictation uses Apple's <strong>Speech framework</strong> and requires your permission. Per Apple's policy, audio may be sent to Apple servers for recognition (varies by locale/device; some on-device). Audio and transcripts are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. If you then use the transcript in an AI feature, section 1.2 applies.</p>
   <p class="ja">音声メモは Apple の <strong>Speech フレームワーク</strong>で音声認識を行い、許可が必要です。Apple のプライバシー仕様により、録音は認識のため Apple サーバーに送信される場合があります（言語・端末により異なり、一部は端末内で完了）。音声と認識結果は <a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>の対象です。認識テキストをさらに AI 機能に使う場合は 1.2 節が適用されます。</p>
   <p class="ko">음성 메모는 Apple의 <strong>Speech 프레임워크</strong>로 음성 인식을 수행하며 권한이 필요합니다. Apple 개인정보 처리 방식에 따라 녹음은 인식을 위해 Apple 서버로 전송될 수 있습니다(언어·기기에 따라 다르며 일부는 기기 내 처리). 오디오와 인식 결과는 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a>을 따릅니다. 인식 텍스트를 AI 기능에 계속 쓰면 1.2절이 적용됩니다.</p>
+  <p class="de">Das Sprachdiktat nutzt Apples <strong>Speech-Framework</strong> zur Spracherkennung und erfordert deine Erlaubnis. Nach Apples Datenschutzmechanismus können Aufnahmen zur Erkennung an Apple-Server übertragen werden (je nach Sprache und Gerät; teils erfolgt die Verarbeitung direkt auf dem Gerät). Audio und Erkennungsergebnisse unterliegen der <a href="https://www.apple.com/legal/privacy/">Datenschutzrichtlinie von Apple</a>. Wenn du den erkannten Text weiter in AI-Funktionen verwendest, gilt Abschnitt 1.2.</p>
 
   <h3 class="zh">1.4 我们<strong>不</strong>收集的</h3>
+  <h3 class="zht">1.4 我們<strong>不</strong>收集的</h3>
   <h3 class="en">1.4 What we do NOT collect</h3>
   <h3 class="ja">1.4 収集しないもの</h3>
   <h3 class="ko">1.4 수집하지 않는 것</h3>
+  <h3 class="de">1.4 Was wir <strong>nicht</strong> erheben</h3>
   <ul class="zh">
     <li>无账号、无邮箱、无手机号——你无需注册即可使用全部功能。</li>
     <li>无广告标识符（IDFA），<strong>不接入任何第三方广告或行为分析 SDK</strong>（无 Firebase / Mixpanel / Adjust 等）。</li>
     <li>不收集位置、通讯录、相册、健康（HealthKit）、支付卡等敏感信息。</li>
     <li>我们<strong>不出售、不出租、不与第三方共享</strong>你的个人数据（1.2 节为提供功能所必需的转发除外）。</li>
+  </ul>
+  <ul class="zht">
+    <li>無帳號、無電子郵件、無手機號碼——你無需註冊即可使用全部功能。</li>
+    <li>無廣告廣告辨識碼（IDFA），<strong>不接入任何第三方廣告或行為分析 SDK</strong>（無 Firebase / Mixpanel / Adjust 等）。</li>
+    <li>不收集位置、通訊錄、相簿、健康（HealthKit）、付款卡等敏感資訊。</li>
+    <li>我們<strong>不出售、不出租、不與第三方共用</strong>你的個人資料（1.2 節為提供功能所必需的轉發除外）。</li>
   </ul>
   <ul class="en">
     <li>No account, email, or phone — fully usable without sign-up.</li>
@@ -204,16 +258,24 @@
     <li>위치·연락처·사진·건강(HealthKit)·결제 카드 등 민감 정보는 수집하지 않습니다.</li>
     <li>당사는 회원님의 개인 데이터를 판매·대여·제3자 공유하지 않습니다(기능 제공에 필요한 1.2절 전송 제외).</li>
   </ul>
+  <ul class="de"><li>Kein Konto, keine E-Mail-Adresse, keine Telefonnummer – du kannst alle Funktionen ohne Registrierung nutzen.</li> <li>Keine Werbe-IDs (IDFA), <strong>keine Einbindung von Werbe- oder Verhaltensanalyse-SDKs Dritter</strong> (kein Firebase / Mixpanel / Adjust usw.).</li> <li>Wir erheben keine sensiblen Informationen wie Standort, Kontakte, Fotos, Gesundheit (HealthKit) oder Zahlungskarten.</li> <li>Wir <strong>verkaufen, vermieten und teilen deine persönlichen Daten nicht</strong> (ausgenommen die in Abschnitt 1.2 beschriebene Weitergabe, die zur Bereitstellung der Funktion erforderlich ist).</li></ul>
 
   <!-- ============ 2. 用途 ============ -->
   <h2 class="zh">2. 我们如何使用数据</h2>
+  <h2 class="zht">2. 我們如何使用資料</h2>
   <h2 class="en">2. How We Use Data</h2>
   <h2 class="ja">2. データの利用目的</h2>
   <h2 class="ko">2. 데이터 이용 목적</h2>
+  <h2 class="de">2. Wie wir Daten verwenden</h2>
   <ul class="zh">
     <li><strong>本地数据</strong>：仅用于在 App 内为你展示任务、生成引导、记录心情与偏好——全部在设备端完成，不上传即不会被我们"使用"。</li>
     <li><strong>AI 输入文本</strong>：仅用于调用大模型生成你要的拆解 / 建议 / 分析，不作他用。</li>
     <li>我们不会用你的数据做用户画像、广告定向或跨 App 追踪。</li>
+  </ul>
+  <ul class="zht">
+    <li><strong>本機資料</strong>：僅用於在 App 內為你展示任務、生成引導、記錄心情與偏好——全部在裝置端完成，不上傳即不會被我們「使用」。</li>
+    <li><strong>AI 輸入文字</strong>：僅用於呼叫大模型生成你要的拆解 / 建議 / 分析，不作他用。</li>
+    <li>我們不會用你的資料做使用者輪廓、廣告定向或跨 App 追蹤。</li>
   </ul>
   <ul class="en">
     <li><strong>Local data</strong>: used only on-device to show tasks, run guidance, and record mood/preferences — never uploaded, so never "used" by us remotely.</li>
@@ -230,16 +292,24 @@
     <li><strong>AI 입력 텍스트</strong>: LLM을 호출해 원하는 분해·제안·분석을 생성하는 용도로만 쓰며 다른 용도로는 사용하지 않습니다.</li>
     <li>당사는 회원님 데이터로 사용자 프로파일링·광고 타게팅·앱 간 추적을 하지 않습니다.</li>
   </ul>
+  <ul class="de"><li><strong>Lokale Daten</strong>: nur auf dem Gerät, um dir Aufgaben anzuzeigen, Begleitung zu erzeugen und Stimmung sowie Einstellungen zu speichern – alles geschieht auf dem Gerät und wird von uns nicht „verwendet“.</li> <li><strong>AI-Eingabetext</strong>: ausschließlich zum Aufruf des LLM, um die gewünschte Zerlegung / den Vorschlag / die Analyse zu erzeugen – keine andere Verwendung.</li> <li>Wir erstellen aus deinen Daten keine Nutzerprofile, kein Werbe-Targeting und kein App-übergreifendes Tracking.</li></ul>
 
   <!-- ============ 3. 保留与删除 ============ -->
   <h2 class="zh">3. 数据保留与删除</h2>
+  <h2 class="zht">3. 資料保留與刪除</h2>
   <h2 class="en">3. Retention &amp; Deletion</h2>
   <h2 class="ja">3. データの保持と削除</h2>
   <h2 class="ko">3. 데이터 보관 및 삭제</h2>
+  <h2 class="de">3. Speicherdauer &amp; Löschung</h2>
   <ul class="zh">
     <li><strong>本地数据</strong>：保留至你删除 App 或在 App 内清除数据为止。</li>
     <li><strong>AI 转发内容</strong>：Stepping 侧不留存；其在 LLM 服务商的留存时长由其政策决定。如希望尽最大可能删除，可联系对应服务商，或发邮件至下方地址，我们将协助说明转发路径。</li>
     <li>你有权访问、导出（Pro 支持 PDF 导出）、更正或删除自己的数据。</li>
+  </ul>
+  <ul class="zht">
+    <li><strong>本機資料</strong>：保留至你刪除 App 或在 App 內清除資料為止。</li>
+    <li><strong>AI 轉發內容</strong>：Stepping 側不留存；其在 LLM 服務商的留存時長由其政策決定。如希望盡最大可能刪除，可聯絡對應服務商，或寄電子郵件至下方地址，我們將協助說明轉發路徑。</li>
+    <li>你有權訪問、匯出（Pro 支援 PDF 匯出）、更正或刪除自己的資料。</li>
   </ul>
   <ul class="en">
     <li><strong>Local data</strong>: retained until you delete the app or clear data in-app.</li>
@@ -256,53 +326,70 @@
     <li><strong>AI 전송 내용</strong>: Stepping 측은 보관하지 않습니다. LLM 제공업체에서의 보관 기간은 해당 방침에 따릅니다. 최대한 삭제를 원하시면 해당 제공업체에 문의하거나 아래 이메일로 연락 주시면 전송 경로를 안내해 드립니다.</li>
     <li>회원님은 본인 데이터에 접근·내보내기(Pro는 PDF 내보내기)·수정·삭제할 권리가 있습니다.</li>
   </ul>
+  <ul class="de"><li><strong>Lokale Daten</strong>: bleiben gespeichert, bis du die App löschst oder in der App die Daten löschst.</li> <li><strong>Von AI weitergeleitete Inhalte</strong>: werden von Stepping nicht gespeichert; die Speicherdauer beim LLM-Anbieter richtet sich nach dessen Richtlinie. Wenn du eine größtmögliche Löschung wünschst, wende dich an den jeweiligen Anbieter oder schreibe uns an die unten stehende Adresse – wir erklären dir den Übertragungsweg.</li> <li>Du hast das Recht, auf deine Daten zuzugreifen, sie zu exportieren (Pro unterstützt PDF-Export), sie zu berichtigen oder zu löschen.</li></ul>
 
   <!-- ============ 4. 儿童 ============ -->
   <h2 class="zh">4. 儿童隐私</h2>
+  <h2 class="zht">4. 兒童隱私</h2>
   <h2 class="en">4. Children's Privacy</h2>
   <h2 class="ja">4. 児童のプライバシー</h2>
   <h2 class="ko">4. 아동의 개인정보</h2>
+  <h2 class="de">4. Datenschutz für Kinder</h2>
   <p class="zh">Stepping 面向<strong>成年神经多样性人群</strong>（如成人 ADHD）设计，<strong>不专门针对 13 岁以下儿童</strong>，也未故意收集儿童数据。若你是 18 岁以下用户，请在监护人同意下使用。如我们发现误收集了儿童数据，将立即删除。</p>
+  <p class="zht">Stepping 面向<strong>成年神經多樣性人群</strong>（如成人 ADHD）設計，<strong>不專門針對 13 歲以下兒童</strong>，也未故意收集兒童資料。若你是 18 歲以下使用者，請在監護人同意下使用。如我們發現誤收集了兒童資料，將立即刪除。</p>
   <p class="en">Stepping is designed for <strong>neurodivergent adults</strong> (e.g. adult ADHD) and is <strong>not directed to children under 13</strong>; we do not knowingly collect children's data. Users under 18 should have parental consent. If we learn we collected a child's data, we will delete it.</p>
   <p class="ja">Stepping は成人の神経多様性当事者（成人 ADHD など）向けに設計されており、13 歳未満の子どもを対象としておらず、意図的に子どものデータを収集することもありません。18 歳未満の方は保護者の同意のもとでご利用ください。子どものデータを誤って収集した場合は直ちに削除します。</p>
   <p class="ko">Stepping은 성인 신경다양성 인구(성인 ADHD 등)를 위해 설계되었으며 13세 미만 아동을 대상으로 하지 않고 아동 데이터를 의도적으로 수집하지 않습니다. 만 18세 미만은 보호자 동의 하에 이용하세요. 아동 데이터를 잘못 수집한 경우 즉시 삭제합니다.</p>
+  <p class="de">Stepping ist für <strong>erwachsene neurodivergente Menschen</strong> konzipiert (z. B. Erwachsene mit ADHS) und richtet sich <strong>nicht speziell an Kinder unter 13 Jahren</strong>; wir erheben wissentlich keine Daten von Kindern. Wenn du unter 18 bist, nutze die App mit Zustimmung deiner Erziehungsberechtigten. Sollten wir versehentlich Kinderdaten erhoben haben, löschen wir sie unverzüglich.</p>
 
   <!-- ============ 5. 联系 ============ -->
   <h2 class="zh">5. 联系我们</h2>
+  <h2 class="zht">5. 聯絡我們</h2>
   <h2 class="en">5. Contact</h2>
   <h2 class="ja">5. お問い合わせ</h2>
   <h2 class="ko">5. 문의하기</h2>
+  <h2 class="de">5. Kontakt</h2>
   <p class="zh">隐私相关问题：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
+  <p class="zht">隱私相關問題：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
   <p class="en">Privacy questions: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
   <p class="ja">プライバシーに関するお問い合わせ：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
   <p class="ko">개인정보 관련 문의：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
+  <p class="de">Fragen zum Datenschutz: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
 
   <!-- ============ 6. 变更 ============ -->
   <h2 class="zh">6. 政策变更</h2>
+  <h2 class="zht">6. 政策變更</h2>
   <h2 class="en">6. Changes</h2>
   <h2 class="ja">6. 変更について</h2>
   <h2 class="ko">6. 변경 사항</h2>
+  <h2 class="de">6. Änderungen dieser Richtlinie</h2>
   <p class="zh">本政策如有更新，将在 App 内及本页面公布新生效日期。重大变更将另行提示。</p>
+  <p class="zht">本政策如有更新，將在 App 內及本頁面公佈新生效日期。重大變更將另行提示。</p>
   <p class="en">We will post updates here with a new effective date. Material changes will be noted in-app.</p>
   <p class="ja">本ポリシーを更新する場合は、アプリ内および本ページで新しい効力発生日をお知らせします。重要な変更は別途お知らせします。</p>
   <p class="ko">본 정책을 업데이트할 경우 앱 내 및 본 페이지에 새 효력 발생일을 공지합니다. 중대한 변경은 별도로 안내합니다.</p>
+  <p class="de">Wenn wir diese Richtlinie aktualisieren, geben wir in der App und auf dieser Seite ein neues Inkrafttretensdatum bekannt. Über wesentliche Änderungen informieren wir gesondert.</p>
 
   <div class="note zh">⚠️ 本页面为隐私政策草稿模板，基于 Stepping 当前实际数据架构编写。正式上线前建议由法务按目标市场（中国 / 美国等）法规复核，尤其涉 ADHD 相关表述与未成年人条款。</div>
+  <div class="note zht">⚠️ 本頁面為隱私政策草稿模板，基於 Stepping 目前實際資料架構編寫。正式上線前建議由法務按目標市場（中國 / 美國等）法規覆核，尤其涉 ADHD 相關表述與未成年人條款。</div>
   <div class="note en">⚠️ This is a draft template based on Stepping's current data architecture. Before launch, have counsel review it against applicable regulations (China / US), especially ADHD-related wording and minor clauses.</div>
   <div class="note ja">⚠️ 本ページは Stepping の現行データアーキテクチャに基づくプライバシーポリシーのドラフト雛形です。正式公開前に、対象市場（中国・米国など）の法規に沿って法務による確認をお勧めします。特に ADHD 関連の表現と未成年者条項にご注意ください。</div>
   <div class="note ko">⚠️ 이 페이지는 Stepping의 현재 실제 데이터 아키텍처를 바탕으로 한 개인정보처리방침 초안 템플릿입니다. 정식 출시 전 대상 시장(중국·미국 등) 법규에 따라 법무 검토를 권장합니다. 특히 ADHD 관련 표현과 미성년자 조항에 유의하세요.</div>
+  <div class="note de">⚠️ Diese Seite ist eine Entwurfsvorlage für die Datenschutzerklärung und basiert auf der aktuellen Datenarchitektur von Stepping. Vor dem offiziellen Start empfehlen wir eine juristische Prüfung anhand der Vorschriften der Zielmärkte (China / USA usw.) – insbesondere zu ADHS-bezogenen Formulierungen und zu Klauseln für Minderjährige.</div>
 
   <footer>
     <span class="zh">Stepping · 为分心与执行困难的大脑而做</span>
+    <span class="zht">Stepping · 為分心與執行困難的大腦而做</span>
     <span class="en">Stepping · Built for distracted &amp; exec-function-challenged brains</span>
     <span class="ja">Stepping · 集中困難・実行機能の課題がある脳のために</span>
     <span class="ko">Stepping · 산만함과 실행 기능의 어려움을 겪는 뇌를 위해</span>
+    <span class="de">Stepping · Für abgelenkte Gehirne mit Schwierigkeiten in der exekutiven Funktion</span>
   </footer>
 </div>
 <script>
   function setLang(l){
     document.body.setAttribute('data-lang', l);
-    ['zh','en','ja','ko'].forEach(function(x){
+    ['zh','zht','en','ja','ko','de'].forEach(function(x){
       var b=document.getElementById('btn'+x.charAt(0).toUpperCase()+x.slice(1));
       if(b) b.classList.toggle('active', x===l);
     });

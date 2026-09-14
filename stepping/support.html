@@ -45,58 +45,47 @@
   .banner{background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;border-radius:14px;padding:18px 22px;margin:14px 0}
   .banner a{color:#fff;text-decoration:underline}
   footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
-  /* ---- 四语切换 ---- */
-  .zh,.en,.ja,.ko{display:block}
-  .en,.ja,.ko{display:none}
-  body[data-lang="en"] .zh,body[data-lang="en"] .ja,body[data-lang="en"] .ko{display:none}
-  body[data-lang="en"] .en{display:block}
-  body[data-lang="ja"] .zh,body[data-lang="ja"] .en,body[data-lang="ja"] .ko{display:none}
-  body[data-lang="ja"] .ja{display:block}
-  body[data-lang="ko"] .zh,body[data-lang="ko"] .en,body[data-lang="ko"] .ja{display:none}
-  body[data-lang="ko"] .ko{display:block}
-  /* 步骤框内联语种 */
-  .step .zh,.step .en,.step .ja,.step .ko{display:block}
-  .step .en,.step .ja,.step .ko{display:none}
-  body[data-lang="en"] .step .zh,body[data-lang="en"] .step .ja,body[data-lang="en"] .step .ko{display:none}
-  body[data-lang="en"] .step .en{display:block}
-  body[data-lang="ja"] .step .zh,body[data-lang="ja"] .step .en,body[data-lang="ja"] .step .ko{display:none}
-  body[data-lang="ja"] .step .ja{display:block}
-  body[data-lang="ko"] .step .zh,body[data-lang="ko"] .step .en,body[data-lang="ko"] .step .ja{display:none}
-  body[data-lang="ko"] .step .ko{display:block}
-  /* 横幅内联语种 */
-  .banner .zh,.banner .en,.banner .ja,.banner .ko{display:block}
-  .banner .en,.banner .ja,.banner .ko{display:none}
-  body[data-lang="en"] .banner .zh,body[data-lang="en"] .banner .ja,body[data-lang="en"] .banner .ko{display:none}
-  body[data-lang="en"] .banner .en{display:block}
-  body[data-lang="ja"] .banner .zh,body[data-lang="ja"] .banner .en,body[data-lang="ja"] .banner .ko{display:none}
-  body[data-lang="ja"] .banner .ja{display:block}
-  body[data-lang="ko"] .banner .zh,body[data-lang="ko"] .banner .en,body[data-lang="ko"] .banner .ja{display:none}
-  body[data-lang="ko"] .banner .ko{display:block}
-</style>
+  /* ---- 多语切换（zh / zht / en / ja / ko / de） ---- */
+  .zh,.zht,.en,.ja,.ko,.de{display:none}
+  body[data-lang="zh"] .zh,
+  body[data-lang="zht"] .zht,
+  body[data-lang="en"] .en,
+  body[data-lang="ja"] .ja,
+  body[data-lang="ko"] .ko,
+  body[data-lang="de"] .de{display:block}</style>
 </head>
 <body data-lang="zh">
 <div class="wrap">
   <header>
     <div class="toggle">
       <button id="btnZh" class="active" onclick="setLang('zh')">中文</button>
+      <button id="btnZht" onclick="setLang('zht')">繁體</button>
       <button id="btnEn" onclick="setLang('en')">English</button>
       <button id="btnJa" onclick="setLang('ja')">日本語</button>
       <button id="btnKo" onclick="setLang('ko')">한국어</button>
+      <button id="btnDe" onclick="setLang('de')">Deutsch</button>
     </div>
     <h1 class="zh">Stepping 技术支持</h1>
+    <h1 class="zht">Stepping 技術支援</h1>
     <h1 class="en">Stepping Support</h1>
     <h1 class="ja">Stepping サポート</h1>
     <h1 class="ko">Stepping 지원</h1>
+    <h1 class="de">Stepping Support</h1>
     <p class="meta zh">常见问题 · 故障排查 · 功能指引 &nbsp;|&nbsp; 更新于 2026-09-13</p>
+    <p class="meta zht">常見問題 · 故障排查 · 功能指引 &nbsp;|&nbsp; 更新於 2026-09-13</p>
     <p class="meta en">FAQ · Troubleshooting · How-to &nbsp;|&nbsp; Updated 2026-09-13</p>
     <p class="meta ja">よくある質問・トラブルシューティング・使い方 &nbsp;|&nbsp; 更新日 2026-09-13</p>
     <p class="meta ko">자주 묻는 질문 · 문제 해결 · 사용 안내 &nbsp;|&nbsp; 업데이트 2026-09-13</p>
+    <p class="meta de">Häufige Fragen · Fehlerbehebung · Anleitungen &nbsp;|&nbsp; Aktualisiert am 2026-09-13</p>
   </header>
 
   <div class="banner">
     <p class="zh" style="margin:0"><strong>需要人工帮助？</strong> 发邮件至
       <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a>，
       我们通常 1–2 个工作日内回复。</p>
+    <p class="zht" style="margin:0"><strong>需要人工幫助？</strong> 寄電子郵件至
+      <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a>，
+      我們通常 1–2 個工作日內回覆。</p>
     <p class="en" style="margin:0"><strong>Need a human?</strong> Email
       <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a> —
       we usually reply within 1–2 business days.</p>
@@ -106,154 +95,171 @@
     <p class="ko" style="margin:0"><strong>인간의 도움이 필요하신가요?</strong>
       <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a>로 메일 주세요.
       보통 1–2 영업일 이내에 답변드립니다.</p>
+    <p class="de" style="margin:0"><strong>Du brauchst menschliche Hilfe?</strong> Schreib eine E-Mail an <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a> – wir antworten in der Regel innerhalb von 1–2 Werktagen.</p>
   </div>
 
   <!-- ============ 快速上手 ============ -->
   <h2 class="zh">一、快速上手</h2>
+  <h2 class="zht">一、快速上手</h2>
   <h2 class="en">1. Getting Started</h2>
   <h2 class="ja">1. はじめに</h2>
   <h2 class="ko">1. 시작하기</h2>
+  <h2 class="de">1. Erste Schritte</h2>
   <div class="card">
     <h3 class="zh">核心循环：把"大事"拆成"一步"</h3>
+    <h3 class="zht">核心循環：把「大事」拆成「一步」</h3>
     <h3 class="en">The core loop: big task → one step</h3>
     <h3 class="ja">核心の流れ：大きなこと → 一つのステップ</h3>
     <h3 class="ko">핵심 루프: 큰 일 → 한 단계</h3>
-    <div class="step"><span class="n">1</span><div class="zh">新建任务，写下让你卡住的那件大事（如"准备季度汇报"）。</div><div class="en">Create a task and write the big thing that freezes you (e.g. "Q3 report").</div><div class="ja">新しいタスクを作成し、行き詰まっている大きなこと（例：「四半期報告の準備」）を書きます。</div><div class="ko">새 작업을 만들고 막히는 그 큰 일(예: "분기 보고 준비")을 적습니다.</div></div>
-    <div class="step"><span class="n">2</span><div class="zh">用 <strong>AI 拆解</strong> 把它分成几个具体小步，或直接手写得更细。</div><div class="en">Use <strong>AI Breakdown</strong> to split it into concrete steps, or write them yourself.</div><div class="ja"><strong>AI分解</strong> で具体的な小ステップに分けるか、自分で細かく書きます。</div><div class="ko"><strong>AI 분해</strong>로 구체적인 작은 단계로 나누거나 직접 더 세분화해 씁니다.</div></div>
-    <div class="step"><span class="n">3</span><div class="zh">点 <strong>今日聚焦</strong> 把今天最重要的 ≤3 件标星，一次只看一件事。</div><div class="en">Tap <strong>Today Focus</strong> to star ≤3 most important tasks; see one thing at a time.</div><div class="ja"><strong>今日のフォーカス</strong> で今日の最重要（最大3件）に星を付け、一度に一つのことだけ見ます。</div><div class="ko"><strong>오늘의 집중</strong>에서 오늘 가장 중요한 ≤3개에 별표를 하고 한 번에 한 가지씩 봅니다.</div></div>
-    <div class="step"><span class="n">4</span><div class="zh">开 <strong>引导专注</strong>，一次只做当前这一步，做完再看下一个。</div><div class="en">Start <strong>Guided Focus</strong> — do only the current step, then move on.</div><div class="ja"><strong>ガイド集中</strong> を開始し、今のステップだけを行い、終わってから次へ進みます。</div><div class="ko"><strong>가이드 집중</strong>을 켜고 현재 단계만 하고, 끝나면 다음을 봅니다.</div></div>
+    <h3 class="de">Der Kernkreislauf: aus einer großen Sache einen einzigen Schritt machen</h3>
+    <div class="step"><span class="n">1</span><div class="zh">新建任务，写下让你卡住的那件大事（如"准备季度汇报"）。</div>
+    <div class="zht">新建任務，寫下讓你卡住的那件大事（如「準備季度彙報」）。</div><div class="en">Create a task and write the big thing that freezes you (e.g. "Q3 report").</div><div class="ja">新しいタスクを作成し、行き詰まっている大きなこと（例：「四半期報告の準備」）を書きます。</div><div class="ko">새 작업을 만들고 막히는 그 큰 일(예: "분기 보고 준비")을 적습니다.</div>
+    <div class="de">Erstelle eine Aufgabe und schreibe die große Sache auf, bei der du stecken bleibst (z. B. „Quartalsbericht vorbereiten“).</div></div>
+    <div class="step"><span class="n">2</span><div class="zh">用 <strong>AI 拆解</strong> 把它分成几个具体小步，或直接手写得更细。</div>
+    <div class="zht">用 <strong>AI 拆解</strong> 把它分成幾個具體小步，或直接手寫得更細。</div><div class="en">Use <strong>AI Breakdown</strong> to split it into concrete steps, or write them yourself.</div><div class="ja"><strong>AI分解</strong> で具体的な小ステップに分けるか、自分で細かく書きます。</div><div class="ko"><strong>AI 분해</strong>로 구체적인 작은 단계로 나누거나 직접 더 세분화해 씁니다.</div>
+    <div class="de">Nutze die <strong>AI-Zerlegung</strong>, um sie in konkrete kleine Schritte zu teilen – oder schreibe sie selbst noch feiner auf.</div></div>
+    <div class="step"><span class="n">3</span><div class="zh">点 <strong>今日聚焦</strong> 把今天最重要的 ≤3 件标星，一次只看一件事。</div>
+    <div class="zht">點 <strong>今日聚焦</strong> 把今天最重要的 ≤3 件標星，一次只看一件事。</div><div class="en">Tap <strong>Today Focus</strong> to star ≤3 most important tasks; see one thing at a time.</div><div class="ja"><strong>今日のフォーカス</strong> で今日の最重要（最大3件）に星を付け、一度に一つのことだけ見ます。</div><div class="ko"><strong>오늘의 집중</strong>에서 오늘 가장 중요한 ≤3개에 별표를 하고 한 번에 한 가지씩 봅니다.</div>
+    <div class="de">Tippe auf <strong>Heute im Fokus</strong>, markiere die wichtigsten ≤3 Dinge des Tages mit einem Stern und sieh immer nur eine Sache.</div></div>
+    <div class="step"><span class="n">4</span><div class="zh">开 <strong>引导专注</strong>，一次只做当前这一步，做完再看下一个。</div>
+    <div class="zht">開 <strong>引導專注</strong>，一次只做目前這一步，做完再看下一個。</div><div class="en">Start <strong>Guided Focus</strong> — do only the current step, then move on.</div><div class="ja"><strong>ガイド集中</strong> を開始し、今のステップだけを行い、終わってから次へ進みます。</div><div class="ko"><strong>가이드 집중</strong>을 켜고 현재 단계만 하고, 끝나면 다음을 봅니다.</div>
+    <div class="de">Starte die <strong>Begleitete Fokussierung</strong> und mache nur den aktuellen Schritt – erst danach den nächsten.</div></div>
   </div>
 
   <!-- ============ FAQ ============ -->
   <h2 class="zh">二、常见问题</h2>
+  <h2 class="zht">二、常見問題</h2>
   <h2 class="en">2. FAQ</h2>
   <h2 class="ja">2. よくある質問</h2>
   <h2 class="ko">2. 자주 묻는 질문</h2>
+  <h2 class="de">2. Häufige Fragen</h2>
 
   <details open>
-    <summary class="zh">试用期怎么算？5 天结束后还能用吗？</summary>
-    <summary class="en">How does the trial work? Can I still use it after 5 days?</summary>
-    <summary class="ja">試用期間はどう計算されますか？5日後も使えますか？</summary>
-    <summary class="ko">체험 기간은 어떻게 계산되나요? 5일 후에도 사용할 수 있나요?</summary>
+    <summary><span class="zh">试用期怎么算？5 天结束后还能用吗？</span><span class="zht">試用期怎麼算？5 天結束後還能用嗎？</span><span class="en">How does the trial work? Can I still use it after 5 days?</span><span class="ja">試用期間はどう計算されますか？5日後も使えますか？</span><span class="ko">체험 기간은 어떻게 계산되나요? 5일 후에도 사용할 수 있나요?</span><span class="de">Wie funktioniert die Testphase? Kann ich sie nach 5 Tagen noch nutzen?</span></summary>
     <p class="zh">首次启动起 <strong>5 天</strong>（120 小时）为 Pro 体验期，期间全部功能无限使用。体验期结束后转为免费版：基础任务管理、语音速记、心情、番茄钟、小组件全部免费；仅 <strong>AI 每天 2 次、引导专注每天 2 次、PDF 导出、5 个高级洞察板块</strong> 受限。<br/><span class="pill">提示</span>首装时间写入 Keychain，<strong>卸载重装不会重置</strong>试用期。</p>
+    <p class="zht">首次啟動起 <strong>5 天</strong>（120 小時）為 Pro 體驗期，期間全部功能無限使用。體驗期結束後轉為免費版：基礎任務管理、語音速記、心情、番茄鐘、小工具全部免費；僅 <strong>AI 每天 2 次、引導專注每天 2 次、PDF 匯出、5 個高階洞察板塊</strong> 受限。<br/><span class="pill">提示</span>首次安裝時間寫入 Keychain，<strong>解除安裝重新安裝不會重設</strong>試用期。</p>
     <p class="en">The first <strong>5 days</strong> (120h) after first launch are the Pro trial — everything unlimited. After that, free tier keeps core features (tasks, voice, mood, pomodoro, widgets); only <strong>AI 2×/day, Guided Focus 2×/day, PDF export, and 5 advanced insight panels</strong> are limited.<br/><span class="pill">Tip</span>Install time is in Keychain, so <strong>reinstalling won't reset</strong> the trial.</p>
     <p class="ja">初回起動から <strong>5日間</strong>（120時間）が Pro 体験期間で、期間中は全機能を無制限に利用できます。終了後は無料版に移行し、基本タスク管理・音声メモ・気分・ポモドーロ・ウィジェットはすべて無料、制限されるのは「AI 1日2回・ガイド集中 1日2回・PDF出力・高度インサイト5項目」のみです。<br/><span class="pill">ヒント</span>初回インストール日時は Keychain に保存され、アンインストールして再インストールしても試用期間はリセットされません。</p>
     <p class="ko">최초 실행부터 <strong>5일</strong>(120시간)이 Pro 체험 기간이며, 기간 중 전 기능 무제한 사용 가능합니다. 종료 후 무료판으로 전환되어 기본 작업 관리·음성 메모·기분·뽀모도로·위젯은 모두 무료이며, 제한되는 것은 'AI 하루 2회·가이드 집중 하루 2회·PDF 내보내기·고급 인사이트 5개'뿐입니다.<br/><span class="pill">팁</span>최초 설치 시점은 Keychain에 저장되어 앱을 지웠다 다시 깔아도 체험 기간이 초기화되지 않습니다.</p>
+    <p class="de">Ab dem ersten Start hast du <strong>5 Tage</strong> (120 Stunden) Pro-Testphase – in dieser Zeit sind alle Funktionen unbegrenzt. Danach wechselst du in die kostenlose Version: grundlegende Aufgabenverwaltung, Sprachdiktat, Stimmung, Pomodoro und Widgets bleiben komplett kostenlos; eingeschränkt sind nur <strong>AI 2×/Tag, begleitete Fokussierung 2×/Tag, PDF-Export und 5 erweiterte Einblick-Bereiche</strong>.<br/><span class="pill">Tipp</span>Die Erstinstallationszeit steht in der Keychain – <strong>Deinstallieren und Neuinstallieren setzt die Testphase nicht zurück</strong>.</p>
   </details>
 
   <details>
-    <summary class="zh">为什么 AI / 引导提示"次数用完了"？</summary>
-    <summary class="en">Why does it say "quota used up"?</summary>
-    <summary class="ja">なぜAI・ガイドで「回数がなくなりました」と表示されるのですか？</summary>
-    <summary class="ko">왜 AI/가이드에서 "횟수를 모두 사용했어요"라고 뜨나요?</summary>
+    <summary><span class="zh">为什么 AI / 引导提示"次数用完了"？</span><span class="zht">為什麼 AI / 引導提示「次數用完了」？</span><span class="en">Why does it say "quota used up"?</span><span class="ja">なぜAI・ガイドで「回数がなくなりました」と表示されるのですか？</span><span class="ko">왜 AI/가이드에서 "횟수를 모두 사용했어요"라고 뜨나요?</span><span class="de">Warum meldet AI / die Begleitung „Kontingent aufgebraucht“?</span></summary>
     <p class="zh">免费版每天 AI 2 次、引导 2 次（新建/恢复/重新开始都计 1 次）。<strong>夜间 22:00–06:00 为无限模式</strong>，不消耗次数。超出后入口会引导至订阅页；语音速记无配额时自动降级为单步任务，不打断你。</p>
+    <p class="zht">免費版每天 AI 2 次、引導 2 次（新建/還原/重新開始都計 1 次）。<strong>夜間 22:00–06:00 為無限模式</strong>，不消耗次數。超出後入口會引導至訂閱頁；語音速記無配額時自動降級為單步任務，不打斷你。</p>
     <p class="en">Free tier allows AI 2×/day and Focus 2×/day (new/resume/restart each count). <strong>Night mode 22:00–06:00 is unlimited</strong>. Over-quota routes to the subscription page; voice memo auto-degrades to a single step without blocking you.</p>
     <p class="ja">無料版は AI 1日2回・ガイド 1日2回（新規／再開／再開は各1回カウント）。<strong>夜間22:00〜06:00は無制限モード</strong>で回数を消費しません。超過すると登録ページへ案内されます。音声メモは割当がない場合、自動で単一ステップに格下げされ、作業を中断しません。</p>
     <p class="ko">무료판은 AI 하루 2회·가이드 2회(신규/재개/다시 시작 each 1회 카운트). <strong>야간 22:00–06:00는 무제한 모드</strong>로 횟수를 소비하지 않습니다. 초과 시 구독 페이지로 안내됩니다. 음성 메모는 할당이 없으면 자동으로 단일 단계로 격하되어 작업을 끊지 않습니다.</p>
+    <p class="de">In der kostenlosen Version gibt es täglich 2× AI und 2× Begleitung (neu starten / fortsetzen / von vorn beginnen zählt jeweils als 1×). <strong>Nachts von 22:00 bis 06:00 gilt der unbegrenzte Modus</strong>, der kein Kontingent verbraucht. Danach führt der Einstieg zur Abo-Seite; das Sprachdiktat wird ohne Kontingent automatisch zu einer Einzelaufgabe heruntergestuft, ohne dich zu unterbrechen.</p>
   </details>
 
   <details>
-    <summary class="zh">我的数据存在哪？换手机怎么办？</summary>
-    <summary class="en">Where is my data? How to move to a new phone?</summary>
-    <summary class="ja">データはどこにありますか？機種変更はどうすればいいですか？</summary>
-    <summary class="ko">내 데이터는 어디에 있나요? 폰을 바꾸면 어떻게 되나요?</summary>
+    <summary><span class="zh">我的数据存在哪？换手机怎么办？</span><span class="zht">我的資料存在哪？換手機怎麼辦？</span><span class="en">Where is my data? How to move to a new phone?</span><span class="ja">データはどこにありますか？機種変更はどうすればいいですか？</span><span class="ko">내 데이터는 어디에 있나요? 폰을 바꾸면 어떻게 되나요?</span><span class="de">Wo liegen meine Daten? Was passiert beim Handywechsel?</span></summary>
     <p class="zh">所有任务、心情、设置都<strong>只存在你当前设备本地</strong>（无账号、无云同步）。换手机时，请先用系统 <strong>iCloud / iTunes 整机备份与恢复</strong> 把 App 连同数据一并迁移；或在 Pro 下用 <strong>PDF 导出</strong> 留存重要任务。我们暂不提供独立云端同步。</p>
+    <p class="zht">所有任務、心情、設定都<strong>只存在你目前裝置本機</strong>（無帳號、無雲同步）。換手機時，請先用系統 <strong>iCloud / iTunes 整機備份與還原</strong> 把 App 連同資料一併遷移；或在 Pro 下用 <strong>PDF 匯出</strong> 留存重要任務。我們暫不提供獨立雲端同步。</p>
     <p class="en">All tasks, mood, and settings live <strong>only on your current device</strong> (no account, no cloud sync). To switch phones, use <strong>iOS iCloud / iTunes full backup &amp; restore</strong> to migrate the app with its data, or use Pro <strong>PDF export</strong> to keep important tasks. We don't offer standalone cloud sync yet.</p>
     <p class="ja">すべてのタスク・気分・設定は「現在の端末ローカル」のみに存在します（アカウント・クラウド同期なし）。機種変更時は、まず iOS の <strong>iCloud / iTunes 端末丸ごとバックアップと復元</strong> でアプリとデータをまとめて移行するか、Pro の <strong>PDF出力</strong> で重要なタスクを保存してください。現時点で独立したクラウド同期は提供していません。</p>
     <p class="ko">모든 작업·기분·설정은 '현재 기기 로컬'에만 존재합니다(계정·클라우드 동기화 없음). 기기 변경 시 먼저 iOS <strong>iCloud/iTunes 전체 백업 및 복원</strong>으로 앱과 데이터를 함께 이전하거나, Pro의 <strong>PDF 내보내기</strong>로 중요한 작업을 보관하세요. 별도 클라우드 동기화는 현재 제공하지 않습니다.</p>
+    <p class="de">Alle Aufgaben, Stimmungen und Einstellungen <strong>liegen nur lokal auf deinem aktuellen Gerät</strong> (kein Konto, keine Cloud-Synchronisierung). Für einen Handywechsel nutze zuerst das <strong>vollständige iCloud-/iTunes-Backup und die Wiederherstellung</strong>, um die App samt Daten zu übertragen; oder sichere wichtige Aufgaben mit dem Pro-<strong>PDF-Export</strong>. Eine eigenständige Cloud-Synchronisierung bieten wir derzeit nicht an.</p>
   </details>
 
   <details>
-    <summary class="zh">AI 功能没反应 / 一直转圈？</summary>
-    <summary class="en">AI features not responding / spinning?</summary>
-    <summary class="ja">AI機能が反応しない／ずっと読み込み中ですか？</summary>
-    <summary class="ko">AI 기능이 반응하지 않나요 / 계속 돌아가나요?</summary>
+    <summary><span class="zh">AI 功能没反应 / 一直转圈？</span><span class="zht">AI 功能沒反應 / 一直轉圈？</span><span class="en">AI features not responding / spinning?</span><span class="ja">AI機能が反応しない／ずっと読み込み中ですか？</span><span class="ko">AI 기능이 반응하지 않나요 / 계속 돌아가나요?</span><span class="de">AI-Funktionen reagieren nicht / laden endlos?</span></summary>
     <p class="zh">依次排查：① 是否处于免费额度外（看上面"次数用完"）；② 网络是否正常（AI 需联网经代理调用大模型）；③ 夜间无限模式不影响联网本身。若仍失败，多为网络环境对代理域名限制，可切换网络重试。</p>
+    <p class="zht">依次排查：① 是否處於免費額度外（看上面「次數用完」）；② 網路是否正常（AI 需連網經代理呼叫大模型）；③ 夜間無限模式不影響連網本身。若仍失敗，多為網路環境對代理網域限制，可切換網路重試。</p>
     <p class="en">Check: ① free quota exceeded (see above); ② network up (AI needs internet to call the model via proxy); ③ night mode doesn't affect connectivity. If it still fails, your network may restrict the proxy domain — try another network.</p>
     <p class="ja">順に確認：① 無料枠外か（上の「回数がなくなりました」参照）② ネットワークは正常か（AIはプロキシ経由でLLMを呼び出すため通信が必要）③ 夜間無制限モードは通信そのものには影響しません。それでも失敗する場合は、ネットワーク環境がプロキシのドメインを制限している可能性が高く、別のネットワークでお試しください。</p>
     <p class="ko">순서대로 확인: ① 무료 할당 외인지(위 '횟수 소진' 참고) ② 네트워크 정상인지(AI는 프록시 경유로 LLM 호출하므로 인터넷 필요) ③ 야간 무제한 모드는 연결 자체에 영향 없음. 그래도 실패하면 네트워크가 프록시 도메인을 제한하는 경우가 많으니 다른 네트워크로 재시도하세요.</p>
+    <p class="de">Der Reihe nach prüfen: ① Bist du außerhalb des kostenlosen Kontingents (siehe oben „Kontingent aufgebraucht“)? ② Ist das Netzwerk in Ordnung (AI braucht Internet, um über den Proxy das Modell aufzurufen)? ③ Der nächtliche unbegrenzte Modus beeinflusst die Verbindung selbst nicht. Wenn es weiterhin fehlschlägt, blockiert dein Netzwerk häufig die Proxy-Domain – versuche es in einem anderen Netzwerk erneut.</p>
   </details>
 
   <details>
-    <summary class="zh">小组件（Widget）不显示 / 空白？</summary>
-    <summary class="en">Widget blank / not showing?</summary>
-    <summary class="ja">ウィジェットが表示されない／空白ですか？</summary>
-    <summary class="ko">위젯이 안 보이나요 / 빈 칸인가요?</summary>
+    <summary><span class="zh">小组件（Widget）不显示 / 空白？</span><span class="zht">小工具（Widget）不顯示 / 空白？</span><span class="en">Widget blank / not showing?</span><span class="ja">ウィジェットが表示されない／空白ですか？</span><span class="ko">위젯이 안 보이나요 / 빈 칸인가요?</span><span class="de">Widget wird nicht angezeigt / bleibt leer?</span></summary>
     <p class="zh">① 长按主屏幕空白处 → 点左上 <code>+</code> → 搜索 <strong>Stepping</strong> → 添加"今日任务"或"专注"小组件；② 确认已在 App 内创建任务并标星<strong>今日聚焦</strong>；③ 若仍空白，重启设备一次通常解决 iOS 小组件缓存问题。</p>
+    <p class="zht">① 長按主畫面空白處 → 點左上 <code>+</code> → 搜尋 <strong>Stepping</strong> → 新增「今日任務」或「專注」小工具；② 確認已在 App 內建立任務並標星<strong>今日聚焦</strong>；③ 若仍空白，重新啟動裝置一次通常解決 iOS 小工具快取問題。</p>
     <p class="en">① Long-press home screen → tap <code>+</code> → search <strong>Stepping</strong> → add "Today" or "Focus" widget; ② make sure you have tasks starred in <strong>Today Focus</strong>; ③ if still blank, a device restart usually fixes iOS widget cache.</p>
     <p class="ja">① ホーム画面の空白を長押し → 左上の <code>＋</code> → 「Stepping」を検索 → 「今日のタスク」または「集中」ウィジェットを追加 ② アプリ内でタスクを作成し「今日のフォーカス」に星を付けているか確認 ③ それでも空白の場合、端末を一度再起動すると iOS のウィジェットキャッシュ問題が解消することが多いです。</p>
     <p class="ko">① 홈 화면 빈 곳을 길게 누름 → 좌상단 <code>+</code> → 'Stepping' 검색 → '오늘의 할 일' 또는 '집중' 위젯 추가 ② 앱 내에서 작업을 만들고 오늘의 집중에 별표했는지 확인 ③ 그래도 빈칸이면 기기 재시작이 iOS 위젯 캐시 문제를 보통 해결합니다.</p>
+    <p class="de">① Halte eine leere Stelle auf dem Home-Bildschirm gedrückt → tippe oben links auf <code>+</code> → suche <strong>Stepping</strong> → füge das Widget „Heutige Aufgaben“ oder „Fokus“ hinzu; ② stelle sicher, dass du in der App Aufgaben erstellt und mit <strong>Heute im Fokus</strong> markiert hast; ③ wenn es weiterhin leer bleibt, löst ein Neustart des Geräts das Widget-Cache-Problem von iOS in der Regel.</p>
   </details>
 
   <details>
-    <summary class="zh">语音速记没反应 / 识别不了？</summary>
-    <summary class="en">Voice memo not working?</summary>
-    <summary class="ja">音声メモが反応しない／認識できませんか？</summary>
-    <summary class="ko">음성 메모가 반응하지 않나요 / 인식이 안 되나요?</summary>
+    <summary><span class="zh">语音速记没反应 / 识别不了？</span><span class="zht">語音速記沒反應 / 辨識不了？</span><span class="en">Voice memo not working?</span><span class="ja">音声メモが反応しない／認識できませんか？</span><span class="ko">음성 메모가 반응하지 않나요 / 인식이 안 되나요?</span><span class="de">Sprachdiktat reagiert nicht / erkennt nichts?</span></summary>
     <p class="zh">语音速记依赖 Apple 语音识别，需两项授权：<strong>麦克风</strong> 与 <strong>语音识别</strong>。去 <code>系统设置 → Stepping</code> 确认两者均已开启；首次使用会弹系统授权框，请点"允许"。识别出的文字可选"AI 拆解"进一步生成步骤。</p>
+    <p class="zht">語音速記依賴 Apple 語音辨識，需兩項授權：<strong>麥克風</strong> 與 <strong>語音辨識</strong>。去 <code>系統設定 → Stepping</code> 確認兩者均已開啟；首次使用會跳出系統授權視窗，請點「允許」。辨識出的文字可選「AI 拆解」進一步生成步驟。</p>
     <p class="en">Voice uses Apple Speech and needs two permissions: <strong>Microphone</strong> and <strong>Speech Recognition</strong>. In <code>Settings → Stepping</code> ensure both are on; grant the system prompt on first use. You can then "AI Breakdown" the transcript.</p>
     <p class="ja">音声メモは Apple の音声認識に依存し、2つの許可（<strong>マイク</strong> と <strong>音声認識</strong>）が必要です。<code>設定 → Stepping</code> で両方がオンになっているか確認してください。初回はシステムの許可ダイアログが出るので「許可」をタップします。認識されたテキストは「AI分解」でさらにステップを生成できます。</p>
     <p class="ko">음성 메모는 Apple 음성 인식에 의존하며 <strong>마이크</strong>와 <strong>음성 인식</strong> 두 권한이 필요합니다. <code>설정 → Stepping</code>에서 둘 다 켜져 있는지 확인하세요. 첫 사용 시 시스템 권한 창이 뜨면 '허용'을 누릅니다. 인식된 텍스트는 'AI 분해'로 단계를 더 생성할 수 있습니다.</p>
+    <p class="de">Das Sprachdiktat nutzt die Spracherkennung von Apple und braucht zwei Berechtigungen: <strong>Mikrofon</strong> und <strong>Spracherkennung</strong>. Gehe zu <code>Einstellungen → Stepping</code> und prüfe, ob beide aktiviert sind; beim ersten Einsatz erscheint der Systemdialog – tippe auf „Erlauben“. Den erkannten Text kannst du anschließend per „AI-Zerlegung“ in Schritte umwandeln.</p>
   </details>
 
   <details>
-    <summary class="zh">通知不推送？</summary>
-    <summary class="en">No notifications?</summary>
-    <summary class="ja">通知が来ませんか？</summary>
-    <summary class="ko">알림이 오지 않나요?</summary>
+    <summary><span class="zh">通知不推送？</span><span class="zht">通知不推送？</span><span class="en">No notifications?</span><span class="ja">通知が来ませんか？</span><span class="ko">알림이 오지 않나요?</span><span class="de">Es kommen keine Mitteilungen an?</span></summary>
     <p class="zh">① <code>系统设置 → Stepping → 通知</code> 已开启；② App 内「设置 → 通知」里相应开关（每日摘要 / 规划提醒 / 整理时刻）已打开；③ iOS 的"专注模式"可能静音通知，请检查。</p>
+    <p class="zht">① <code>系統設定 → Stepping → 通知</code> 已開啟；② App 內「設定 → 通知」裡相應開關（每日摘要 / 規劃提醒 / 整理時刻）已開啟；③ iOS 的「專注模式」可能靜音通知，請檢查。</p>
     <p class="en">① <code>Settings → Stepping → Notifications</code> enabled; ② in-app Settings toggles (daily summary / plan reminders / tidy moment) on; ③ iOS Focus mode may silence them — check it.</p>
     <p class="ja">① <code>設定 → Stepping → 通知</code> がオン ② アプリ内「設定 → 通知」の各スイッチ（毎日のサマリー／計画リマインダー／整理タイミング）がオン ③ iOS の「集中モード」が通知を消音する場合があるのでご確認を。</p>
     <p class="ko">① <code>설정 → Stepping → 알림</code> 켜짐 ② 앱 내 '설정 → 알림'의 각 스위치(매일 요약/계획 알림/정리 시간) 켜짐 ③ iOS '집중 모드'가 알림을 음소거할 수 있으니 확인하세요.</p>
+    <p class="de">① <code>Einstellungen → Stepping → Mitteilungen</code> ist aktiviert; ② in der App unter „Einstellungen → Mitteilungen“ sind die passenden Schalter (Tagesübersicht / Planungserinnerung / Aufräum-Moment) eingeschaltet; ③ der „Fokus“-Modus von iOS kann Mitteilungen stummschalten – bitte prüfen.</p>
   </details>
 
   <details>
-    <summary class="zh">怎么清除数据 / 重置？</summary>
-    <summary class="en">How to clear / reset data?</summary>
-    <summary class="ja">データを消去／リセットするには？</summary>
-    <summary class="ko">데이터를 어떻게 지우고 / 초기화하나요?</summary>
+    <summary><span class="zh">怎么清除数据 / 重置？</span><span class="zht">怎麼清除資料 / 重設？</span><span class="en">How to clear / reset data?</span><span class="ja">データを消去／リセットするには？</span><span class="ko">데이터를 어떻게 지우고 / 초기화하나요?</span><span class="de">Wie lösche ich Daten / setze zurück?</span></summary>
     <p class="zh">App 内「设置 → 清除数据」会清空本地全部任务、心情与偏好（不可恢复，请先导出重要项）。也可直接卸载 App 删除所有本地数据。</p>
+    <p class="zht">App 內「設定 → 清除資料」會清空本機全部任務、心情與偏好（無法還原，請先匯出重要項目）。也可直接解除安裝 App 刪除所有本機資料。</p>
     <p class="en">In-app Settings → Clear Data wipes all local tasks, mood, and preferences (irreversible — export first). Uninstalling the app also deletes everything local.</p>
     <p class="ja">アプリ内「設定 → データを消去」ですべてのローカルタスク・気分・設定を削除します（復元不可、重要な項目は事前にエクスポートを）。アプリをアンインストールしてもすべてのローカルデータが削除されます。</p>
     <p class="ko">앱 내 '설정 → 데이터 지우기'는 로컬 작업·기분·설정을 모두 삭제합니다(복구 불가, 중요한 항목은 먼저 내보내기). 앱을 삭제해도 모든 로컬 데이터가 지워집니다.</p>
+    <p class="de">In der App löscht „Einstellungen → Daten löschen“ alle lokalen Aufgaben, Stimmungen und Einstellungen (nicht wiederherstellbar – exportiere wichtige Inhalte vorher). Du kannst die App auch direkt deinstallieren, um alle lokalen Daten zu entfernen.</p>
   </details>
 
   <details>
-    <summary class="zh">字号太小 / 想放大？</summary>
-    <summary class="en">Text too small / want larger?</summary>
-    <summary class="ja">文字が小さい／大きくしたいですか？</summary>
-    <summary class="ko">글자가 너무 작아요 / 키우고 싶어요?</summary>
+    <summary><span class="zh">字号太小 / 想放大？</span><span class="zht">字體太小 / 想放大？</span><span class="en">Text too small / want larger?</span><span class="ja">文字が小さい／大きくしたいですか？</span><span class="ko">글자가 너무 작아요 / 키우고 싶어요?</span><span class="de">Schrift zu klein / möchtest du sie vergrößern?</span></summary>
     <p class="zh">App 内「设置 → 字号缩放」可整体放大界面文字，并会跟随系统"动态字体"设置。</p>
+    <p class="zht">App 內「設定 → 字體縮放」可整體放大介面文字，並會跟隨系統「動態字型」設定。</p>
     <p class="en">In-app Settings → Font Size scales the whole UI and respects iOS Dynamic Type.</p>
     <p class="ja">アプリ内「設定 → 文字サイズ」で画面全体の文字を拡大でき、iOS の「動的タイプ」設定にも追従します。</p>
     <p class="ko">앱 내 '설정 → 글자 크기'에서 화면 전체 글자를 키울 수 있고 iOS '동적 글자형' 설정도 따릅니다.</p>
+    <p class="de">In der App kannst du unter „Einstellungen → Schriftgröße“ den Text der gesamten Oberfläche vergrößern; zudem folgt sie der Systemeinstellung „Dynamische Schrift“.</p>
   </details>
 
   <!-- ============ 功能地图 ============ -->
   <h2 class="zh">三、功能一览</h2>
+  <h2 class="zht">三、功能一覽</h2>
   <h2 class="en">3. Feature Map</h2>
   <h2 class="ja">3. 機能一覧</h2>
   <h2 class="ko">3. 기능 한눈에 보기</h2>
+  <h2 class="de">3. Funktionsübersicht</h2>
   <div class="card">
     <p class="zh"><span class="pill ok">免费</span>任务管理 · 今日聚焦 · 带入今天 · 语音速记（识别/建任务/单步专注）· 心情记录 · 番茄钟 · 小组件 · 夜间无限模式 · 模板库 · 成就海报/分享卡 · 基础洞察（连续行动/情绪路由/积压/专注时长）</p>
+    <p class="zht"><span class="pill ok">免費</span>任務管理 · 今日聚焦 · 帶入今天 · 語音速記（辨識/建任務/單步專注）· 心情記錄 · 番茄鐘 · 小工具 · 夜間無限模式 · 模板庫 · 成就海報/分享卡 · 基礎洞察（連續行動/情緒路由/積壓/專注時長）</p>
     <p class="en"><span class="pill ok">Free</span>Tasks · Today Focus · Bring-to-Today · Voice memo (transcribe/build/single-step) · Mood · Pomodoro · Widgets · Night unlimited · Templates · Achievement/share cards · Basic insights</p>
     <p class="ja"><span class="pill ok">無料</span>タスク管理・今日のフォーカス・今日に持ち込む・音声メモ（認識／タスク作成／単一ステップ集中）・気分記録・ポモドーロ・ウィジェット・夜間無制限モード・テンプレート・実績ポスター／共有カード・基本インサイト（連続行動／感情ルーティング／滞留警告／集中時間）</p>
     <p class="ko"><span class="pill ok">무료</span>작업 관리·오늘의 집중·오늘로 가져오기·음성 메모(인식/작업 생성/단일 단계 집중)·기분 기록·뽀모도로·위젯·야간 무제한 모드·템플릿·성취 포스터/공유 카드·기본 인사이트(연속 행동/감정 라우팅/누적 경고/집중 시간)</p>
+    <p class="de"><span class="pill ok">Kostenlos</span>Aufgabenverwaltung · Heute im Fokus · Auf heute holen · Sprachdiktat (erkennen / Aufgabe anlegen / Einzelschritt-Fokus) · Stimmungsprotokoll · Pomodoro · Widgets · Unbegrenzter Nachtmodus · Vorlagen · Erfolgs-Poster/Teilen-Karten · Basis-Einblicke (Aktionsserie / Stimmungs-Routing / Rückstand / Fokusdauer)</p>
     <p class="zh"><span class="pill warn">Pro</span>AI 无限 · 引导专注无限 · PDF 导出 · 5 个高级洞察板块（高效时段/模式觉察/时间校准/难度×完成率/能量·时段·心情关联）</p>
+    <p class="zht"><span class="pill warn">Pro</span>AI 無限 · 引導專注無限 · PDF 匯出 · 5 個高階洞察板塊（高效時段/模式覺察/時間校準/難度×完成率/能量·時段·心情關聯）</p>
     <p class="en"><span class="pill warn">Pro</span>Unlimited AI · Unlimited Guided Focus · PDF export · 5 advanced insight panels</p>
     <p class="ja"><span class="pill warn">Pro</span>AI無制限・ガイド集中無制限・PDF出力・高度インサイト5項目（高效時間帯／パターン気づき／時間キャリブレーション／難易度×完了率／エネルギー・時間帯・気分の関連）</p>
     <p class="ko"><span class="pill warn">Pro</span>AI 무제한·가이드 집중 무제한·PDF 내보내기·고급 인사이트 5개(효율 시간대/패턴 인식/시간 보정/난이도×완료율/에너지·시간대·기분 연관)</p>
+    <p class="de"><span class="pill warn">Pro</span>AI unbegrenzt · Begleitete Fokussierung unbegrenzt · PDF-Export · 5 erweiterte Einblick-Bereiche (produktive Zeitfenster / Mustererkennung / Zeitkalibrierung / Schwierigkeit × Abschlussrate / Energie · Zeitfenster · Stimmung im Zusammenhang)</p>
   </div>
 
   <!-- ============ 联系 ============ -->
   <h2 class="zh">四、联系与支持</h2>
+  <h2 class="zht">四、聯絡與支援</h2>
   <h2 class="en">4. Contact &amp; Support</h2>
   <h2 class="ja">4. お問い合わせとサポート</h2>
   <h2 class="ko">4. 문의 및 지원</h2>
+  <h2 class="de">4. Kontakt &amp; Support</h2>
   <div class="card">
     <p class="zh">📧 技术支持：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        🔒 隐私问题：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        <span class="pill">回复时效</span>1–2 个工作日内</p>
+    <p class="zht">📧 技術支援：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
+       🔒 隱私問題：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
+       <span class="pill">回覆時效</span>1–2 個工作日內</p>
     <p class="en">📧 Support: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        🔒 Privacy: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        <span class="pill">Response</span>within 1–2 business days</p>
@@ -263,19 +269,22 @@
     <p class="ko">📧 기술 지원：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        🔒 개인정보：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/>
        <span class="pill">답변</span>1–2 영업일 이내</p>
+    <p class="de">📧 Technischer Support: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/> 🔒 Datenschutz: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a><br/> <span class="pill">Antwortzeit</span>innerhalb von 1–2 Werktagen</p>
   </div>
 
   <footer>
     <span class="zh">Stepping · 为分心与执行困难的大脑而做 · 本页内容如与 App 实际功能不一致，以 App 内为准。</span>
+    <span class="zht">Stepping · 為分心與執行困難的大腦而做 · 本頁內容如與 App 實際功能不一致，以 App 內為準。</span>
     <span class="en">Stepping · Built for distracted &amp; exec-function-challenged brains · If this page conflicts with the app, the app prevails.</span>
     <span class="ja">Stepping · 集中困難・実行機能の課題がある脳のために · 本ページの内容がアプリの実際の機能と異なる場合はアプリ内の表示が優先されます。</span>
     <span class="ko">Stepping · 산만함과 실행 기능의 어려움을 겪는 뇌를 위해 · 이 페이지 내용이 앱 실제 기능과 다를 경우 앱 내 표시가 우선합니다.</span>
+    <span class="de">Stepping · Für abgelenkte Gehirne mit Schwierigkeiten in der exekutiven Funktion · Sollte diese Seite von den tatsächlichen App-Funktionen abweichen, gilt die App.</span>
   </footer>
 </div>
 <script>
   function setLang(l){
     document.body.setAttribute('data-lang', l);
-    ['zh','en','ja','ko'].forEach(function(x){
+    ['zh','zht','en','ja','ko','de'].forEach(function(x){
       var b=document.getElementById('btn'+x.charAt(0).toUpperCase()+x.slice(1));
       if(b) b.classList.toggle('active', x===l);
     });
