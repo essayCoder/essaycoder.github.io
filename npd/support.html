@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NPD避雷针 / Narcissist Check — 技术支持 Support</title>
+  <style>
+    :root { --gold:#C9A24B; --ink:#1c2230; --muted:#5b6472; --line:#e6e8ee; --bg:#fff; --chip:#f6f7fa; --hl:#eef5ee; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); line-height:1.8; }
+    .topbar { position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--line); }
+    .topbar-inner { max-width:780px; margin:0 auto; padding:14px 22px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .brand { font-weight:700; font-size:15px; margin-right:auto; }
+    .brand small { font-weight:400; color:var(--muted); }
+    .tabs { display:inline-flex; background:var(--chip); border-radius:999px; padding:4px; }
+    .tab { border:0; background:transparent; color:var(--muted); font-size:14px; padding:7px 16px; border-radius:999px; cursor:pointer; font-family:inherit; }
+    .tab.active { background:#fff; color:var(--ink); box-shadow:0 1px 3px rgba(0,0,0,.12); font-weight:600; }
+    .wrap { max-width:780px; margin:0 auto; padding:34px 22px 80px; }
+    .pane { display:none; }
+    .pane.active { display:block; }
+    h1 { font-size:23px; margin:0 0 4px; }
+    h2 { font-size:17px; margin:30px 0 8px; color:var(--gold); }
+    h3 { font-size:15px; margin:18px 0 4px; }
+    p { margin:9px 0; }
+    ul { margin:8px 0; padding-left:22px; }
+    li { margin:5px 0; }
+    .muted { color:var(--muted); }
+    .hl { background:var(--hl); border:1px solid #cfe3cf; border-radius:10px; padding:14px 16px; margin:16px 0; }
+    .warn { background:#fff7e6; border:1px solid #f0d9a8; border-radius:10px; padding:14px 16px; margin:16px 0; }
+    a { color:#2a6cb0; }
+    code { background:var(--chip); padding:1px 6px; border-radius:5px; font-size:13px; }
+    footer { margin-top:40px; padding-top:18px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">NPD避雷针 <small>· Narcissist Check</small></div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" id="tab-zh" role="tab" aria-controls="pane-zh" onclick="showLang('zh')">中文</button>
+        <button class="tab" id="tab-en" role="tab" aria-controls="pane-en" onclick="showLang('en')">English</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- ============ 中文 ============ -->
+    <section class="pane active" id="pane-zh" role="tabpanel" aria-labelledby="tab-zh">
+      <h1>技术支持</h1>
+      <p class="muted">NPD避雷针 / Narcissist Check · 最后更新：2026-09-15</p>
+
+      <div class="hl">
+        <strong>遇到问题时：</strong>先在本页「常见问题」查找对应解法；仍未解决，请通过文末邮箱联系我们。我们会在 2 个工作日内回复。
+      </div>
+
+      <h2>1. 联系我们</h2>
+      <p>技术支持邮箱：<a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
+      <p>请在邮件中注明：设备型号、系统版本、App 版本号（设置 → 关于），以及问题截图，便于快速定位。</p>
+
+      <h2>2. 常见问题（FAQ）</h2>
+
+      <h3>2.1 澄清镜分析提示「需要先同意」？</h3>
+      <p>澄清镜、练习场会调用第三方 AI（DeepSeek）。首次使用任一 AI 功能时，App 会弹窗说明「发送什么 / 发给谁 / 用途」，需点击「同意并继续」后方可使用。不同意时，本地功能（日记、证据、图书馆等）仍可正常使用，仅 AI 功能不可用。可在「设置 → 隐私与同意」中重新查看或撤回同意。</p>
+
+      <h3>2.2 粘贴对话后分析失败 / 一直转圈？</h3>
+      <ul>
+        <li>检查网络：AI 分析需要联网，请在 Wi-Fi 或蜂窝网络下重试。</li>
+        <li>文本过长：单次建议不超过约 4000 字，可分次提交。</li>
+        <li>截图不清晰：请确保截图文字清晰、未遮挡，且体积不超过 10MB。</li>
+        <li>仍失败：完全退出 App 后重新打开，或更新到最新版本。</li>
+      </ul>
+
+      <h3>2.3 忘记隐私锁密码怎么办？</h3>
+      <p>出于安全设计，隐私锁密码不存储在服务器、无法找回。连续输错或选择「忘记密码」会<strong>清空本机全部本地数据</strong>（日记、证据、练习记录）。开启「云同步备份（VIP）」的数据可重新下载恢复；未开启云同步的数据将无法找回，请谨慎操作。</p>
+
+      <h3>2.4 数据存在哪里？会不会泄露？</h3>
+      <p>日记、证据、练习记录默认仅存于你的设备（加密）。仅当你主动使用 AI 功能时，输入内容才会发给 DeepSeek；分析完成后原文即焚、不留存。详情见<a href="privacy_policy.html">隐私政策</a>。</p>
+
+      <h3>2.5 如何导出证据 / PDF？</h3>
+      <p>进入「证据拱廊」，选择需要导出的条目，点击「导出 PDF」即可保存到本机文件或分享。PDF 仅包含你选择的内容，不会上传。</p>
+
+      <h3>2.6 云同步备份（VIP）说明</h3>
+      <p>开启后，本地数据会加密传输至我们的同步服务，用于多设备恢复。你可随时在「设置 → 云同步」中关闭或删除云端备份。关闭后云端数据按约定删除。</p>
+
+      <h2>3. 订阅与支付</h2>
+      <ul>
+        <li>订阅通过 App Store / Google Play 完成，支付由平台处理，我们不经手银行卡信息。</li>
+        <li>管理 / 取消订阅：iOS 在「设置 → Apple ID → 订阅」，Android 在 Play 商店「订阅」中操作。</li>
+        <li>已扣费但未解锁：请先确认登录同一账号、重启 App；仍未解锁请联系我们并附上收据（订单号）。</li>
+        <li>退款：由平台规则决定，请通过 App Store / Google Play 申请，我们可协助提供购买凭证。</li>
+      </ul>
+
+      <h2>4. 兼容性与系统要求</h2>
+      <ul>
+        <li>iPhone：iOS 15.0 及以上</li>
+        <li>iPad：iPadOS 15.0 及以上</li>
+        <li>Android：10.0 及以上</li>
+      </ul>
+
+      <h2>5. 重要提示</h2>
+      <div class="warn">
+        <strong>本应用不是诊断工具，不替代专业心理治疗。</strong>如果你正处于危机中、有自伤或伤人风险，请立即联系当地紧急救援（如拨打 110 / 120）或心理援助热线（如全国心理援助热线 12356）。你值得被认真对待。
+      </div>
+
+      <footer>本页为中文版本。如与英文版本存在理解差异，以中文版本为准。</footer>
+    </section>
+
+    <!-- ============ English ============ -->
+    <section class="pane" id="pane-en" role="tabpanel" aria-labelledby="tab-en">
+      <h1>Support</h1>
+      <p class="muted">Narcissist Check / NPD避雷针 · Last updated: 2026-09-15</p>
+
+      <div class="hl">
+        <strong>Need help?</strong> Check the FAQ below first. If your issue isn't resolved, contact us by email at the bottom of this page. We typically reply within 2 business days.
+      </div>
+
+      <h2>1. Contact Us</h2>
+      <p>Support email: <a href="mailto:mingzhaoluw@gmail.com">mingzhaoluw@gmail.com</a></p>
+      <p>Please include your device model, OS version, app version (Settings → About), and a screenshot of the issue so we can help quickly.</p>
+
+      <h2>2. Frequently Asked Questions</h2>
+
+      <h3>2.1 Clarity Mirror says "consent required"?</h3>
+      <p>Clarity Mirror and the Practice Field call a third-party AI (DeepSeek). The first time you use any AI feature, the app shows a notice explaining what is sent, to whom, and why, and you must tap "Agree &amp; Continue". Without consent, local features (diary, evidence, library) still work — only AI features are disabled. You can review or withdraw consent under Settings → Privacy &amp; Consent.</p>
+
+      <h3>2.2 Analysis fails / keeps spinning after I paste a conversation?</h3>
+      <ul>
+        <li>Check your connection: AI analysis needs internet. Retry on Wi-Fi or cellular.</li>
+        <li>Text too long: keep each submission under ~4,000 characters; split longer ones.</li>
+        <li>Screenshot unclear: ensure text is legible and unobstructed, under 10MB.</li>
+        <li>Still failing: force-close the app and reopen, or update to the latest version.</li>
+      </ul>
+
+      <h3>2.3 Forgot my privacy-lock passcode?</h3>
+      <p>By design, the privacy-lock passcode is not stored on any server and cannot be recovered. After repeated wrong attempts or choosing "Forgot passcode", <strong>all local data on this device is erased</strong> (diary, evidence, practice logs). Data backed up via Cloud Sync (VIP) can be re-downloaded; data without cloud sync cannot be recovered. Please proceed with care.</p>
+
+      <h3>2.4 Where is my data stored? Can it leak?</h3>
+      <p>Diary, evidence, and practice logs stay encrypted on your device by default. Your input is sent to DeepSeek only when you actively use an AI feature; originals are discarded after analysis and never retained. See the <a href="privacy_policy.html">Privacy Policy</a> for details.</p>
+
+      <h3>2.5 How do I export evidence / PDF?</h3>
+      <p>Open Evidence Gallery, select the items to export, and tap "Export PDF" to save or share. The PDF contains only what you select and is never uploaded.</p>
+
+      <h3>2.6 Cloud Sync backup (VIP)</h3>
+      <p>When enabled, local data is transmitted encrypted to our sync service for multi-device recovery. You can turn sync off or delete the cloud backup anytime under Settings → Cloud Sync. Cloud data is deleted as agreed after you disable sync.</p>
+
+      <h2>3. Subscriptions &amp; Billing</h2>
+      <ul>
+        <li>Subscriptions are handled by the App Store / Google Play; we never handle your card details.</li>
+        <li>Manage / cancel: on iOS via Settings → Apple ID → Subscriptions; on Android via Play Store → Subscriptions.</li>
+        <li>Charged but not unlocked: confirm you're signed in with the same account and restart the app; if still locked, contact us with your receipt (order ID).</li>
+        <li>Refunds: governed by platform policy — request via App Store / Google Play; we can provide proof of purchase.</li>
+      </ul>
+
+      <h2>4. Compatibility &amp; Requirements</h2>
+      <ul>
+        <li>iPhone: iOS 15.0 or later</li>
+        <li>iPad: iPadOS 15.0 or later</li>
+        <li>Android: 10.0 or later</li>
+      </ul>
+
+      <h2>5. Important Notice</h2>
+      <div class="warn">
+        <strong>This app is not a diagnostic tool and does not replace professional therapy.</strong> If you are in crisis or at risk of harming yourself or others, contact local emergency services immediately (e.g., call 110 / 120) or a crisis hotline (e.g., China mental-health hotline 12356). You deserve to be taken seriously.
+      </div>
+
+      <footer>This is the English version. If there is any conflict in interpretation, the Chinese version prevails.</footer>
+    </section>
+  </div>
+
+  <script>
+    function showLang(lang) {
+      document.getElementById('pane-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('pane-en').classList.toggle('active', lang === 'en');
+      document.getElementById('tab-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+      try { location.hash = lang; } catch (e) {}
+    }
+    (function () {
+      var h = (location.hash || '').replace('#', '');
+      if (h === 'en' || h === 'zh') showLang(h);
+    })();
+  </script>
+</body>
+</html>
