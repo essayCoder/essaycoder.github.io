@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技术支持 · 课时记 ClassLog</title>
+<meta name="description" content="课时记（ClassLog）技术支持：快速上手、常见问题解答与联系方式。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FAFAF8;--surface:#FFFFFF;--surface-2:#F3F2EF;--text:#1F1D1A;--text-2:#6E6A64;
+  --line:#E8E6E3;--brand:#3D4F6F;--brand-soft:#EAEEF5;--brand-on:#FFFFFF;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#262320;--surface:#2F2B26;--surface-2:#3B362F;--text:#F3EFE9;--text-2:#B0AAA0;
+        --line:#473F38;--brand:#A6B7D2;--brand-soft:#333A49;--brand-on:#262320;}
+}
+body{background:var(--bg);color:var(--text);
+  font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .in{max-width:840px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
+.mark{width:22px;height:22px;border-radius:6px;background:var(--brand);flex:none}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.langs button{background:none;border:0;padding:6px 13px;font:inherit;font-size:13px;color:var(--text-2);cursor:pointer;white-space:nowrap}
+.bname{white-space:nowrap}
+.bname i{font-style:normal}
+.langs button.on{background:var(--brand);color:var(--brand-on)}
+main{max-width:840px;margin:0 auto;padding:44px 24px 64px}
+h1{font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.sub{color:var(--text-2);font-size:15px;margin-top:8px}
+h2{font-size:17px;font-weight:500;margin:38px 0 14px}
+h3{font-size:15px;font-weight:500;margin:24px 0 6px}
+p{margin-bottom:12px}
+ol,ul{margin:6px 0 14px;padding-left:22px}
+li{margin-bottom:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:20px 0}
+.card ol{margin-bottom:0}
+.card p:last-child{margin-bottom:0}
+.faq{border-top:1px solid var(--line);padding-top:20px;margin-top:20px}
+.faq:first-of-type{border-top:0;padding-top:0;margin-top:14px}
+.faq h3{margin-top:0}
+.faq p{margin-bottom:0;color:var(--text)}
+.note{background:var(--brand-soft);border-radius:0 8px 8px 0;border-left:3px solid var(--brand);padding:15px 20px;margin:18px 0;font-size:15px}
+.note p:last-child{margin-bottom:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;color:var(--text-2)}
+.meta b{font-weight:500;color:var(--text)}
+a{color:var(--brand)}
+footer{border-top:1px solid var(--line);color:var(--text-2);font-size:13px;margin-top:20px}
+footer .in{max-width:840px;margin:0 auto;padding:22px 24px;display:flex;flex-wrap:wrap;gap:8px 18px}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  main{padding:32px 20px 56px}
+  h1{font-size:25px}
+  .bar .in{padding:11px 16px;gap:10px}
+  .langs button{padding:5px 9px;font-size:12px}
+  .bname i{display:none}
+  .card{padding:18px 18px}
+}
+@media (max-width:400px){
+  .bar .in{padding:11px 14px;gap:8px}
+  .bname{display:none}
+  .langs button{padding:5px 8px}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="in">
+    <div class="brand"><span class="mark"></span><span class="bname">课时记 <i>· ClassLog</i></span></div>
+    <div class="langs">
+      <button type="button" data-set="zh" class="on">中文</button>
+      <button type="button" data-set="en">English</button>
+      <button type="button" data-set="ja">日本語</button>
+      <button type="button" data-set="ko">한국어</button>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section data-doc="zh">
+  <h1>技术支持</h1>
+  <p class="sub">课时记 · ClassLog — 把孩子的每一节课，都记得明明白白</p>
+
+  <h2>快速上手</h2>
+  <div class="card">
+    <ol>
+      <li>在首页添加孩子（支持多个孩子，可随时切换）</li>
+      <li>添加课程：填写课程名称、老师、上课地点、总课时数和单价</li>
+      <li>设置每周的上课时间，课程表会自动排好</li>
+      <li>每天在「今日」页一键打卡；缴费后在课程详情页记一笔金额</li>
+    </ol>
+  </div>
+  <p>剩余课时、已消耗金额和费用占比都会自动计算。所有数据保存在你的设备本地，不需要注册账号。</p>
+
+  <h2>常见问题</h2>
+
+  <div class="faq">
+    <h3>我的数据存在哪里？会上传吗？</h3>
+    <p>只存在你的设备上。本应用不联服务器、不需要账号，也不会把数据发送到任何地方。</p>
+  </div>
+
+  <div class="faq">
+    <h3>换手机了，数据怎么迁移？</h3>
+    <p>旧设备：设置 → 导入导出 → 导出 CSV，再通过微信、邮件或隔空投送把文件发给自己。新设备：设置 → 导入导出 → 导入 CSV。</p>
+  </div>
+
+  <div class="faq">
+    <h3>卸载应用会丢数据吗？</h3>
+    <p>会。数据全部保存在本机，卸载后无法恢复。卸载前请先导出一份 CSV 备份。</p>
+  </div>
+
+  <div class="note">
+    <p>本应用没有云端同步，数据不会自动备份到任何地方。养成定期导出 CSV 的习惯，是保护记录最可靠的方式。</p>
+  </div>
+
+  <div class="faq">
+    <h3>漏记了几节课，可以补打卡吗？</h3>
+    <p>可以。进入课程详情页，手动添加打卡记录，日期可以自行选择，也可以修改已存在的记录。</p>
+  </div>
+
+  <div class="faq">
+    <h3>剩余课时是怎么算的？</h3>
+    <p>总课时减去已打卡的次数。课程详情页会同时显示剩余课时和已消耗的金额。</p>
+  </div>
+
+  <div class="faq">
+    <h3>怎么记录缴费？</h3>
+    <p>在课程详情页添加缴费记录，填写金额和日期。统计页会汇总每个孩子的学习支出和费用占比。</p>
+  </div>
+
+  <div class="faq">
+    <h3>支持多个孩子吗？</h3>
+    <p>支持。首页可以添加多个孩子并随时切换，课程、课时和缴费都按孩子分别统计。</p>
+  </div>
+
+  <div class="faq">
+    <h3>导出的 CSV 用什么打开？</h3>
+    <p>CSV 是通用表格格式，可以用 Excel、Numbers、WPS 或 Google Sheets 打开。</p>
+  </div>
+
+  <div class="faq">
+    <h3>怎么切换深色模式或者语言？</h3>
+    <p>设置 → 外观可以选浅色、深色或跟随系统；设置 → 语言支持中文、English、日本語、한국어。</p>
+  </div>
+
+  <div class="faq">
+    <h3>课程表从周一开始还是周日开始？</h3>
+    <p>设置 → 周起始日可以随时切换。</p>
+  </div>
+
+  <div class="faq">
+    <h3>会读取我的定位、通讯录或相册吗？</h3>
+    <p>不会。本应用不申请任何系统权限，详细说明见<a href="privacy.html">隐私政策</a>。</p>
+  </div>
+
+  <div class="faq">
+    <h3>怎么给应用评分？</h3>
+    <p>设置 → 给我们评分，会弹出系统评分窗口。也可以直接到应用商店的页面留言。</p>
+  </div>
+
+  <div class="faq">
+    <h3>发现 Bug 或者有功能建议，怎么反馈？</h3>
+    <p>发邮件到下面的地址即可。如果能附上设备型号、系统版本和应用版本（设置页可查看），会更方便我们定位问题。</p>
+  </div>
+
+  <h2>还没解决？</h2>
+  <p>发邮件到 <a href="mailto:shangshagnqian123@qq.com">shangshagnqian123@qq.com</a>，我们会尽快回复。</p>
+  <p>为了更快定位问题，建议在邮件里写明：</p>
+  <ul>
+    <li>设备型号与系统版本（例如 iPhone 15 / iOS 18.2）</li>
+    <li>应用版本号（设置页可查看）</li>
+    <li>问题出现的步骤，或一张截图</li>
+  </ul>
+
+  <h2>关于本应用</h2>
+  <div class="meta">
+    <span><b>名称</b>　课时记 / ClassLog / 授業記録 / 수업기록</span>
+    <span><b>支持平台</b>　iOS、Android</span>
+    <span><b>支持语言</b>　中文、English、日本語、한국어</span>
+    <span><b>当前版本</b>　2.0.1（以应用商店显示为准）</span>
+  </div>
+</section>
+
+<section data-doc="en" hidden>
+  <h1>Support</h1>
+  <p class="sub">ClassLog — Track every class for your kids</p>
+
+  <h2>Getting started</h2>
+  <div class="card">
+    <ol>
+      <li>Add your child on the home screen (multiple children supported, switch anytime)</li>
+      <li>Add a course: name, teacher, location, total lesson count, and unit price</li>
+      <li>Set the weekly class times and your schedule fills itself in</li>
+      <li>Check in from the Today tab each day; record a payment from the course detail page</li>
+    </ol>
+  </div>
+  <p>Remaining lessons, amount spent, and cost breakdown are calculated automatically. All data stays on your device — no account required.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <div class="faq">
+    <h3>Where is my data stored? Is it uploaded anywhere?</h3>
+    <p>On your device only. The app does not connect to any server, requires no account, and never sends your data anywhere.</p>
+  </div>
+
+  <div class="faq">
+    <h3>I got a new phone. How do I move my data?</h3>
+    <p>On the old device: Settings → Import / Export → Export CSV, then send the file to yourself (Messages, email, or AirDrop). On the new device: Settings → Import / Export → Import CSV.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Will I lose my data if I uninstall the app?</h3>
+    <p>Yes. Everything is stored locally, so uninstalling erases it permanently. Export a CSV backup first.</p>
+  </div>
+
+  <div class="note">
+    <p>There is no cloud sync, and your data is never backed up automatically. Exporting a CSV now and then is the most reliable way to protect your records.</p>
+  </div>
+
+  <div class="faq">
+    <h3>I forgot to check in. Can I add a record afterwards?</h3>
+    <p>Yes. Open the course detail page and add a check-in manually — you can pick any date, and edit existing records too.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How are remaining lessons calculated?</h3>
+    <p>Total lessons minus completed check-ins. The course detail page shows both the remaining count and the amount spent so far.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I record a payment?</h3>
+    <p>Add a payment from the course detail page with the amount and date. The Stats tab totals each child's spending and cost breakdown.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Does it support more than one child?</h3>
+    <p>Yes. Add several children on the home screen and switch between them — courses, lessons, and payments are tracked separately for each.</p>
+  </div>
+
+  <div class="faq">
+    <h3>What can I open the exported CSV with?</h3>
+    <p>CSV is a universal spreadsheet format — Excel, Numbers, WPS, and Google Sheets all work.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I change dark mode or the language?</h3>
+    <p>Settings → Appearance lets you choose light, dark, or follow system. Settings → Language supports Chinese, English, Japanese, and Korean.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Does the week start on Monday or Sunday?</h3>
+    <p>You can switch this anytime under Settings → Week start.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Does the app access my location, contacts, or photos?</h3>
+    <p>No. The app requests no system permissions at all — see the <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I rate the app?</h3>
+    <p>Settings → Rate us opens the system review prompt. You can also leave a review directly on the App Store or Google Play page.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I report a bug or suggest a feature?</h3>
+    <p>Email us at the address below. Including your device model, OS version, and app version (visible in Settings) helps us find the issue faster.</p>
+  </div>
+
+  <h2>Still stuck?</h2>
+  <p>Email <a href="mailto:shangshagnqian123@qq.com">shangshagnqian123@qq.com</a> and we will get back to you as soon as we can.</p>
+  <p>To help us help you faster, please include:</p>
+  <ul>
+    <li>Device model and OS version (e.g. iPhone 15 / iOS 18.2)</li>
+    <li>App version (visible in Settings)</li>
+    <li>The steps that reproduce the problem, or a screenshot</li>
+  </ul>
+
+  <h2>About this app</h2>
+  <div class="meta">
+    <span><b>Name</b>　课时记 / ClassLog / 授業記録 / 수업기록</span>
+    <span><b>Platforms</b>　iOS, Android</span>
+    <span><b>Languages</b>　Chinese, English, Japanese, Korean</span>
+    <span><b>Version</b>　2.0.1 (see the store listing for the latest)</span>
+  </div>
+</section>
+
+<section data-doc="ja" hidden>
+  <h1>サポート</h1>
+  <p class="sub">授業記録 · ClassLog — お子様のすべての授業を明確に記録しましょう</p>
+
+  <h2>はじめに</h2>
+  <div class="card">
+    <ol>
+      <li>ホーム画面でお子様を追加（複数のお子様に対応、いつでも切り替え可能）</li>
+      <li>授業を追加：授業名、先生、場所、総回数、単価を入力</li>
+      <li>毎週の授業時間を設定すると、時間割が自動で組み上がります</li>
+      <li>毎日「今日」タブでワンタップ出席。支払い後は授業の詳細ページで金額を記録</li>
+    </ol>
+  </div>
+  <p>残り回数、支払済み金額、費用の割合は自動で計算されます。データはすべて端末内に保存され、アカウント登録は不要です。</p>
+
+  <h2>よくあるご質問</h2>
+
+  <div class="faq">
+    <h3>データはどこに保存されますか？送信されますか？</h3>
+    <p>お使いの端末内のみです。本アプリはサーバーに接続せず、アカウントも不要で、データをどこかへ送信することもありません。</p>
+  </div>
+
+  <div class="faq">
+    <h3>機種変更した場合、データはどう移行しますか？</h3>
+    <p>旧端末：「設定 → インポート / エクスポート → CSVエクスポート」で書き出し、LINEやメール、AirDropなどでご自身に送信します。新端末：「設定 → インポート / エクスポート → CSVインポート」。</p>
+  </div>
+
+  <div class="faq">
+    <h3>アプリを削除するとデータは消えますか？</h3>
+    <p>消えます。データはすべて端末内にあるため、削除すると復元できません。削除前にCSVを書き出してバックアップしてください。</p>
+  </div>
+
+  <div class="note">
+    <p>クラウド同期はないため、データが自動的にバックアップされることはありません。定期的にCSVを書き出すのが、記録を守る最も確実な方法です。</p>
+  </div>
+
+  <div class="faq">
+    <h3>出席し忘れました。後から記録できますか？</h3>
+    <p>できます。授業の詳細ページから出席記録を手動で追加でき、日付も自由に選べます。既存の記録の修正も可能です。</p>
+  </div>
+
+  <div class="faq">
+    <h3>残り回数はどう計算されますか？</h3>
+    <p>総回数から出席済みの回数を引いた数です。授業の詳細ページに残り回数と支払済み金額が表示されます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>支払いはどう記録しますか？</h3>
+    <p>授業の詳細ページから支払いを追加し、金額と日付を入力します。統計ページでお子様ごとの支出と費用の割合が集計されます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>複数のお子様を登録できますか？</h3>
+    <p>できます。ホーム画面で複数追加していつでも切り替えられ、授業・回数・支払いはお子様ごとに分けて集計されます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>書き出したCSVは何で開けますか？</h3>
+    <p>CSVは汎用的な表形式です。Excel、Numbers、WPS、Googleスプレッドシートで開けます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>ダークモードや言語はどう切り替えますか？</h3>
+    <p>「設定 → 外観」でライト / ダーク / システムに従うを選択できます。「設定 → 言語」は中文、English、日本語、한국어に対応しています。</p>
+  </div>
+
+  <div class="faq">
+    <h3>週の始まりは月曜と日曜のどちらですか？</h3>
+    <p>「設定 → カレンダー」でいつでも切り替えられます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>位置情報や連絡先、写真にアクセスしますか？</h3>
+    <p>しません。本アプリはいかなるシステム権限も要求しません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  </div>
+
+  <div class="faq">
+    <h3>アプリを評価するには？</h3>
+    <p>「設定 → アプリを評価」でシステムの評価ダイアログが開きます。ストアのページに直接レビューを書いていただくこともできます。</p>
+  </div>
+
+  <div class="faq">
+    <h3>不具合の報告や機能の提案は？</h3>
+    <p>下記のメールアドレスまでご連絡ください。端末の機種、OSのバージョン、アプリのバージョン（設定画面で確認できます）を添えていただけると助かります。</p>
+  </div>
+
+  <h2>解決しない場合</h2>
+  <p><a href="mailto:shangshagnqian123@qq.com">shangshagnqian123@qq.com</a> までご連絡ください。できるだけ早く返信いたします。</p>
+  <p>より早く対応するため、以下を添えてお送りください。</p>
+  <ul>
+    <li>端末の機種とOSのバージョン（例：iPhone 15 / iOS 18.2）</li>
+    <li>アプリのバージョン（設定画面で確認できます）</li>
+    <li>問題が起きる手順、またはスクリーンショット</li>
+  </ul>
+
+  <h2>このアプリについて</h2>
+  <div class="meta">
+    <span><b>名称</b>　课时记 / ClassLog / 授業記録 / 수업기록</span>
+    <span><b>対応プラットフォーム</b>　iOS、Android</span>
+    <span><b>対応言語</b>　中国語、英語、日本語、韓国語</span>
+    <span><b>現在のバージョン</b>　2.0.1（最新版はストアの表示をご確認ください）</span>
+  </div>
+</section>
+
+<section data-doc="ko" hidden>
+  <h1>고객 지원</h1>
+  <p class="sub">수업기록 · ClassLog — 아이의 모든 수업을 명확하게 기록하세요</p>
+
+  <h2>시작하기</h2>
+  <div class="card">
+    <ol>
+      <li>홈 화면에서 자녀 추가(여러 명 지원, 언제든 전환 가능)</li>
+      <li>수업 추가: 수업명, 선생님, 장소, 총 수업 횟수, 단가 입력</li>
+      <li>매주 수업 시간을 설정하면 시간표가 자동으로 구성됩니다</li>
+      <li>매일 '오늘' 탭에서 한 번에 출석 체크, 결제 후에는 수업 상세 페이지에서 금액을 기록</li>
+    </ol>
+  </div>
+  <p>남은 횟수, 결제 금액, 비용 비중은 자동으로 계산됩니다. 모든 데이터는 기기에 저장되며 계정 등록이 필요 없습니다.</p>
+
+  <h2>자주 묻는 질문</h2>
+
+  <div class="faq">
+    <h3>데이터는 어디에 저장되나요? 전송되나요?</h3>
+    <p>사용자의 기기에만 저장됩니다. 본 앱은 서버에 연결하지 않고 계정도 필요 없으며, 데이터를 어디에도 전송하지 않습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>기기를 바꾸면 데이터는 어떻게 옮기나요?</h3>
+    <p>이전 기기: '설정 → 가져오기 / 내보내기 → CSV 내보내기'로 내보낸 뒤 카카오톡이나 메일로 본인에게 전송합니다. 새 기기: '설정 → 가져오기 / 내보내기 → CSV 가져오기'.</p>
+  </div>
+
+  <div class="faq">
+    <h3>앱을 삭제하면 데이터가 사라지나요?</h3>
+    <p>그렇습니다. 데이터가 모두 기기에 있으므로 삭제하면 복구할 수 없습니다. 삭제 전에 CSV를 내보내 백업해 주세요.</p>
+  </div>
+
+  <div class="note">
+    <p>클라우드 동기화가 없으므로 데이터가 자동으로 백업되지 않습니다. 주기적으로 CSV를 내보내는 것이 기록을 지키는 가장 확실한 방법입니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>출석 체크를 놓쳤는데 나중에 기록할 수 있나요?</h3>
+    <p>가능합니다. 수업 상세 페이지에서 출석 기록을 직접 추가할 수 있고 날짜도 선택할 수 있습니다. 기존 기록도 수정할 수 있습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>남은 수업 횟수는 어떻게 계산되나요?</h3>
+    <p>총 수업 횟수에서 출석한 횟수를 뺀 값입니다. 수업 상세 페이지에서 남은 횟수와 결제 금액을 함께 확인할 수 있습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>결제는 어떻게 기록하나요?</h3>
+    <p>수업 상세 페이지에서 결제를 추가하고 금액과 날짜를 입력하세요. 통계 페이지에서 자녀별 지출과 비용 비중이 집계됩니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>자녀를 여러 명 등록할 수 있나요?</h3>
+    <p>가능합니다. 홈 화면에서 여러 명을 추가하고 언제든 전환할 수 있으며, 수업, 횟수, 결제는 자녀별로 따로 집계됩니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>내보낸 CSV는 무엇으로 열 수 있나요?</h3>
+    <p>CSV는 범용 표 형식으로 Excel, Numbers, WPS, Google 스프레드시트에서 열 수 있습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>다크 모드나 언어는 어떻게 바꾸나요?</h3>
+    <p>'설정 → 외형'에서 라이트, 다크, 시스템 설정 따르기를 선택할 수 있습니다. '설정 → 언어'는 중국어, 영어, 일본어, 한국어를 지원합니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>주의 시작은 월요일인가요 일요일인가요?</h3>
+    <p>'설정 → 캘린더'에서 언제든 바꿀 수 있습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>위치, 연락처, 사진에 접근하나요?</h3>
+    <p>하지 않습니다. 본 앱은 어떤 시스템 권한도 요청하지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 참고해 주세요.</p>
+  </div>
+
+  <div class="faq">
+    <h3>앱을 평가하려면?</h3>
+    <p>'설정 → 앱 평가하기'를 누르면 시스템 평가 창이 열립니다. 스토어 페이지에 직접 리뷰를 남길 수도 있습니다.</p>
+  </div>
+
+  <div class="faq">
+    <h3>버그 신고나 기능 제안은 어떻게 하나요?</h3>
+    <p>아래 이메일로 보내주세요. 기기 모델, OS 버전, 앱 버전(설정 화면에서 확인 가능)을 함께 보내주시면 더 빠르게 확인할 수 있습니다.</p>
+  </div>
+
+  <h2>해결되지 않았다면</h2>
+  <p><a href="mailto:shangshagnqian123@qq.com">shangshagnqian123@qq.com</a> 으로 보내주시면 최대한 빠르게 답변드리겠습니다.</p>
+  <p>더 빠른 확인을 위해 다음을 함께 보내주세요.</p>
+  <ul>
+    <li>기기 모델과 OS 버전(예: iPhone 15 / iOS 18.2)</li>
+    <li>앱 버전(설정 화면에서 확인 가능)</li>
+    <li>문제가 발생하는 순서 또는 스크린샷</li>
+  </ul>
+
+  <h2>앱 정보</h2>
+  <div class="meta">
+    <span><b>이름</b>　课时记 / ClassLog / 授業記録 / 수업기록</span>
+    <span><b>지원 플랫폼</b>　iOS, Android</span>
+    <span><b>지원 언어</b>　중국어, 영어, 일본어, 한국어</span>
+    <span><b>현재 버전</b>　2.0.1(최신 버전은 스토어 표시를 확인하세요)</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <span>课时记 · ClassLog</span>
+    <span>技术支持 / Support</span>
+    <span>2026-09-15</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KEY = 'keshiji.legal.lang';
+  var LANGS = {
+    zh:{html:'zh-CN', title:'技术支持'},
+    en:{html:'en', title:'Support'},
+    ja:{html:'ja', title:'サポート'},
+    ko:{html:'ko', title:'고객 지원'}
+  };
+  function detect(){
+    var n = (navigator.language || 'zh').toLowerCase();
+    if (n.indexOf('zh') === 0) return 'zh';
+    if (n.indexOf('ja') === 0) return 'ja';
+    if (n.indexOf('ko') === 0) return 'ko';
+    return 'en';
+  }
+  function apply(lang){
+    if (!LANGS[lang]) lang = 'en';
+    document.querySelectorAll('[data-doc]').forEach(function(s){
+      s.hidden = s.getAttribute('data-doc') !== lang;
+    });
+    document.querySelectorAll('.langs button').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-set') === lang);
+    });
+    document.documentElement.lang = LANGS[lang].html;
+    document.title = LANGS[lang].title + ' · 课时记 ClassLog';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+  var guess = LANGS[saved] ? saved : detect();
+  apply(guess);
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var lang = b.getAttribute('data-set');
+      apply(lang);
+      try { localStorage.setItem(KEY, lang); } catch(e){}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
