@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技术支持 · Reclaim</title>
+<meta name="description" content="Reclaim 是装在你手机上使用的自助工具：内容都存在设备本地，不需要注册账号。下面是最常见问题的答案；没有找到答案时，写信到 mingzhaoluw@gmail.com。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F9F5EF;--surface:#FFFFFF;--surface-2:#F4EEE4;--text:#2C1810;--text-2:#7A6A5A;
+  --line:#E6DED2;--brand:#C4694A;--brand-soft:#FBEDE6;--brand-on:#FFFFFF;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1F1915;--surface:#2A221C;--surface-2:#352C24;--text:#F6F0E8;--text-2:#B5A695;
+        --line:#44392F;--brand:#E08D6C;--brand-soft:#3A2A22;--brand-on:#1F1915;}
+}
+body{background:var(--bg);color:var(--text);
+  font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans","Noto Sans KR","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.bar{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .in{max-width:820px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
+.mark{width:22px;height:22px;border-radius:7px;background:var(--brand);flex:none}
+.bname{white-space:nowrap}
+.bname i{font-style:normal;color:var(--text-2);font-weight:400}
+.langs{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.langs button{background:none;border:0;padding:6px 13px;font:inherit;font-size:13px;color:var(--text-2);cursor:pointer;white-space:nowrap}
+.langs button.on{background:var(--brand);color:var(--brand-on)}
+main{max-width:820px;margin:0 auto;padding:44px 24px 56px}
+h1{font-size:30px;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.updated{color:var(--text-2);font-size:14px;margin-top:8px}
+h2{font-size:17px;font-weight:600;margin:36px 0 12px;color:var(--brand)}
+p{margin-bottom:12px}
+.tldr{background:var(--brand-soft);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:26px 0 6px}
+.tldr p{margin:0;font-size:16px}
+a{color:var(--brand)}
+.cross{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.cross a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;
+  text-decoration:none;background:var(--surface)}
+footer{border-top:1px solid var(--line);color:var(--text-2);font-size:13px;margin-top:12px}
+footer .in{max-width:820px;margin:0 auto;padding:22px 24px;display:flex;flex-wrap:wrap;gap:8px 18px}
+[hidden]{display:none!important}
+@media (max-width:560px){
+  main{padding:30px 20px 48px}
+  h1{font-size:25px}
+  .bar .in{padding:11px 16px;gap:10px}
+  .langs button{padding:5px 9px;font-size:12px}
+  .bname i{display:none}
+}
+/* 只在真的挤不下时才让出品牌名：360px 实测四个语言按钮仍有富余，
+   而页面上保留「Reclaim」是审核方确认「这是该 App 的政策页」的依据。 */
+@media (max-width:360px){
+  .bar .in{padding:11px 12px;gap:6px}
+  .bname{display:none}
+  .langs button{padding:5px 7px}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="in">
+    <div class="brand"><span class="mark"></span><span class="bname">Reclaim</span></div>
+    <div class="langs">
+      <button type="button" data-set="zh" class="on">中文</button>
+      <button type="button" data-set="en">English</button>
+      <button type="button" data-set="ja">日本語</button>
+      <button type="button" data-set="ko">한국어</button>
+    </div>
+  </div>
+</div>
+
+<main>
+<section data-doc="zh">
+<h1>技术支持</h1>
+<p class="updated">最后更新：2026 年 9 月 22 日</p>
+<div class="tldr"><p>Reclaim 是装在你手机上使用的自助工具：内容都存在设备本地，不需要注册账号。下面是最常见问题的答案；没有找到答案时，写信到 mingzhaoluw@gmail.com。</p></div>
+<h2>基本问题</h2>
+<p>支持哪些设备：Reclaim 支持 iPhone 和 Android 手机，对系统版本的要求以 App Store 或应用商店页面显示为准。</p>
+<p>需要注册账号吗：不需要。Reclaim 没有登录、没有统计工具、没有广告。</p>
+<p>这是医疗或心理治疗吗：不是。Reclaim 是一款自助工具，不替代临床治疗。如果你正处于危机中，请联系专业人士或当地的心理援助热线。</p>
+<h2>快速上手</h2>
+<p>首次打开时的引导会请你填写：你和前任的称呼、分手日期、交往时长、反复次数与分手原因。这些信息只保存在你的手机上，用于生成你的 90 天恢复旅程。</p>
+<p>旅程由 90 节每日课程组成，每天解锁一节。配合早晚两次打卡（「我的」页里可以设置「晨间打卡」和「晚间回顾」的时间）。</p>
+<p>语言可以随时切换：「我的」→「语言」，提供中文、English、日本語、한국어。</p>
+<h2>通知没有提醒，怎么办</h2>
+<p>第一步：确认「我的」→「通知」的总开关是打开的。它管住每日打卡提醒和试用到期提醒。</p>
+<p>第二步：如果 App 里提示「请在系统设置中允许 Reclaim 发送通知」，请到手机的系统设置里允许 Reclaim 发送通知。</p>
+<p>卸载重装后，提醒时间需要重新设置一次。</p>
+<h2>AI 教练与 AI 模式分析</h2>
+<p>第一次使用 AI 教练或 AI 模式分析时，App 会弹出「使用 AI 前，先说清楚」，说明会发送什么、发到哪里。你可以选「同意并使用 AI」或「暂不使用」。</p>
+<p>选了「暂不使用」不影响使用 App：相关页面会改用一组预写好的回复。想再开启，在对应页面点「开启」即可，随时可以改。</p>
+<p>AI 请求会离开你的设备，具体发什么、发给谁，请阅读隐私政策（页脚有链接）。</p>
+<h2>免费试用、订阅与恢复购买</h2>
+<p>免费试用每台设备只能领一次，卸载重装也不会重新获得。看到「这台设备上的免费试用已经用过了」，说明这台设备之前领过。</p>
+<p>订阅由 Apple 或 Google 收款，价格以购买时商店显示为准。</p>
+<p>换了手机或重装后想找回已付费的权益：打开订阅页，点「恢复购买」。</p>
+<p>想管理或取消订阅：「我的」→「订阅」→「管理订阅」，或到应用商店的订阅设置里操作。取消后可用到当前计费周期结束。</p>
+<h2>我的数据在哪里，怎么删除</h2>
+<p>你写的一切都只存在这台手机的 App 里。Reclaim 没有云备份，卸载 App 记录就消失，无法恢复。</p>
+<p>想主动删除：「我的」→「彻底删除我的数据」→「全部删除」。这一步立即、不可恢复地清空 App 在本机的全部内容。</p>
+<p>当前版本没有导出功能，请不要把重要内容只保存在 Reclaim 里。</p>
+<h2>换手机怎么办</h2>
+<p>当前版本没有云备份和数据迁移，换到新手机是全新开始，旧手机上的记录不会跟过来。</p>
+<p>已付费的订阅不受影响：在新手机上打开订阅页点「恢复购买」即可找回权益。</p>
+<h2>联系我们</h2>
+<p>以上没有覆盖到的问题，写信到 mingzhaoluw@gmail.com。</p>
+<p>来信时写明你的设备型号与系统版本、问题发生的大致时间，能更快帮你定位。</p>
+<div class="cross">
+<a href="privacy.html">隐私政策</a>
+<a href="terms.html">用户协议</a>
+<a href="index.html">首页</a>
+</div>
+</section>
+
+<section data-doc="en">
+<h1>Support</h1>
+<p class="updated">Last updated: 22 September 2026</p>
+<div class="tldr"><p>Reclaim is a self-help tool that runs entirely on your phone: everything stays on the device, and there is no account to create. Below are answers to the most common questions. If yours isn't covered, write to mingzhaoluw@gmail.com.</p></div>
+<h2>Basics</h2>
+<p>Supported devices: Reclaim runs on iPhone and Android phones. System requirements are shown on its App Store or Play Store page.</p>
+<p>Do I need an account? No. Reclaim has no sign-in, no analytics, and no ads.</p>
+<p>Is this medical or therapy? No. Reclaim is a self-help tool, not clinical treatment. If you're in crisis, please reach out to a professional or your local crisis line.</p>
+<h2>Getting started</h2>
+<p>The first-run setup asks for: what you call each other, your breakup date, how long you were together, how many cycles, and why it ended. This stays on your phone and shapes your 90-day recovery journey.</p>
+<p>The journey is 90 daily lessons, one unlocked per day, alongside a morning and an evening check-in (you can set both times under the You tab).</p>
+<p>You can switch languages anytime: You → Language (中文, English, 日本語, 한국어).</p>
+<h2>Notifications aren't arriving</h2>
+<p>First: check that the master switch under You → Notifications is on. It controls both the daily check-in reminders and the trial-ending reminder.</p>
+<p>Second: if the app says "Allow notifications for Reclaim in your device settings", open your phone's system settings and allow notifications for Reclaim.</p>
+<p>After reinstalling, you'll need to set your reminder times again.</p>
+<h2>AI Coach and AI pattern analysis</h2>
+<p>The first time you open the AI Coach or the AI pattern analysis, the app shows "Before we use AI" — what gets sent, and where it goes. You choose "Agree and use AI" or "Not now".</p>
+<p>Choosing "Not now" doesn't lock you out of anything: those screens fall back to pre-written replies. To turn it on later, tap the switch on the same screen. You can change your mind anytime.</p>
+<p>AI requests do leave your device. What exactly is sent, and to whom, is described in the Privacy Policy (linked in the footer).</p>
+<h2>Free trial, subscription, and restoring purchases</h2>
+<p>The free trial can be claimed once per device — reinstalling doesn't bring it back. If you see "Your free trial has already been used on this device", that device has claimed it before.</p>
+<p>Subscriptions are billed by Apple or Google; prices are as shown in the store at the time of purchase.</p>
+<p>Bought a plan and switched phones or reinstalled? Open the paywall and tap "Restore Purchases" to get your access back.</p>
+<p>To manage or cancel: You → plan → "Manage subscription", or the subscription settings in the App Store / Play Store. After cancelling you keep access until the end of the current billing period.</p>
+<h2>Where my data lives, and how to delete it</h2>
+<p>Everything you write stays inside the app on this phone. Reclaim has no cloud backup — uninstalling the app deletes your records, and they cannot be recovered.</p>
+<p>To delete on purpose: You → "Erase all my data" → "Erase it all". This immediately and permanently clears everything the app stored on this device.</p>
+<p>The current version has no export feature, so don't keep the only copy of something important inside Reclaim.</p>
+<h2>Switching to a new phone</h2>
+<p>The current version has no cloud backup or migration, so a new phone starts fresh — records on the old phone don't follow.</p>
+<p>A paid subscription isn't affected: on the new phone, open the paywall and tap "Restore Purchases".</p>
+<h2>Contact us</h2>
+<p>If your question isn't covered above, write to mingzhaoluw@gmail.com.</p>
+<p>Mentioning your device model, OS version, and roughly when the problem happens helps us find it faster.</p>
+<div class="cross">
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Use</a>
+<a href="index.html">Home</a>
+</div>
+</section>
+
+<section data-doc="ja">
+<h1>サポート</h1>
+<p class="updated">最終更新：2026年9月22日</p>
+<div class="tldr"><p>Reclaim は端末内で完結するセルフヘルプツールです。内容はすべて端末内に保存され、アカウント登録は不要です。よくある質問をまとめました。解決しない場合は mingzhaoluw@gmail.com までご連絡ください。</p></div>
+<h2>基本について</h2>
+<p>対応端末：Reclaim は iPhone と Android スマートフォンで動作します。必要な OS バージョンは App Store または Google Play の掲載情報をご確認ください。</p>
+<p>アカウント登録は必要？ 不要です。Reclaim にログイン機能、統計ツール、広告はありません。</p>
+<p>医療やセラピーですか？ いいえ。Reclaim は自助ツールであり、臨床的な治療に代わるものではありません。危機的状況にある場合は、専門家またはお住まいの地域の相談窓口にご連絡ください。</p>
+<h2>はじめに</h2>
+<p>初回起動の案内では、お互いの呼び方、別れた日、交際期間、繰り返した回数、別れた理由を入力します。これらは端末内にのみ保存され、90 日間の回復ジャーニーを作るために使われます。</p>
+<p>ジャーニーは 90 の毎日レッスンで、1 日に 1 つずつ解放されます。朝と夜のチェックイン（マイページで「朝のチェックイン」「夜のふりかえり」の時刻を設定できます）と組み合わせて使います。</p>
+<p>言語はいつでも切り替えられます：マイページ →「言語」（中文 / English / 日本語 / 한국어）。</p>
+<h2>通知が届かないとき</h2>
+<p>まず、マイページ →「通知」のマスタースイッチがオンになっているか確認してください。毎日のチェックインとトライアル終了前のお知らせの両方をこのスイッチが管理しています。</p>
+<p>次に、「端末の設定で Reclaim の通知を許可してください」と表示される場合は、端末の設定で Reclaim の通知を許可してください。</p>
+<p>再インストール後は、リマインダーの時刻を設定し直す必要があります。</p>
+<h2>AI コーチと AI パターン分析</h2>
+<p>AI コーチまたは AI パターン分析を初めて使うとき、「AI を使う前に」という説明が表示されます（何を送るか、どこに送るか）。「同意して AI を使う」か「今は使わない」を選べます。</p>
+<p>「今は使わない」を選んでもアプリはそのまま使えます。該当ページでは定型文での返信に切り替わります。後から使いはじめたいときは、同じページのスイッチでオンにできます。いつでも変更できます。</p>
+<p>AI へのリクエストは端末の外に出ます。何をどこに送るかの詳細は、プライバシーポリシー（フッターにリンクあり）をお読みください。</p>
+<h2>無料トライアル、サブスクリプション、購入の復元</h2>
+<p>無料トライアルは端末ごとに 1 回だけです。再インストールしても復活しません。「この端末では無料トライアルをすでに利用済みです」と表示された場合は、以前に利用済みです。</p>
+<p>サブスクリプションの課金は Apple または Google が行います。価格は購入時にストアに表示される金額です。</p>
+<p>機種変更や再インストール後に購入済みの権利を戻すには：プラン画面で「購入を復元」をタップしてください。</p>
+<p>管理・解約は：マイページ →「プラン」→「サブスクリプション管理」、またはストアのサブスクリプション設定から。解約後も現在の請求期間の終わりまでは利用できます。</p>
+<h2>データの保存先と削除方法</h2>
+<p>書いた内容はすべて、この端末のアプリ内にだけ保存されます。Reclaim にクラウドバックアップはなく、アプリを削除すると記録も消え、元に戻せません。</p>
+<p>自分で削除するには：マイページ →「すべてのデータを削除」→「すべて削除」。この操作で端末内の全データが即時かつ完全に消去されます。</p>
+<p>現バージョンにはエクスポート機能がないため、大事な内容を Reclaim だけに保存しないでください。</p>
+<h2>機種変更について</h2>
+<p>現バージョンにクラウドバックアップとデータ移行はありません。新しい端末では最初から始まります。旧端末の記録は引き継がれません。</p>
+<p>購入済みのサブスクリプションには影響しません。新しい端末でプラン画面を開き「購入を復元」をタップしてください。</p>
+<h2>お問い合わせ</h2>
+<p>ここで解決しない質問は mingzhaoluw@gmail.com までご連絡ください。</p>
+<p>端末のモデル名と OS バージョン、問題が起きたおおよその時間を書いていただけると、原因を特定しやすくなります。</p>
+<div class="cross">
+<a href="privacy.html">プライバシーポリシー</a>
+<a href="terms.html">利用規約</a>
+<a href="index.html">ホーム</a>
+</div>
+</section>
+
+<section data-doc="ko">
+<h1>고객 지원</h1>
+<p class="updated">최종 수정: 2026년 9월 22일</p>
+<div class="tldr"><p>Reclaim은 기기 안에서만 작동하는 자조 도구예요. 모든 내용은 기기에만 저장되고 계정 등록도 필요 없어요. 자주 있는 질문을 모았어요. 여기에 없는 질문은 mingzhaoluw@gmail.com 로 보내 주세요.</p></div>
+<h2>기본 정보</h2>
+<p>지원 기기: Reclaim은 iPhone과 Android 폰에서 사용할 수 있어요. 필요한 OS 버전은 App Store 또는 Play 스토어 페이지를 확인해 주세요.</p>
+<p>계정 등록이 필요한가요? 아니요. Reclaim에는 로그인, 통계 도구, 광고가 없어요.</p>
+<p>의료나 치료인가요? 아니요. Reclaim은 자조 도구이며 임상 치료를 대신하지 않아요. 위기 상황이라면 전문가나 거주 지역의 위기 핫라인에 연락하세요.</p>
+<h2>시작하기</h2>
+<p>처음 실행하면 서로를 부르던 호칭, 헤어진 날짜, 교제 기간, 반복 횟수, 헤어진 이유를 입력해요. 이 정보는 기기에만 저장되고 90일 회복 여정을 만드는 데 쓰여요.</p>
+<p>여정은 90개의 매일 레슨으로 이루어져 있고 하루에 하나씩 열려요. 아침·저녁 체크인(마이페이지에서 시간을 설정할 수 있어요)과 함께 사용해요.</p>
+<p>언어는 언제든 바꿀 수 있어요: 마이페이지 → '언어'(中文 / English / 日本語 / 한국어).</p>
+<h2>알림이 오지 않을 때</h2>
+<p>먼저 마이페이지 → '알림'의 메인 스위치가 켜져 있는지 확인하세요. 매일 체크인과 체험 종료 알림을 이 스위치가 모두 관리해요.</p>
+<p>다음으로 '기기 설정에서 Reclaim 알림을 허용해 주세요'라는 안내가 보이면, 기기 설정에서 Reclaim 알림을 허용해 주세요.</p>
+<p>다시 설치한 후에는 알림 시간을 새로 설정해야 해요.</p>
+<h2>AI 코치와 AI 패턴 분석</h2>
+<p>AI 코치나 AI 패턴 분석을 처음 열면 'AI를 사용하기 전에'라는 설명이 나와요(무엇을 어디로 보내는지). '동의하고 AI 사용' 또는 '지금은 사용 안 함'을 고를 수 있어요.</p>
+<p>'지금은 사용 안 함'을 골라도 앱은 그대로 쓸 수 있어요. 해당 화면은 미리 작성된 답변으로 바뀌어요. 나중에 켜고 싶으면 같은 화면의 스위치로 켜면 되고, 언제든 바꿀 수 있어요.</p>
+<p>AI 요청은 기기 밖으로 나가요. 정확히 무엇을 누구에게 보내는지는 개인정보 처리방침(푸터에 링크)을 읽어 주세요.</p>
+<h2>무료 체험, 구독, 구매 복원</h2>
+<p>무료 체험은 기기마다 한 번만 받을 수 있어요. 다시 설치해도 돌아오지 않아요. '이 기기에서는 무료 체험을 이미 사용했어요'라고 나오면 그 기기에서 이미 받았다는 뜻이에요.</p>
+<p>구독 결제는 Apple 또는 Google이 처리해요. 가격은 구매 시 스토어에 표시된 금액이에요.</p>
+<p>기기를 바꾸거나 다시 설치한 후 구매한 권한을 되찾으려면: 플랜 화면에서 '구매 복원'을 누르세요.</p>
+<p>관리와 해지는: 마이페이지 → '플랜' → '구독 관리', 또는 스토어의 구독 설정에서 할 수 있어요. 해지해도 현재 결제 기간이 끝날 때까지는 사용할 수 있어요.</p>
+<h2>데이터 위치와 삭제 방법</h2>
+<p>쓴 모든 내용은 이 기기의 앱 안에만 저장돼요. Reclaim에는 클라우드 백업이 없고, 앱을 삭제하면 기록도 사라지며 되돌릴 수 없어요.</p>
+<p>직접 삭제하려면: 마이페이지 → '내 모든 데이터 지우기' → '전부 지우기'. 이 단계에서 기기에 저장된 모든 내용이 즉시, 영구적으로 지워져요.</p>
+<p>현재 버전에는 내보내기 기능이 없어서, 중요한 내용을 Reclaim에만 보관하지 마세요.</p>
+<h2>기기 변경</h2>
+<p>현재 버전에는 클라우드 백업과 데이터 이전이 없어요. 새 기기에서는 처음부터 시작되고, 이전 기기의 기록은 따라오지 않아요.</p>
+<p>유료 구독은 영향받지 않아요. 새 기기에서 플랜 화면을 열고 '구매 복원'을 누르면 돼요.</p>
+<h2>문의하기</h2>
+<p>여기서 해결되지 않는 질문은 mingzhaoluw@gmail.com 로 보내 주세요.</p>
+<p>기기 모델명과 OS 버전, 문제가 생긴 대략적인 시간을 함께 적어 주시면 원인을 찾는 데 도움이 돼요.</p>
+<div class="cross">
+<a href="privacy.html">개인정보 처리방침</a>
+<a href="terms.html">이용약관</a>
+<a href="index.html">홈</a>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="in">
+    <span>Reclaim</span>
+    <span>mingzhaoluw@gmail.com</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KEY = 'reclaim.legal.lang';
+  var LANGS = {
+    zh:{html:'zh-CN', title:'技术支持'},
+    en:{html:'en', title:'Support'},
+    ja:{html:'ja', title:'サポート'},
+    ko:{html:'ko', title:'고객 지원'}
+  };
+  function detect(){
+    var n = (navigator.language || 'zh').toLowerCase();
+    if (n.indexOf('zh') === 0) return 'zh';
+    if (n.indexOf('ja') === 0) return 'ja';
+    if (n.indexOf('ko') === 0) return 'ko';
+    return 'en';
+  }
+  function apply(lang){
+    if (!LANGS[lang]) lang = 'en';
+    document.querySelectorAll('[data-doc]').forEach(function(s){
+      s.hidden = s.getAttribute('data-doc') !== lang;
+    });
+    document.querySelectorAll('.langs button').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-set') === lang);
+    });
+    document.documentElement.lang = LANGS[lang].html;
+    document.title = LANGS[lang].title + ' · Reclaim';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch(e){}
+  var guess = (saved && LANGS[saved]) ? saved : detect();
+  apply(guess);
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var lang = b.getAttribute('data-set');
+      apply(lang);
+      try { localStorage.setItem(KEY, lang); } catch(e){}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
