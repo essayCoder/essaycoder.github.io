@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Kismara</title>
+<style>
+  :root{
+    --bg:#0C0E14; --card1:#1C2030; --card2:#14171F;
+    --text:#E8E4DA; --muted:#A8AAC0;
+    --gold:#D4B987; --gold-strong:#D4B987;
+    --border:rgba(212,185,135,0.18); --border2:rgba(212,185,135,0.30);
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#F6F3EC; --card1:#FFFFFF; --card2:#EFEAE0;
+      --text:#21242E; --muted:#6B6F7A;
+      --gold:#B0863E; --gold-strong:#8A6420;
+      --border:rgba(176,134,62,0.18); --border2:rgba(176,134,62,0.32);
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .bar{position:sticky; top:0; z-index:10; background:var(--bg);
+    border-bottom:1px solid var(--border); backdrop-filter:saturate(1.2) blur(6px)}
+  .bar .in{display:flex; align-items:center; justify-content:space-between;
+    gap:12px; padding:12px 18px; max-width:820px; margin:0 auto}
+  .bname{font-weight:700; font-size:17px; color:var(--gold-strong); white-space:nowrap; letter-spacing:.3px}
+  .bname i{font-style:normal; font-weight:400; font-size:13px; color:var(--muted); margin-left:8px}
+  .langs{display:flex; gap:6px; flex-wrap:nowrap}
+  .langs button{
+    background:var(--card1); color:var(--text); border:1px solid var(--border);
+    border-radius:999px; padding:6px 12px; font-size:13px; cursor:pointer;
+    font-family:inherit; transition:.15s}
+  .langs button:hover{border-color:var(--border2)}
+  .langs button.active{background:var(--gold); color:#0C0E14; border-color:var(--gold); font-weight:600}
+  main{max-width:820px; margin:0 auto; padding:28px 18px 80px}
+  h1{font-size:24px; margin:0 0 4px; color:var(--gold-strong)}
+  .updated{color:var(--muted); font-size:13px; margin:0 0 18px}
+  .intro{background:var(--card1); border:1px solid var(--border); border-left:3px solid var(--gold);
+    border-radius:12px; padding:14px 16px; margin:0 0 26px; color:var(--text)}
+  .sec{margin:0 0 22px}
+  .sec h2{font-size:16px; margin:0 0 6px; color:var(--gold-strong); display:flex; gap:8px; align-items:baseline}
+  .sec h2 .n{font-size:13px; color:var(--muted); font-weight:600; min-width:20px}
+  .sec p{margin:0; color:var(--muted)}
+  .contact{margin-top:30px; background:var(--card2); border:1px solid var(--border);
+    border-radius:14px; padding:18px 18px}
+  .contact .lab{font-size:13px; color:var(--muted); margin-bottom:6px}
+  .contact a{color:var(--gold-strong); font-weight:600; font-size:16px; text-decoration:none;
+    border-bottom:1px dashed var(--border2); word-break:break-all}
+  [data-doc]{display:none}
+  [data-doc].show{display:block}
+  @media (max-width:560px){
+    .langs button{padding:5px 9px; font-size:12px}
+    .bname i{display:none}
+  }
+  @media (max-width:360px){
+    .bar .in{padding:11px 12px; gap:6px}
+    .bname{display:none}
+    .langs button{padding:5px 7px}
+  }
+  @media print{
+    .bar{position:static; border:none}
+    .langs{display:none}
+    body{background:#fff; color:#000}
+    .intro,.contact{background:#fff; border-color:#ccc}
+  }
+</style>
+</head>
+<body>
+<div class="bar"><div class="in">
+  <div class="bname">Kismara <i>占星与塔罗</i></div>
+  <div class="langs">
+    <button data-set="zh">中文</button>
+    <button data-set="en">English</button>
+    <button data-set="ja">日本語</button>
+    <button data-set="ko">한국어</button>
+  </div>
+</div></div>
+
+<main>
+
+<!-- ===================== 中文 ===================== -->
+<section data-doc="zh" lang="zh-Hans">
+  <h1>隐私政策</h1>
+  <p class="updated">最后更新：2026 年 9 月 26 日</p>
+  <div class="intro">Kismara 将您的数据保存在您的设备上。我们不运营任何收集这些数据的服务器，也不使用任何分析、广告或账号系统。</div>
+
+  <div class="sec"><h2><span class="n">1</span>本地存储</h2>
+    <p>您输入的所有信息——出生日期、出生时间、出生地、占卜历史、偏好设置以及订阅状态——仅存储在您设备的本地存储中。这些数据绝不会上传到我们运营的服务器。Kismara 没有任何用户账号，也不提供云端同步。</p></div>
+
+  <div class="sec"><h2><span class="n">2</span>第三方网络请求</h2>
+    <p>唯一发生的外部网络活动，是当您使用 App 内的地图选择出生地时。App 会从 OpenStreetMap（openstreetmap.org）加载地图瓦片；当您在地图上落点，会把所选坐标发送到 OpenStreetMap 的公开地理编码服务以查询地名。我们不会传输出生日期、姓名或任何其他个人信息。Kismara 不使用登录、分析、广告或崩溃上报 SDK。</p></div>
+
+  <div class="sec"><h2><span class="n">3</span>系统权限</h2>
+    <p>定位——用于以真太阳时计算您的星盘，以及让您在地图上选择出生地。相机与相册——用于设置头像、保存或分享海报。您可以拒绝任何权限；手动输入出生信息后 App 仍可正常使用。</p></div>
+
+  <div class="sec"><h2><span class="n">4</span>儿童信息</h2>
+    <p>Kismara 不面向 13 岁以下儿童。我们不会有意收集儿童的个人信息，且如上所述，我们根本不收集任何个人数据。</p></div>
+
+  <div class="sec"><h2><span class="n">5</span>您的数据权利</h2>
+    <p>由于您的数据只存在于设备上，您拥有完全的控制权。要彻底删除，只需卸载 App（或使用 App 内的重置功能）。没有任何服务器端账号或档案需要申请删除——我们自始至终都未收到过您的数据。</p></div>
+
+  <div class="sec"><h2><span class="n">6</span>政策更新</h2>
+    <p>我们可能不时更新本政策。更新会随 App 版本发布并在本页体现。</p></div>
+
+  <div class="contact"><div class="lab">联系方式</div>
+    <a href="mailto:xianruqizhi@126.com">xianruqizhi@126.com</a></div>
+</section>
+
+<!-- ===================== English ===================== -->
+<section data-doc="en" lang="en">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: September 26, 2026</p>
+  <div class="intro">Kismara stores your data on your device. We run no servers that collect it, and we use no analytics, advertising, or account systems.</div>
+
+  <div class="sec"><h2><span class="n">1</span>Local storage</h2>
+    <p>All information you enter — birth date, birth time, birthplace, reading history, preferences, and subscription status — is stored only on your device using its local storage. This data is never uploaded to a server we operate. Kismara has no user accounts and no cloud sync.</p></div>
+
+  <div class="sec"><h2><span class="n">2</span>Third-party network</h2>
+    <p>The only external network activity occurs when you use the in-app map to choose a birth location. The app loads map tiles from OpenStreetMap (openstreetmap.org) and, when you drop a pin on the map, sends the selected coordinates to OpenStreetMap's public geocoding service to look up a place name. No birth date, name, or any other personal information is transmitted. Kismara does not use sign-in, analytics, advertising, or crash-reporting SDKs.</p></div>
+
+  <div class="sec"><h2><span class="n">3</span>System permissions</h2>
+    <p>Location: used to compute your birth chart with true solar time and to let you pick a birthplace on the map. Camera and Photo Library: used to set a profile avatar and to save or share posters. You can deny any permission; the app still works when you enter birth data manually.</p></div>
+
+  <div class="sec"><h2><span class="n">4</span>Children</h2>
+    <p>Kismara is not directed to children under 13. We do not knowingly collect personal information from children, and as described above we collect no personal data at all.</p></div>
+
+  <div class="sec"><h2><span class="n">5</span>Your data rights</h2>
+    <p>Because your data lives only on your device, you stay in full control. To erase everything, delete the app (or use the in-app reset). There is no server-side account or profile to request deletion of — we never receive your data in the first place.</p></div>
+
+  <div class="sec"><h2><span class="n">6</span>Changes</h2>
+    <p>We may update this policy from time to time. Changes are reflected in app updates and on this page.</p></div>
+
+  <div class="contact"><div class="lab">Contact</div>
+    <a href="mailto:xianruqizhi@126.com">xianruqizhi@126.com</a></div>
+</section>
+
+<!-- ===================== 日本語 ===================== -->
+<section data-doc="ja" lang="ja">
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日：2026年9月26日</p>
+  <div class="intro">Kismara はお客様のデータをお客様の端末に保存します。当社が収集するサーバーは運用しておらず、分析・広告・アカウント機能は一切使用していません。</div>
+
+  <div class="sec"><h2><span class="n">1</span>端末内保存</h2>
+    <p>お客様が入力したすべての情報（生年月日、出生時刻、出生地、占い履歴、設定、購入状況など）は、端末のローカルストレージにのみ保存されます。このデータが当社のサーバーに送信されることはありません。Kismara にユーザーアカウントやクラウド同期はありません。</p></div>
+
+  <div class="sec"><h2><span class="n">2</span>第三者への通信</h2>
+    <p>外部通信が発生するのは、アプリ内の地図で出生地を選ぶときだけです。アプリは OpenStreetMap（openstreetmap.org）から地図タイルを読み込み、地図上でピンを落としたときは選択した緯度経度を OpenStreetMap の公開ジオコーディング機能へ送り、地名を取得します。生年月日や名前などの個人情報が送信されることはありません。Kismara はログイン、分析、広告、クラッシュレポートの SDK を使用していません。</p></div>
+
+  <div class="sec"><h2><span class="n">3</span>システム権限</h2>
+    <p>位置情報は、真太陽時で星盤を計算したり、地図上で出生地を選んだりするために使用します。カメラとフォトライブラリは、アバターの設定やポスターの保存・共有に使用します。いずれの権限も拒否できます。手動で出生情報を入力すれば、アプリは引き続き正常に動作します。</p></div>
+
+  <div class="sec"><h2><span class="n">4</span>児童のプライバシー</h2>
+    <p>Kismara は 13 歳未満の児童向けではありません。当社が児童から個人情報を意図的に収集することはなく、前述のとおりいかなる個人データも収集していません。</p></div>
+
+  <div class="sec"><h2><span class="n">5</span>お客様の権利</h2>
+    <p>データは端末内のみにあるため、お客様が完全に管理できます。すべてを削除するには、アプリを削除する（またはアプリ内のリセットを使う）だけです。削除を申請するサーバー側のアカウントやプロフィールは存在しません。当社がお客様のデータを受け取ることはそもそもないからです。</p></div>
+
+  <div class="sec"><h2><span class="n">6</span>変更</h2>
+    <p>本ポリシーは予告なく改定されることがあります。変更はアプリのアップデートおよび本ページに反映されます。</p></div>
+
+  <div class="contact"><div class="lab">お問い合わせ</div>
+    <a href="mailto:xianruqizhi@126.com">xianruqizhi@126.com</a></div>
+</section>
+
+<!-- ===================== 한국어 ===================== -->
+<section data-doc="ko" lang="ko">
+  <h1>개인정보 처리방침</h1>
+  <p class="updated">최종 업데이트: 2026년 9월 26일</p>
+  <div class="intro">Kismara는 고객의 데이터를 고객 기기에 저장합니다. 당사는 이를 수집하는 서버를 운영하지 않으며, 분석·광고·계정 시스템을 사용하지 않습니다.</div>
+
+  <div class="sec"><h2><span class="n">1</span>기기 내 저장</h2>
+    <p>고객이 입력한 모든 정보(생년월일, 출생 시각, 출생지, 타로 기록, 설정, 구독 상태 등)는 기기의 로컬 저장소에만 보관됩니다. 이 데이터가 당사 서버로 전송되는 일은 없습니다. Kismara에는 사용자 계정이나 클라우드 동기화가 없습니다.</p></div>
+
+  <div class="sec"><h2><span class="n">2</span>제3자 통신</h2>
+    <p>외부 통신은 앱 내 지도에서 출생지를 선택할 때만 발생합니다. 앱은 OpenStreetMap(openstreetmap.org)에서 지도 타일을 불러오고, 지도에 핀을 놓으면 선택한 좌표를 OpenStreetMap의 공개 지오코딩 서비스로 보내 장소 이름을 조회합니다. 생년월일이나 이름 등 개인정보가 전송되지는 않습니다. Kismara는 로그인, 분석, 광고, 크래시 리포트 SDK를 사용하지 않습니다.</p></div>
+
+  <div class="sec"><h2><span class="n">3</span>시스템 권한</h2>
+    <p>위치는 진태양시로 별지도를 계산하거나 지도에서 출생지를 고를 때 사용합니다. 카메라와 사진 라이브러리는 프로필 이미지 설정이나 포스터 저장·공유에 사용합니다. 어떤 권한도 거부할 수 있으며, 출생 정보를 직접 입력하면 앱은 계속 정상 작동합니다.</p></div>
+
+  <div class="sec"><h2><span class="n">4</span>아동의 개인정보</h2>
+    <p>Kismara는 13세 미만 아동을 대상으로 하지 않습니다. 당사는 아동의 개인정보를 의도적으로 수집하지 않으며, 앞서 설명한 대로 어떤 개인 데이터도 수집하지 않습니다.</p></div>
+
+  <div class="sec"><h2><span class="n">5</span>고객의 권리</h2>
+    <p>데이터가 기기 내에만 있으므로 고객이 완전히 관리합니다. 모두 삭제하려면 앱을 삭제하거나(또는 앱 내 초기화 기능 사용) 하면 됩니다. 삭제를 신청할 서버 측 계정이나 프로필은 존재하지 않습니다. 당사는 처음부터 고객 데이터를 받은 적이 없기 때문입니다.</p></div>
+
+  <div class="sec"><h2><span class="n">6</span>변경</h2>
+    <p>본 방침은 때에 따라 업데이트될 수 있습니다. 변경 사항은 앱 업데이트와 이 페이지에 반영됩니다.</p></div>
+
+  <div class="contact"><div class="lab">문의</div>
+    <a href="mailto:xianruqizhi@126.com">xianruqizhi@126.com</a></div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var LANGS={zh:1,en:1,ja:1,ko:1};
+  var KEY='kismara_lang';
+  function pick(){
+    var s=null; try{s=localStorage.getItem(KEY);}catch(e){}
+    if(s&&LANGS[s]) return s;
+    var nav=(navigator.language||'en').slice(0,2).toLowerCase();
+    if(LANGS[nav]) return nav;
+    return 'en';
+  }
+  function apply(lang){
+    if(!LANGS[lang]) lang='en';
+    document.documentElement.lang = (lang==='zh')?'zh-Hans':lang;
+    document.title = (lang==='zh'?'隐私政策':lang==='ja'?'プライバシーポリシー':lang==='ko'?'개인정보 처리방침':'Privacy Policy')+' — Kismara';
+    document.querySelectorAll('[data-doc]').forEach(function(s){
+      s.classList.toggle('show', s.getAttribute('data-doc')===lang);
+    });
+    document.querySelectorAll('.langs button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-set')===lang);
+    });
+    try{localStorage.setItem(KEY,lang);}catch(e){}
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){apply(b.getAttribute('data-set'));});
+  });
+  apply(pick());
+})();
+</script>
+</body>
+</html>
