@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lastly — Terms of Service</title>
+<meta name="description" content="Lastly Terms of Service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  :root {
+    --brand: #1A1A1A;
+    --brand-light: #555555;
+    --brand-dark: #000000;
+    --bg: #F8F7FC;
+    --card-bg: #FFFFFF;
+    --text: #1A1A2E;
+    --text-secondary: #6B6B80;
+    --border: #ECECF4;
+    --radius: 16px;
+    --shadow: 0 2px 20px rgba(108, 92, 231, 0.08);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F0F1A;
+      --card-bg: #1A1A2E;
+      --text: #F0F0FA;
+      --text-secondary: #9B9BB0;
+      --border: #2A2A3E;
+      --shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (prefers-color-scheme: dark) {
+    header { background: rgba(15,15,26,0.8); }
+  }
+  .nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--brand);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand::before {
+    content: '';
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 8px;
+  }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .lang-btn {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .lang-btn:hover { border-color: var(--brand); color: var(--brand); }
+  .lang-btn.active {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+  }
+
+  /* Main */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Markdown content */
+  .doc h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .doc h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  .doc h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--text);
+  }
+  .doc p {
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .doc ul {
+    margin: 12px 0 16px 24px;
+  }
+  .doc li {
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .doc strong {
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .doc em { color: var(--brand); font-style: normal; }
+  .doc a {
+    color: var(--brand);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .doc a:hover { border-bottom-color: var(--brand); }
+
+  /* Card wrapper */
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Support page specific */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .support-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--brand-light);
+  }
+  .support-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+  .support-card h3 { margin-bottom: 8px; }
+  .support-card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+  .support-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .support-btn:hover { transform: scale(1.05); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .faq-q {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .faq-a {
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--brand);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    main { padding: 24px 16px 60px; }
+    .card { padding: 24px; border-radius: 12px; }
+    .doc h1 { font-size: 26px; }
+    .doc h2 { font-size: 19px; margin-top: 32px; }
+    .nav { padding: 12px 16px; flex-wrap: wrap; }
+    .brand { font-size: 16px; }
+    .lang-btn { padding: 5px 8px; font-size: 12px; }
+    .support-card { padding: 24px 16px; }
+  }
+</style>
+<script>
+// 极简 Markdown 渲染器（够用就行，不依赖外部库）
+function mdToHtml(md) {
+  let html = md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // 列表
+  html = html.replace(/((?:^- .+\n?)+)/gm, (m) => {
+    return '<ul>' + m.replace(/^- (.+)$/gm, '<li>$1</li>') + '</ul>';
+  });
+  // 段落：按空行分割
+  html = html.split(/\n\n+/).map(blk => {
+    if (/^<[hu]|<ul/.test(blk)) return blk;
+    return '<p>' + blk.replace(/\n/g, '<br>') + '</p>';
+  }).join('\n');
+  return html;
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Lastly</a>
+    <div class="lang-switch" id="langSwitch"></div>
+  </div>
+</header>
+<main>
+  <div class="doc" id="docContent"></div>
+</main>
+<footer>
+  <div>© 2026 Lastly</div>
+  <div style="margin-top: 8px;">
+    <a href="support.html" id="linkSupport">技术支持</a> ·
+    <a href="tos.html" id="linkTos">用户协议</a> ·
+    <a href="privacy.html" id="linkPrivacy">隐私政策</a>
+  </div>
+</footer>
+<script>
+/* ===== i18n 引擎 ===== */
+const LANGS = [
+  { code: 'zh-hans', label: '简体',  name: '简体中文' },
+  { code: 'zh-hant', label: '繁體',  name: '繁體中文' },
+  { code: 'en',      label: 'EN',    name: 'English' },
+  { code: 'ja',      label: '日本',  name: '日本語' },
+  { code: 'ko',      label: '한국',  name: '한국어' },
+  { code: 'es',      label: 'ES',    name: 'Español' },
+  { code: 'pt-br',   label: 'PT',    name: 'Português' },
+  { code: 'fr',      label: 'FR',    name: 'Français' },
+  { code: 'de',      label: 'DE',    name: 'Deutsch' },
+];
+
+// 公共 UI 文案（页脚链接、按钮等）
+const UI_I18N = {
+  'zh-hans': { support: '技术支持', tos: '用户协议', privacy: '隐私政策' },
+  'zh-hant': { support: '技術支援', tos: '使用者條款', privacy: '隱私權政策' },
+  'en':      { support: 'Support', tos: 'Terms', privacy: 'Privacy' },
+  'ja':      { support: 'サポート', tos: '利用規約', privacy: 'プライバシー' },
+  'ko':      { support: '고객센터', tos: '이용약관', privacy: '개인정보' },
+  'es':      { support: 'Soporte', tos: 'Términos', privacy: 'Privacidad' },
+  'pt-br':   { support: 'Suporte', tos: 'Termos', privacy: 'Privacidade' },
+  'fr':      { support: 'Support', tos: 'Conditions', privacy: 'Confidentialité' },
+  'de':      { support: 'Support', tos: 'Bedingungen', privacy: 'Datenschutz' },
+};
+
+function detectLang() {
+  const saved = localStorage.getItem('Lastly.lang');
+  if (saved) return saved;
+  const navLang = (navigator.language || 'en').toLowerCase();
+  if (navLang.startsWith('zh')) return navLang.includes('tw') || navLang.includes('hk') ? 'zh-hant' : 'zh-hans';
+  if (navLang.startsWith('ja')) return 'ja';
+  if (navLang.startsWith('ko')) return 'ko';
+  if (navLang.startsWith('es')) return 'es';
+  if (navLang.startsWith('fr')) return 'fr';
+  if (navLang.startsWith('de')) return 'de';
+  if (navLang.startsWith('pt')) return 'pt-br';
+  return 'en';
+}
+
+function renderLangSwitch(current) {
+  const bar = document.getElementById('langSwitch');
+  bar.innerHTML = '';
+  LANGS.forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-btn' + (l.code === current ? ' active' : '');
+    btn.textContent = l.label;
+    btn.title = l.name;
+    btn.onclick = () => { localStorage.setItem('Lastly.lang', l.code); location.reload(); };
+    bar.appendChild(btn);
+  });
+}
+
+function applyUI18n(lang) {
+  const ui = UI_I18N[lang] || UI_I18N['en'];
+  document.getElementById('linkSupport').textContent = ui.support;
+  document.getElementById('linkTos').textContent = ui.tos;
+  document.getElementById('linkPrivacy').textContent = ui.privacy;
+  document.documentElement.lang = lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : lang;
+}
+/* ===== END i18n ===== */
+</script>
+<script>
+
+(async function() {
+  const lang = detectLang();
+  renderLangSwitch(lang);
+  applyUI18n(lang);
+  const doc = document.getElementById('docContent');
+  doc.className = 'doc card';
+  const terms = {"zh-hans": "# Lastly 用户协议\n\n**最后更新日期：2026 年 7 月 17 日**\n\n欢迎使用「Since」（以下简称\"本应用\"）。在使用本应用前，请仔细阅读本协议。一旦您开始使用本应用，即视为您已充分理解、同意并接受本协议全部条款。\n\n## 1. 服务说明\n\n「Since」是一款用于追踪事件间隔的应用，帮助您记录生活中重要事件的持续时间，例如：清洁、保养、运动、给家人打电话等。\n\n## 2. 账号与数据\n\n- 本应用**不需要注册账号**，所有数据默认存储在您的设备本地。\n- 您可以选择启用 iCloud 同步，启用后数据将通过 iCloud 在您的设备间同步。\n- 您对您的数据拥有完全的控制权，可随时导出、删除。\n\n## 3. 用户行为规范\n\n您承诺不会利用本应用：\n- 从事任何违法违规的活动\n- 上传、记录任何违法、违规、违反公序良俗的内容\n- 干扰本应用的正常运行\n\n## 4. 知识产权\n\n本应用的所有内容（包括但不限于 UI 设计、图标、文字说明）归开发者所有，受著作权法保护。\n\n## 5. 免责声明\n\n- 本应用按\"现状\"提供，不对服务的及时性、准确性、可靠性做任何明示或暗示的保证。\n- 因不可抗力（包括但不限于自然灾害、网络中断）导致的服务中断，开发者不承担责任。\n- 您理解并同意，使用本应用产生的任何后果由您自行承担。\n\n## 6. 协议变更\n\n开发者有权根据需要修改本协议，修改后的协议将在应用内公布。继续使用本应用即视为接受修改后的协议。\n\n## 7. 联系方式\n\n如对本协议有任何疑问，请通过以下邮箱联系我们：\n📧 **mingzhaoluw@gmail.com**", "zh-hant": "# Lastly 使用者條款\n\n**最後更新日期：2026 年 7 月 17 日**\n\n歡迎使用「最後」（以下簡稱「本應用」）。在使用本應用前，請仔細閱讀本條款。一旦您開始使用本應用，即視為您已充分理解、同意並接受本條款全部內容。\n\n## 1. 服務說明\n\n「最後」是一款用於追蹤事件間隔的應用，幫助您記錄生活中重要事件的持續時間，例如：清潔、保養、運動、給家人打電話等。\n\n## 2. 帳號與資料\n\n- 本應用**不需要註冊帳號**，所有資料預設儲存在您的裝置本地。\n- 您可以選擇啟用 iCloud 同步，啟用後資料將透過 iCloud 在您的裝置間同步。\n- 您對您的資料擁有完全的控制權，可隨時匯出、刪除。\n\n## 3. 使用者行為規範\n\n您承諾不會利用本應用：\n- 從事任何違法違規的活動\n- 上傳、記錄任何違法、違規、違反公序良俗的內容\n- 干擾本應用的正常運行\n\n## 4. 智慧財產權\n\n本應用的所有內容（包括但不限於 UI 設計、圖示、文字說明）歸開發者所有，受著作權法保護。\n\n## 5. 免責聲明\n\n- 本應用按「現狀」提供，不對服務的及時性、準確性、可靠性做任何明示或暗示的保證。\n- 因不可抗力（包括但不限於自然災害、網路中斷）導致的服務中斷，開發者不承擔責任。\n- 您理解並同意，使用本應用產生的任何後果由您自行承擔。\n\n## 6. 條款變更\n\n開發者有權根據需要修改本條款，修改後的條款將在應用內公佈。繼續使用本應用即視為接受修改後的條款。\n\n## 7. 聯絡方式\n\n如對本條款有任何疑問，請透過以下電子郵件聯絡我們：\n📧 **mingzhaoluw@gmail.com**", "en": "# Lastly Terms of Service\n\n**Last Updated: July 17, 2026**\n\nWelcome to \"Since\" (hereinafter \"the App\"). Please read these terms carefully before using the App. By using the App, you acknowledge that you have read, understood, and agree to be bound by these terms.\n\n## 1. Service Description\n\n\"Since\" is an app designed to track the intervals between life events, helping you record how long it has been since important activities such as cleaning, maintenance, exercise, calling family, and more.\n\n## 2. Account and Data\n\n- The App **does not require account registration**. All data is stored locally on your device by default.\n- You may optionally enable iCloud sync, which will synchronize your data across your Apple devices via iCloud.\n- You retain full control over your data and may export or delete it at any time.\n\n## 3. User Conduct\n\nYou agree not to use the App to:\n- Engage in any illegal or unauthorized activity\n- Upload or record any content that is illegal, inappropriate, or offensive\n- Interfere with the normal operation of the App\n\n## 4. Intellectual Property\n\nAll content in the App (including but not limited to UI design, icons, and text) is owned by the developer and protected by copyright law.\n\n## 5. Disclaimer\n\n- The App is provided \"as is\" without any express or implied warranties of timeliness, accuracy, or reliability.\n- The developer is not responsible for service interruptions caused by force majeure (including but not limited to natural disasters and network failures).\n- You understand and agree that you are solely responsible for any consequences arising from your use of the App.\n\n## 6. Changes to Terms\n\nThe developer reserves the right to modify these terms as needed. Updated terms will be published within the App. Continued use of the App constitutes acceptance of the updated terms.\n\n## 7. Contact\n\nIf you have any questions about these terms, please contact us at:\n📧 **mingzhaoluw@gmail.com**", "ja": "# Lastly 利用規約\n\n**最終更新日：2026年7月17日**\n\n「さいご」（以下「本アプリ」）へようこそ。本アプリをご利用になる前に、本規約をよくお読みください。本アプリをご利用になった時点で、本規約のすべての内容を理解・同意したものとみなされます。\n\n## 1. サービス内容\n\n「さいご」は、生活の重要なイベントの間隔を追跡するアプリで、清掃、メンテナンス、運動、家族への電話などの経過時間を記録するのに役立ちます。\n\n## 2. アカウントとデータ\n\n- 本アプリは**アカウント登録不要**です。すべてのデータはお使いのデバイス上にローカル保存されます。\n- 任意で iCloud 同期を有効化でき、有効化した場合、データは iCloud 経由で Apple デバイス間で同期されます。\n- データの完全な管理権はお客様にあり、いつでもエクスポート・削除できます。\n\n## 3. ユーザー行動規範\n\nお客様は本アプリを利用して以下を行わないことに同意します：\n- 違法または不正な活動に従事すること\n- 違法、不適切、または不快なコンテンツをアップロードまたは記録すること\n- 本アプリの正常な動作を妨害すること\n\n## 4. 知的財産権\n\n本アプリのすべてのコンテンツ（UI デザイン、アイコン、テキストなどを含むがこれらに限定されない）は開発者に帰属し、著作権法によって保護されています。\n\n## 5. 免責事項\n\n- 本アプリは「現状のまま」提供され、即時性、正確性、信頼性について明示または暗示の保証は一切ありません。\n- 不可抗力（自然災害、ネットワーク障害などを含むがこれらに限定されない）に起因するサービス中断について、開発者は責任を負いません。\n- 本アプリの使用から生じる結果について、お客様が単独で責任を負うことに同意します。\n\n## 6. 規約の変更\n\n開発者は必要に応じて本規約を変更する権利を有します。変更後の規約はアプリ内で公開されます。本アプリの継続使用は、変更後の規約への同意とみなされます。\n\n## 7. お問い合わせ\n\n本規約に関するご質問は、以下のメールアドレスまでお問い合わせください：\n📧 **mingzhaoluw@gmail.com**", "ko": "# Lastly 이용약관\n\n**최종 업데이트: 2026년 7월 17일**\n\n\"마지막\"(이하 \"본 앱\")에 오신 것을 환영합니다. 본 앱을 사용하기 전에 본 약관을 주의 깊게 읽어 주세요. 본 앱을 사용하는 것은 본 약관의 모든 내용을 읽고 이해했으며 동의한다는 것을 의미합니다.\n\n## 1. 서비스 설명\n\n\"마지막\"은 생활 이벤트의 간격을 추적하는 앱으로, 청소, 관리, 운동, 가족에게 전화하기 등 중요한 활동의 경과 시간을 기록하는 데 도움이 됩니다.\n\n## 2. 계정 및 데이터\n\n- 본 앱은 **계정 등록이 필요하지 않습니다**. 모든 데이터는 기본적으로 사용자의 기기에 로컬로 저장됩니다.\n- 선택적으로 iCloud 동기화를 활성화할 수 있으며, 활성화하면 iCloud를 통해 Apple 기기 간에 데이터가 동기화됩니다.\n- 데이터에 대한 완전한 제어권은 사용자에게 있으며, 언제든지 내보내거나 삭제할 수 있습니다.\n\n## 3. 사용자 행동 규범\n\n사용자는 본 앱을 사용하여 다음을 수행하지 않기로 동의합니다:\n- 불법 또는 무단 활동에 참여\n- 불법, 부적절 또는 불쾌한 콘텐츠 업로드 또는 기록\n- 본 앱의 정상적인 작동을 방해\n\n## 4. 지적 재산권\n\n본 앱의 모든 콘텐츠(UI 디자인, 아이콘, 텍스트 등을 포함하되 이에 국한되지 않음)는 개발자에게 소유권이 있으며 저작권법에 의해 보호됩니다.\n\n## 5. 면책 조항\n\n- 본 앱은 \"있는 그대로\" 제공되며 적시성, 정확성, 신뢰성에 대한 명시적 또는 묵시적 보증을 하지 않습니다.\n- 불가항력(자연재해, 네트워크 장애 등을 포함하되 이에 국한되지 않음)으로 인한 서비스 중단에 대해 개발자는 책임을 지지 않습니다.\n- 본 앱 사용으로 인한 결과에 대해 사용자 본인이 단독으로 책임을 진다는 것에 동의합니다.\n\n## 6. 약관 변경\n\n개발자는 필요에 따라 본 약관을 수정할 권리를 보유합니다. 수정된 약관은 앱 내에 게시됩니다. 본 앱의 계속 사용은 수정된 약관에 대한 동의로 간주됩니다.\n\n## 7. 연락처\n\n본 약관에 대한 질문이 있으시면 다음 이메일로 연락 주세요:\n📧 **mingzhaoluw@gmail.com**", "es": "# Lastly Términos de Servicio\n\n**Última actualización: 17 de julio de 2026**\n\nBienvenido a \"Última\" (en adelante \"la App\"). Por favor, lea atentamente estos términos antes de usar la App. Al usar la App, usted reconoce que ha leído, entendido y acepta estar sujeto a estos términos.\n\n## 1. Descripción del Servicio\n\n\"Última\" es una aplicación diseñada para rastrear los intervalos entre eventos de la vida, ayudándole a registrar cuánto tiempo ha pasado desde actividades importantes como limpieza, mantenimiento, ejercicio, llamar a la familia y más.\n\n## 2. Cuenta y Datos\n\n- La App **no requiere registro de cuenta**. Todos los datos se almacenan localmente en su dispositivo por defecto.\n- Puede activar opcionalmente la sincronización con iCloud, que sincronizará sus datos entre sus dispositivos Apple a través de iCloud.\n- Usted mantiene el control total sobre sus datos y puede exportarlos o eliminarlos en cualquier momento.\n\n## 3. Conducta del Usuario\n\nUsted acepta no usar la App para:\n- Participar en cualquier actividad ilegal o no autorizada\n- Subir o registrar contenido ilegal, inapropiado u ofensivo\n- Interferir con el funcionamiento normal de la App\n\n## 4. Propiedad Intelectual\n\nTodo el contenido de la App (incluyendo pero no limitado a diseño de UI, iconos y texto) es propiedad del desarrollador y está protegido por las leyes de derechos de autor.\n\n## 5. Descargo de Responsabilidad\n\n- La App se proporciona \"tal cual\" sin ninguna garantía expresa o implícita de puntualidad, precisión o fiabilidad.\n- El desarrollador no es responsable de las interrupciones del servicio causadas por fuerza mayor (incluyendo pero no limitado a desastres naturales y fallos de red).\n- Usted entiende y acepta que es el único responsable de cualquier consecuencia derivada del uso de la App.\n\n## 6. Cambios en los Términos\n\nEl desarrollador se reserva el derecho de modificar estos términos según sea necesario. Los términos actualizados se publicarán dentro de la App. El uso continuo de la App constituye la aceptación de los términos actualizados.\n\n## 7. Contacto\n\nSi tiene alguna pregunta sobre estos términos, contáctenos en:\n📧 **mingzhaoluw@gmail.com**", "pt-br": "# Lastly Termos de Uso\n\n**Última atualização: 17 de julho de 2026**\n\nBem-vindo ao \"Última\" (doravante \"o App\"). Por favor, leia atentamente estes termos antes de usar o App. Ao usar o App, você reconhece que leu, entendeu e concorda em ficar vinculado a estes termos.\n\n## 1. Descrição do Serviço\n\n\"Última\" é um aplicativo projetado para rastrear os intervalos entre eventos da vida, ajudando você a registrar quanto tempo passou desde atividades importantes como limpeza, manutenção, exercícios, ligar para a família e muito mais.\n\n## 2. Conta e Dados\n\n- O App **não requer registro de conta**. Todos os dados são armazenados localmente no seu dispositivo por padrão.\n- Você pode opcionalmente ativar a sincronização do iCloud, que sincronizará seus dados entre seus dispositivos Apple via iCloud.\n- Você mantém controle total sobre seus dados e pode exportá-los ou excluí-los a qualquer momento.\n\n## 3. Conduta do Usuário\n\nVocê concorda em não usar o App para:\n- Participar de qualquer atividade ilegal ou não autorizada\n- Carregar ou registrar conteúdo ilegal, impróprio ou ofensivo\n- Interferir no funcionamento normal do App\n\n## 4. Propriedade Intelectual\n\nTodo o conteúdo do App (incluindo mas não limitado a design de UI, ícones e texto) é de propriedade do desenvolvedor e protegido por leis de direitos autorais.\n\n## 5. Isenção de Responsabilidade\n\n- O App é fornecido \"como está\" sem garantias expressas ou implícitas de pontualidade, precisão ou confiabilidade.\n- O desenvolvedor não é responsável por interrupções do serviço causadas por força maior (incluindo mas não limitado a desastres naturais e falhas de rede).\n- Você entende e concorda que é o único responsável por quaisquer consequências decorrentes do uso do App.\n\n## 6. Alterações nos Termos\n\nO desenvolvedor reserva-se o direito de modificar estes termos conforme necessário. Os termos atualizados serão publicados dentro do App. O uso contínuo do App constitui aceitação dos termos atualizados.\n\n## 7. Contato\n\nSe você tiver alguma dúvida sobre estes termos, entre em contato conosco em:\n📧 **mingzhaoluw@gmail.com**", "fr": "# Lastly Conditions d'Utilisation\n\n**Dernière mise à jour : 17 juillet 2026**\n\nBienvenue sur \"Dernière\" (ci-après \"l'App\"). Veuillez lire attentivement ces conditions avant d'utiliser l'App. En utilisant l'App, vous reconnaissez avoir lu, compris et accepté d'être lié par ces conditions.\n\n## 1. Description du Service\n\n\"Dernière\" est une application conçue pour suivre les intervalles entre les événements de la vie, vous aidant à enregistrer combien de temps s'est écoulé depuis des activités importantes telles que le nettoyage, l'entretien, l'exercice, les appels à la famille, et plus encore.\n\n## 2. Compte et Données\n\n- L'App **ne nécessite pas d'inscription**. Toutes les données sont stockées localement sur votre appareil par défaut.\n- Vous pouvez éventuellement activer la synchronisation iCloud, qui synchronisera vos données entre vos appareils Apple via iCloud.\n- Vous conservez un contrôle total sur vos données et pouvez les exporter ou les supprimer à tout moment.\n\n## 3. Conduite de l'Utilisateur\n\nVous vous engagez à ne pas utiliser l'App pour :\n- Participer à toute activité illégale ou non autorisée\n- Télécharger ou enregistrer tout contenu illégal, inapproprié ou offensant\n- Interférer avec le fonctionnement normal de l'App\n\n## 4. Propriété Intellectuelle\n\nTout le contenu de l'App (y compris mais sans s'y limiter le design UI, les icônes et le texte) appartient au développeur et est protégé par les lois sur le droit d'auteur.\n\n## 5. Avis de Non-Responsabilité\n\n- L'App est fournie \"en l'état\" sans aucune garantie expresse ou implicite de ponctualité, d'exactitude ou de fiabilité.\n- Le développeur n'est pas responsable des interruptions de service causées par un cas de force majeure (y compris mais sans s'y limiter les catastrophes naturelles et les pannes de réseau).\n- Vous comprenez et acceptez que vous êtes le seul responsable des conséquences découlant de votre utilisation de l'App.\n\n## 6. Modifications des Conditions\n\nLe développeur se réserve le droit de modifier ces conditions si nécessaire. Les conditions mises à jour seront publiées dans l'App. L'utilisation continue de l'App constitue l'acceptation des conditions mises à jour.\n\n## 7. Contact\n\nSi vous avez des questions sur ces conditions, veuillez nous contacter à :\n📧 **mingzhaoluw@gmail.com**", "de": "# Lastly Nutzungsbedingungen\n\n**Letzte Aktualisierung: 17. Juli 2026**\n\nWillkommen bei \"Zuletzt\" (im Folgenden \"die App\"). Bitte lesen Sie diese Bedingungen sorgfältig durch, bevor Sie die App verwenden. Durch die Nutzung der App bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden haben und sich an sie gebunden fühlen.\n\n## 1. Dienstbeschreibung\n\n\"Zuletzt\" ist eine App zur Verfolgung der Intervalle zwischen Lebensereignissen, die Ihnen hilft, die Zeit seit wichtigen Aktivitäten wie Reinigung, Wartung, Sport, Anrufen bei der Familie und mehr zu erfassen.\n\n## 2. Konto und Daten\n\n- Die App **erfordert keine Kontoerstellung**. Alle Daten werden standardmäßig lokal auf Ihrem Gerät gespeichert.\n- Sie können optional die iCloud-Synchronisierung aktivieren, die Ihre Daten über iCloud zwischen Ihren Apple-Geräten synchronisiert.\n- Sie behalten die volle Kontrolle über Ihre Daten und können diese jederzeit exportieren oder löschen.\n\n## 3. Nutzerverhalten\n\nSie verpflichten sich, die App nicht zu nutzen, um:\n- illegale oder unbefugte Aktivitäten auszuüben\n- illegale, unangemessene oder anstößige Inhalte hochzuladen oder aufzuzeichnen\n- den normalen Betrieb der App zu stören\n\n## 4. Geistiges Eigentum\n\nAlle Inhalte der App (einschließlich, aber nicht beschränkt auf UI-Design, Symbole und Text) sind Eigentum des Entwicklers und durch das Urheberrecht geschützt.\n\n## 5. Haftungsausschluss\n\n- Die App wird \"wie besehen\" bereitgestellt, ohne ausdrückliche oder stillschweigende Garantien für Aktualität, Genauigkeit oder Zuverlässigkeit.\n- Der Entwickler ist nicht verantwortlich für Serviceunterbrechungen, die durch höhere Gewalt verursacht werden (einschließlich, aber nicht beschränkt auf Naturkatastrophen und Netzwerkausfälle).\n- Sie verstehen und stimmen zu, dass Sie allein verantwortlich sind für alle Folgen, die sich aus der Nutzung der App ergeben.\n\n## 6. Änderungen der Bedingungen\n\nDer Entwickler behält sich das Recht vor, diese Bedingungen nach Bedarf zu ändern. Aktualisierte Bedingungen werden in der App veröffentlicht. Die fortgesetzte Nutzung der App gilt als Annahme der aktualisierten Bedingungen.\n\n## 7. Kontakt\n\nWenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter:\n📧 **mingzhaoluw@gmail.com**"};
+  doc.innerHTML = mdToHtml(terms[lang] || terms['en']);
+})();
+</script>
+</body>
+
+</html>

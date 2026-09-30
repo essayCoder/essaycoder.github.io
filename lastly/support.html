@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lastly — Support</title>
+<meta name="description" content="Lastly Technical Support">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  :root {
+    --brand: #1A1A1A;
+    --brand-light: #555555;
+    --brand-dark: #000000;
+    --bg: #F8F7FC;
+    --card-bg: #FFFFFF;
+    --text: #1A1A2E;
+    --text-secondary: #6B6B80;
+    --border: #ECECF4;
+    --radius: 16px;
+    --shadow: 0 2px 20px rgba(108, 92, 231, 0.08);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F0F1A;
+      --card-bg: #1A1A2E;
+      --text: #F0F0FA;
+      --text-secondary: #9B9BB0;
+      --border: #2A2A3E;
+      --shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (prefers-color-scheme: dark) {
+    header { background: rgba(15,15,26,0.8); }
+  }
+  .nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--brand);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand::before {
+    content: '';
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 8px;
+  }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .lang-btn {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .lang-btn:hover { border-color: var(--brand); color: var(--brand); }
+  .lang-btn.active {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+  }
+
+  /* Main */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Markdown content */
+  .doc h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .doc h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  .doc h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--text);
+  }
+  .doc p {
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .doc ul {
+    margin: 12px 0 16px 24px;
+  }
+  .doc li {
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .doc strong {
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .doc em { color: var(--brand); font-style: normal; }
+  .doc a {
+    color: var(--brand);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .doc a:hover { border-bottom-color: var(--brand); }
+
+  /* Card wrapper */
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Support page specific */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .support-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--brand-light);
+  }
+  .support-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+  .support-card h3 { margin-bottom: 8px; }
+  .support-card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+  .support-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .support-btn:hover { transform: scale(1.05); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .faq-q {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .faq-a {
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--brand);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    main { padding: 24px 16px 60px; }
+    .card { padding: 24px; border-radius: 12px; }
+    .doc h1 { font-size: 26px; }
+    .doc h2 { font-size: 19px; margin-top: 32px; }
+    .nav { padding: 12px 16px; flex-wrap: wrap; }
+    .brand { font-size: 16px; }
+    .lang-btn { padding: 5px 8px; font-size: 12px; }
+    .support-card { padding: 24px 16px; }
+  }
+</style>
+<script>
+// 极简 Markdown 渲染器（够用就行，不依赖外部库）
+function mdToHtml(md) {
+  let html = md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // 列表
+  html = html.replace(/((?:^- .+\n?)+)/gm, (m) => {
+    return '<ul>' + m.replace(/^- (.+)$/gm, '<li>$1</li>') + '</ul>';
+  });
+  // 段落：按空行分割
+  html = html.split(/\n\n+/).map(blk => {
+    if (/^<[hu]|<ul/.test(blk)) return blk;
+    return '<p>' + blk.replace(/\n/g, '<br>') + '</p>';
+  }).join('\n');
+  return html;
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Lastly</a>
+    <div class="lang-switch" id="langSwitch"></div>
+  </div>
+</header>
+<main>
+  <div class="doc" id="docContent"></div>
+</main>
+<footer>
+  <div>© 2026 Lastly</div>
+  <div style="margin-top: 8px;">
+    <a href="support.html" id="linkSupport">技术支持</a> ·
+    <a href="tos.html" id="linkTos">用户协议</a> ·
+    <a href="privacy.html" id="linkPrivacy">隐私政策</a>
+  </div>
+</footer>
+<script>
+/* ===== i18n 引擎 ===== */
+const LANGS = [
+  { code: 'zh-hans', label: '简体',  name: '简体中文' },
+  { code: 'zh-hant', label: '繁體',  name: '繁體中文' },
+  { code: 'en',      label: 'EN',    name: 'English' },
+  { code: 'ja',      label: '日本',  name: '日本語' },
+  { code: 'ko',      label: '한국',  name: '한국어' },
+  { code: 'es',      label: 'ES',    name: 'Español' },
+  { code: 'pt-br',   label: 'PT',    name: 'Português' },
+  { code: 'fr',      label: 'FR',    name: 'Français' },
+  { code: 'de',      label: 'DE',    name: 'Deutsch' },
+];
+
+// 公共 UI 文案（页脚链接、按钮等）
+const UI_I18N = {
+  'zh-hans': { support: '技术支持', tos: '用户协议', privacy: '隐私政策' },
+  'zh-hant': { support: '技術支援', tos: '使用者條款', privacy: '隱私權政策' },
+  'en':      { support: 'Support', tos: 'Terms', privacy: 'Privacy' },
+  'ja':      { support: 'サポート', tos: '利用規約', privacy: 'プライバシー' },
+  'ko':      { support: '고객센터', tos: '이용약관', privacy: '개인정보' },
+  'es':      { support: 'Soporte', tos: 'Términos', privacy: 'Privacidad' },
+  'pt-br':   { support: 'Suporte', tos: 'Termos', privacy: 'Privacidade' },
+  'fr':      { support: 'Support', tos: 'Conditions', privacy: 'Confidentialité' },
+  'de':      { support: 'Support', tos: 'Bedingungen', privacy: 'Datenschutz' },
+};
+
+function detectLang() {
+  const saved = localStorage.getItem('Lastly.lang');
+  if (saved) return saved;
+  const navLang = (navigator.language || 'en').toLowerCase();
+  if (navLang.startsWith('zh')) return navLang.includes('tw') || navLang.includes('hk') ? 'zh-hant' : 'zh-hans';
+  if (navLang.startsWith('ja')) return 'ja';
+  if (navLang.startsWith('ko')) return 'ko';
+  if (navLang.startsWith('es')) return 'es';
+  if (navLang.startsWith('fr')) return 'fr';
+  if (navLang.startsWith('de')) return 'de';
+  if (navLang.startsWith('pt')) return 'pt-br';
+  return 'en';
+}
+
+function renderLangSwitch(current) {
+  const bar = document.getElementById('langSwitch');
+  bar.innerHTML = '';
+  LANGS.forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-btn' + (l.code === current ? ' active' : '');
+    btn.textContent = l.label;
+    btn.title = l.name;
+    btn.onclick = () => { localStorage.setItem('Lastly.lang', l.code); location.reload(); };
+    bar.appendChild(btn);
+  });
+}
+
+function applyUI18n(lang) {
+  const ui = UI_I18N[lang] || UI_I18N['en'];
+  document.getElementById('linkSupport').textContent = ui.support;
+  document.getElementById('linkTos').textContent = ui.tos;
+  document.getElementById('linkPrivacy').textContent = ui.privacy;
+  document.documentElement.lang = lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : lang;
+}
+/* ===== END i18n ===== */
+</script>
+<script>
+
+(async function() {
+  const lang = detectLang();
+  renderLangSwitch(lang);
+  applyUI18n(lang);
+  const doc = document.getElementById('docContent');
+  const data = {"zh-hans": {"title": "技术支持", "subtitle": "遇到问题？我们随时帮你", "faqTitle": "常见问题", "faq": [{"q": "如何恢复已购买的订阅？", "a": "打开 App → 设置 → 订阅 → 点击「恢复购买」。StoreKit 会自动同步你 Apple ID 的所有历史订阅。如果开通了 Apple 家庭共享，家人的订阅也会一并同步。"}, {"q": "iCloud 同步没有生效？", "a": "请确认你登录了正确的 Apple ID，且「设置 → Apple ID → iCloud」里为 Lastly 开启了 iCloud 同步。如果仍有问题，尝试在 App 内关闭再重新开启 iCloud 同步。"}, {"q": "数据可以导出吗？", "a": "可以。进入「设置 → 导出数据」，支持 CSV 和 JSON 两种格式，包含所有事件记录和笔记。"}, {"q": "删除的数据能恢复吗？", "a": "从「归档」删除的数据会进入系统垃圾箱，30 天内可以从 iCloud 或本地备份恢复。彻底清除后无法找回。"}, {"q": "Lastly Pro 支持家庭共享吗？", "a": "支持！在 App Store Connect 已为月付和终身买断开启 Apple 家庭共享。同一个 Apple 家庭组内的所有成员都能使用 Pro 功能。"}, {"q": "还有其他问题？", "a": "请发邮件到 mingzhaoluw@gmail.com，我们会在 7 个工作日内回复。"}]}, "zh-hant": {"title": "技術支援", "subtitle": "遇到問題？我們隨時幫你", "faqTitle": "常見問題", "faq": [{"q": "如何恢復已購買的訂閱？", "a": "打開 App → 設定 → 訂閱 → 點擊「恢復購買」。StoreKit 會自動同步你 Apple ID 的所有歷史訂閱。如果開啟了 Apple 家庭共享，家人的訂閱也會一併同步。"}, {"q": "iCloud 同步沒有生效？", "a": "請確認你登入了正確的 Apple ID，且「設定 → Apple ID → iCloud」裡為 Lastly 開啟了 iCloud 同步。若仍有問題，嘗試在 App 內關閉再重新開啟 iCloud 同步。"}, {"q": "資料可以匯出嗎？", "a": "可以。進入「設定 → 匯出資料」，支援 CSV 和 JSON 兩種格式，包含所有事件記錄和筆記。"}, {"q": "刪除的資料能恢復嗎？", "a": "從「封存」刪除的資料會進入系統資源回收桶，30 天內可從 iCloud 或本機備份恢復。徹底清除後無法找回。"}, {"q": "Lastly Pro 支援家庭共享嗎？", "a": "支援！已在 App Store Connect 為月付和終身買斷開啟 Apple 家庭共享。同一個 Apple 家庭組內的所有成員都能使用 Pro 功能。"}, {"q": "還有其他問題？", "a": "請發送郵件到 mingzhaoluw@gmail.com，我們會在 7 個工作日內回覆。"}]}, "en": {"title": "Support", "subtitle": "Need help? We're here for you", "faqTitle": "Frequently Asked Questions", "faq": [{"q": "How do I restore my subscription?", "a": "Open the App → Settings → Subscription → tap Restore Purchases. StoreKit automatically syncs all historical subscriptions for your Apple ID. If Apple Family Sharing is enabled, family subscriptions are also included."}, {"q": "iCloud sync is not working?", "a": "Make sure you're signed into the correct Apple ID and that iCloud sync is enabled for Lastly in Settings → Apple ID → iCloud. If the issue persists, try toggling iCloud sync off and on again within the app."}, {"q": "Can I export my data?", "a": "Yes. Go to Settings → Export Data. Both CSV and JSON formats are supported, containing all event records and notes."}, {"q": "Can deleted data be recovered?", "a": "Data deleted from Archive goes to the system trash and can be restored from iCloud or local backup within 30 days. Once permanently cleared, recovery is not possible."}, {"q": "Does Lastly Pro support Family Sharing?", "a": "Yes! Both monthly and lifetime purchases have Apple Family Sharing enabled in App Store Connect. All members of the same Apple Family group can use Pro features."}, {"q": "Other questions?", "a": "Email us at mingzhaoluw@gmail.com. We reply within 7 business days."}]}, "ja": {"title": "サポート", "subtitle": "お困りですか？お手伝いします", "faqTitle": "よくある質問", "faq": [{"q": "購入したサブスクリプションを復元するには？", "a": "アプリを開く → 設定 → サブスクリプション → 「購入を復元」をタップ。StoreKit が Apple ID の全履歴を自動同期します。Apple ファミリー共有を有効にしていれば、家族のサブスクも同期されます。"}, {"q": "iCloud 同期が機能しない？", "a": "正しい Apple ID にサインインし、設定 → Apple ID → iCloud で Lastly の iCloud 同期が有効になっているか確認してください。改善しない場合は、アプリ内で iCloud 同期を一度オフにしてからオンにしてみてください。"}, {"q": "データをエクスポートできますか？", "a": "できます。設定 → データをエクスポートで、CSV と JSON の両方に対応。すべてのイベント記録とメモを含みます。"}, {"q": "削除したデータを復元できますか？", "a": "アーカイブから削除したデータはシステムのゴミ箱に移動し、30 日以内であれば iCloud またはローカルバックアップから復元できます。完全に消去されたものは復元できません。"}, {"q": "Lastly Pro はファミリー共有に対応していますか？", "a": "はい！App Store Connect で月額と買い切りに Apple ファミリー共有を有効化しています。同じ Apple ファミリーグループのすべてのメンバーが Pro 機能を利用できます。"}, {"q": "その他のご質問は？", "a": "メールで mingzhaoluw@gmail.com までお問い合わせください。7営業日以内に返信します。"}]}, "ko": {"title": "고객센터", "subtitle": "문제가 있나요? 도와드릴게요", "faqTitle": "자주 묻는 질문", "faq": [{"q": "구독을 어떻게 복원하나요?", "a": "앱 열기 → 설정 → 구독 → '구매 항목 복원'을 탭하세요. StoreKit가 Apple ID의 모든 구독 내역을 자동으로 동기화합니다. Apple 가족 공유를 켰다면 가족의 구독도 함께 동기화됩니다."}, {"q": "iCloud 동기화가 작동하지 않나요?", "a": "올바른 Apple ID에 로그인했는지, 설정 → Apple ID → iCloud에서 Lastly의 iCloud 동기화가 켜져 있는지 확인하세요. 문제가 지속되면 앱 내에서 iCloud 동기화를 껐다가 다시 켜보세요."}, {"q": "데이터를 내보낼 수 있나요?", "a": "가능합니다. 설정 → 데이터 내보내기에서 CSV와 JSON 형식으로 내보낼 수 있으며, 모든 이벤트 기록과 메모가 포함됩니다."}, {"q": "삭제한 데이터를 복구할 수 있나요?", "a": "'보관'에서 삭제한 데이터는 시스템 휴지통으로 이동하며, 30일 이내라면 iCloud 또는 로컬 백업에서 복구할 수 있습니다. 완전히 삭제된 데이터는 복구할 수 없습니다."}, {"q": "Lastly Pro는 가족 공유를 지원하나요?", "a": "네! App Store Connect에서 월간 및 평생 구매 모두 Apple 가족 공유를 켰습니다. 같은 Apple 가족 그룹의 모든 구성원이 Pro 기능을 사용할 수 있습니다."}, {"q": "다른 질문이 있나요?", "a": "이메일 mingzhaoluw@gmail.com 로 연락해 주세요. 7 영업일 이내에 답장드립니다."}]}, "es": {"title": "Soporte", "subtitle": "¿Necesitas ayuda? Estamos aquí", "faqTitle": "Preguntas Frecuentes", "faq": [{"q": "¿Cómo restauro mi suscripción?", "a": "Abre la App → Ajustes → Suscripción → toca Restaurar Compras. StoreKit sincroniza automáticamente todas las suscripciones de tu Apple ID. Si tienes Family Sharing activado, las suscripciones familiares también se incluyen."}, {"q": "¿iCloud no sincroniza?", "a": "Verifica que estés con el Apple ID correcto y que la sincronización iCloud esté activada para Lastly en Ajustes → Apple ID → iCloud. Si persiste, intenta apagar y volver a encender la sincronización dentro de la app."}, {"q": "¿Puedo exportar mis datos?", "a": "Sí. Ve a Ajustes → Exportar Datos. Se admiten formatos CSV y JSON, incluyendo todos los eventos y notas."}, {"q": "¿Se pueden recuperar datos eliminados?", "a": "Los datos eliminados de Archivo van a la papelera del sistema y pueden recuperarse desde iCloud o copia local en 30 días. Una vez borrados permanentemente, no es posible."}, {"q": "¿Lastly Pro soporta Family Sharing?", "a": "¡Sí! Tanto la suscripción mensual como la de por vida tienen Apple Family Sharing activado. Todos los miembros del mismo grupo Familiar de Apple pueden usar las funciones Pro."}, {"q": "¿Otras preguntas?", "a": "Escríbenos a mingzhaoluw@gmail.com. Respondemos en 7 días hábiles."}]}, "pt-br": {"title": "Suporte", "subtitle": "Precisa de ajuda? Estamos aqui", "faqTitle": "Perguntas Frequentes", "faq": [{"q": "Como faço para restaurar minha assinatura?", "a": "Abra o App → Ajustes → Assinatura → toque Restaurar Compras. O StoreKit sincroniza automaticamente todas as assinaturas do seu Apple ID. Se o Compartilhamento Familiar estiver ativo, as assinaturas da família também são incluídas."}, {"q": "iCloud não está sincronizando?", "a": "Verifique se está com o Apple ID correto e se a sincronização do iCloud está ativada para Lastly em Ajustes → Apple ID → iCloud. Se persistir, tente desligar e ligar novamente a sincronização no app."}, {"q": "Posso exportar meus dados?", "a": "Sim. Vá em Ajustes → Exportar Dados. Formatos CSV e JSON são suportados, incluindo todos os eventos e notas."}, {"q": "Dados excluídos podem ser recuperados?", "a": "Dados excluídos de Arquivo vão para a lixeira do sistema e podem ser recuperados do iCloud ou backup local em até 30 dias. Uma vez apagados permanentemente, não há recuperação."}, {"q": "O Lastly Pro suporta Compartilhamento Familiar?", "a": "Sim! Tanto a mensal quanto a vitalícia têm Compartilhamento Familiar da Apple ativado. Todos os membros do mesmo grupo Familiar da Apple podem usar os recursos Pro."}, {"q": "Outras dúvidas?", "a": "Envie um email para mingzhaoluw@gmail.com. Respondemos em até 7 dias úteis."}]}, "fr": {"title": "Support", "subtitle": "Besoin d'aide ? Nous sommes là", "faqTitle": "Questions Fréquentes", "faq": [{"q": "Comment restaurer mon abonnement ?", "a": "Ouvrez l'app → Paramètres → Abonnement → touchez Restaurer les achats. StoreKit synchronise automatiquement tous les abonnements de votre identifiant Apple. Si le partage familial est activé, les abonnements familiaux sont également inclus."}, {"q": "La synchro iCloud ne fonctionne pas ?", "a": "Vérifiez que vous avez le bon identifiant Apple et que la synchro iCloud est activée pour Lastly dans Paramètres → Identifiant Apple → iCloud. Si le problème persiste, essayez de désactiver puis réactiver la synchro dans l'app."}, {"q": "Puis-je exporter mes données ?", "a": "Oui. Allez dans Paramètres → Exporter les données. Les formats CSV et JSON sont pris en charge, avec tous les événements et notes."}, {"q": "Les données supprimées peuvent-elles être récupérées ?", "a": "Les données supprimées de Archive vont dans la corbeille système et peuvent être récupérées depuis iCloud ou une sauvegarde locale dans les 30 jours. Une fois supprimées définitivement, c'est impossible."}, {"q": "Lastly Pro prend-il en charge le partage familial ?", "a": "Oui ! L'abonnement mensuel et l'achat à vie ont le partage familial Apple activé. Tous les membres du même groupe familial Apple peuvent utiliser les fonctionnalités Pro."}, {"q": "Autres questions ?", "a": "Email à mingzhaoluw@gmail.com. Réponse sous 7 jours ouvrés."}]}, "de": {"title": "Support", "subtitle": "Brauchen Sie Hilfe? Wir sind da", "faqTitle": "Häufige Fragen", "faq": [{"q": "Wie stelle ich mein Abonnement wieder her?", "a": "App öffnen → Einstellungen → Abonnement → tippe auf Käufe wiederherstellen. StoreKit synchronisiert automatisch alle Abonnements Ihrer Apple-ID. Wenn Familienfreigabe aktiviert ist, sind auch Familienabonnements enthalten."}, {"q": "iCloud-Sync funktioniert nicht?", "a": "Prüfen Sie, ob Sie mit der richtigen Apple-ID angemeldet sind und iCloud-Sync für Lastly unter Einstellungen → Apple-ID → iCloud aktiviert ist. Bei Problemen deaktivieren Sie den Sync in der App und aktivieren ihn erneut."}, {"q": "Kann ich meine Daten exportieren?", "a": "Ja. Gehen Sie zu Einstellungen → Daten exportieren. CSV- und JSON-Format werden unterstützt, inklusive aller Ereignisse und Notizen."}, {"q": "Können gelöschte Daten wiederhergestellt werden?", "a": "Aus Archiv gelöschte Daten gehen in den Systempapierkorb und können innerhalb von 30 Tagen aus iCloud oder lokalem Backup wiederhergestellt werden. Dauerhaft gelöschte Daten sind unwiderruflich verloren."}, {"q": "Unterstützt Lastly Pro die Familienfreigabe?", "a": "Ja! Sowohl das monatliche Abonnement als auch der Einmalkauf haben Apple-Familienfreigabe aktiviert. Alle Mitglieder derselben Apple-Familie können Pro-Funktionen nutzen."}, {"q": "Andere Fragen?", "a": "Email an mingzhaoluw@gmail.com. Antwort innerhalb von 7 Werktagen."}]}};
+  const d = data[lang] || data['en'];
+  let html = '<div class="card">';
+  html += '<h1>' + d.title + '</h1>';
+  html += '<p style="color: var(--text-secondary); margin-bottom: 30px;">' + d.subtitle + '</p>';
+  d.faq.forEach(f => {
+    html += '<div class="faq-item"><div class="faq-q">' + f.q + '</div><div class="faq-a">' + f.a + '</div></div>';
+  });
+  html += '</div>';
+  doc.className = 'doc';
+  doc.innerHTML = html;
+})();
+</script>
+</body>
+
+</html>

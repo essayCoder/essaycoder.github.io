@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lastly — Privacy Policy</title>
+<meta name="description" content="Lastly Privacy Policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  :root {
+    --brand: #1A1A1A;
+    --brand-light: #555555;
+    --brand-dark: #000000;
+    --bg: #F8F7FC;
+    --card-bg: #FFFFFF;
+    --text: #1A1A2E;
+    --text-secondary: #6B6B80;
+    --border: #ECECF4;
+    --radius: 16px;
+    --shadow: 0 2px 20px rgba(108, 92, 231, 0.08);
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F0F1A;
+      --card-bg: #1A1A2E;
+      --text: #F0F0FA;
+      --text-secondary: #9B9BB0;
+      --border: #2A2A3E;
+      --shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  @media (prefers-color-scheme: dark) {
+    header { background: rgba(15,15,26,0.8); }
+  }
+  .nav {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--brand);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand::before {
+    content: '';
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 8px;
+  }
+  .lang-switch {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .lang-btn {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .lang-btn:hover { border-color: var(--brand); color: var(--brand); }
+  .lang-btn.active {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+  }
+
+  /* Main */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Markdown content */
+  .doc h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .doc h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  .doc h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    color: var(--text);
+  }
+  .doc p {
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+  .doc ul {
+    margin: 12px 0 16px 24px;
+  }
+  .doc li {
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .doc strong {
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .doc em { color: var(--brand); font-style: normal; }
+  .doc a {
+    color: var(--brand);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .doc a:hover { border-bottom-color: var(--brand); }
+
+  /* Card wrapper */
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Support page specific */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .support-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--brand-light);
+  }
+  .support-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+  .support-card h3 { margin-bottom: 8px; }
+  .support-card p { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; }
+  .support-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-light));
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .support-btn:hover { transform: scale(1.05); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease-out;
+  }
+  .faq-q {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .faq-a {
+    color: var(--text-secondary);
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  footer a {
+    color: var(--brand);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    main { padding: 24px 16px 60px; }
+    .card { padding: 24px; border-radius: 12px; }
+    .doc h1 { font-size: 26px; }
+    .doc h2 { font-size: 19px; margin-top: 32px; }
+    .nav { padding: 12px 16px; flex-wrap: wrap; }
+    .brand { font-size: 16px; }
+    .lang-btn { padding: 5px 8px; font-size: 12px; }
+    .support-card { padding: 24px 16px; }
+  }
+</style>
+<script>
+// 极简 Markdown 渲染器（够用就行，不依赖外部库）
+function mdToHtml(md) {
+  let html = md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  // 列表
+  html = html.replace(/((?:^- .+\n?)+)/gm, (m) => {
+    return '<ul>' + m.replace(/^- (.+)$/gm, '<li>$1</li>') + '</ul>';
+  });
+  // 段落：按空行分割
+  html = html.split(/\n\n+/).map(blk => {
+    if (/^<[hu]|<ul/.test(blk)) return blk;
+    return '<p>' + blk.replace(/\n/g, '<br>') + '</p>';
+  }).join('\n');
+  return html;
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">Lastly</a>
+    <div class="lang-switch" id="langSwitch"></div>
+  </div>
+</header>
+<main>
+  <div class="doc" id="docContent"></div>
+</main>
+<footer>
+  <div>© 2026 Lastly</div>
+  <div style="margin-top: 8px;">
+    <a href="support.html" id="linkSupport">技术支持</a> ·
+    <a href="tos.html" id="linkTos">用户协议</a> ·
+    <a href="privacy.html" id="linkPrivacy">隐私政策</a>
+  </div>
+</footer>
+<script>
+/* ===== i18n 引擎 ===== */
+const LANGS = [
+  { code: 'zh-hans', label: '简体',  name: '简体中文' },
+  { code: 'zh-hant', label: '繁體',  name: '繁體中文' },
+  { code: 'en',      label: 'EN',    name: 'English' },
+  { code: 'ja',      label: '日本',  name: '日本語' },
+  { code: 'ko',      label: '한국',  name: '한국어' },
+  { code: 'es',      label: 'ES',    name: 'Español' },
+  { code: 'pt-br',   label: 'PT',    name: 'Português' },
+  { code: 'fr',      label: 'FR',    name: 'Français' },
+  { code: 'de',      label: 'DE',    name: 'Deutsch' },
+];
+
+// 公共 UI 文案（页脚链接、按钮等）
+const UI_I18N = {
+  'zh-hans': { support: '技术支持', tos: '用户协议', privacy: '隐私政策' },
+  'zh-hant': { support: '技術支援', tos: '使用者條款', privacy: '隱私權政策' },
+  'en':      { support: 'Support', tos: 'Terms', privacy: 'Privacy' },
+  'ja':      { support: 'サポート', tos: '利用規約', privacy: 'プライバシー' },
+  'ko':      { support: '고객센터', tos: '이용약관', privacy: '개인정보' },
+  'es':      { support: 'Soporte', tos: 'Términos', privacy: 'Privacidad' },
+  'pt-br':   { support: 'Suporte', tos: 'Termos', privacy: 'Privacidade' },
+  'fr':      { support: 'Support', tos: 'Conditions', privacy: 'Confidentialité' },
+  'de':      { support: 'Support', tos: 'Bedingungen', privacy: 'Datenschutz' },
+};
+
+function detectLang() {
+  const saved = localStorage.getItem('Lastly.lang');
+  if (saved) return saved;
+  const navLang = (navigator.language || 'en').toLowerCase();
+  if (navLang.startsWith('zh')) return navLang.includes('tw') || navLang.includes('hk') ? 'zh-hant' : 'zh-hans';
+  if (navLang.startsWith('ja')) return 'ja';
+  if (navLang.startsWith('ko')) return 'ko';
+  if (navLang.startsWith('es')) return 'es';
+  if (navLang.startsWith('fr')) return 'fr';
+  if (navLang.startsWith('de')) return 'de';
+  if (navLang.startsWith('pt')) return 'pt-br';
+  return 'en';
+}
+
+function renderLangSwitch(current) {
+  const bar = document.getElementById('langSwitch');
+  bar.innerHTML = '';
+  LANGS.forEach(l => {
+    const btn = document.createElement('button');
+    btn.className = 'lang-btn' + (l.code === current ? ' active' : '');
+    btn.textContent = l.label;
+    btn.title = l.name;
+    btn.onclick = () => { localStorage.setItem('Lastly.lang', l.code); location.reload(); };
+    bar.appendChild(btn);
+  });
+}
+
+function applyUI18n(lang) {
+  const ui = UI_I18N[lang] || UI_I18N['en'];
+  document.getElementById('linkSupport').textContent = ui.support;
+  document.getElementById('linkTos').textContent = ui.tos;
+  document.getElementById('linkPrivacy').textContent = ui.privacy;
+  document.documentElement.lang = lang === 'zh-hans' ? 'zh-Hans' : lang === 'zh-hant' ? 'zh-Hant' : lang;
+}
+/* ===== END i18n ===== */
+</script>
+<script>
+
+(async function() {
+  const lang = detectLang();
+  renderLangSwitch(lang);
+  applyUI18n(lang);
+  const doc = document.getElementById('docContent');
+  doc.className = 'doc card';
+  const privacy = {"zh-hans": "# Lastly 隐私政策\n\n**最后更新日期：2026 年 7 月 17 日**\n\n「Since」尊重并保护您的隐私。本政策说明我们如何收集、使用和保护您的个人信息。\n\n## 1. 我们收集的信息\n\n### 1.1 您主动提供的信息\n- 您创建的事件记录（标题、类型、图标、频率、日期等）\n- 您的笔记内容\n- 您选择加入的家庭（如启用）\n\n### 1.2 自动收集的信息\n- **不收集**：我们**不**收集您的姓名、邮箱、电话、位置、设备唯一标识等任何个人信息用于追踪或广告目的。\n\n## 2. 数据存储\n\n- **本地优先**：您的数据默认存储在您的设备本地。\n- **iCloud 同步（可选）**：如果您启用，数据将通过 iCloud 在您的 Apple 设备间同步。Apple 的 iCloud 服务遵循 Apple 自身的隐私政策。\n- **不与第三方共享**：我们**不**会将您的数据出售、出租或以任何方式分享给第三方。\n\n## 3. 通知权限\n\n如果您启用了提醒功能，我们会请求通知权限。通知内容仅包含您自己设置的事件提醒，不会包含任何追踪代码。\n\n## 4. 第三方服务\n\n本应用使用以下系统级服务（由 Apple 提供）：\n- **iCloud 同步**：仅在您启用时使用\n- **UserNotifications**：仅在您启用提醒时使用\n\n我们**不**使用任何第三方分析、广告或追踪 SDK。\n\n## 5. 儿童隐私\n\n本应用不面向 13 岁以下儿童。我们不会故意收集 13 岁以下儿童的任何信息。\n\n## 6. 您的权利\n\n您对自己的数据拥有完全的权利：\n- **访问**：所有数据均在应用内可查看\n- **导出**：可在设置中导出为 CSV / JSON 格式\n- **删除**：可随时在「归档」中删除或清空所有数据\n- **注销**：本应用无账号系统，无需注销\n\n## 7. 数据安全\n\n我们采用 Apple 平台的安全机制保护您的数据：\n- 设备数据受 iOS 系统沙盒保护\n- iCloud 同步采用端到端加密（由 Apple 提供）\n\n## 8. 政策变更\n\n我们可能会更新本政策。更新后的政策将在应用内公布。继续使用本应用即视为接受更新后的政策。\n\n## 9. 联系我们\n\n如对本政策有任何疑问、建议或投诉，请通过以下邮箱联系我们：\n\n📧 **mingzhaoluw@gmail.com**\n\n我们会在收到邮件后的 7 个工作日内回复您。", "zh-hant": "# Lastly 隱私權政策\n\n**最後更新日期：2026 年 7 月 17 日**\n\n「最後」尊重並保護您的隱私。本政策說明我們如何收集、使用和保護您的個人資訊。\n\n## 1. 我們收集的資訊\n\n### 1.1 您主動提供的資訊\n- 您建立的事件記錄（標題、類型、圖示、頻率、日期等）\n- 您的筆記內容\n- 您選擇加入的家庭（如啟用）\n\n### 1.2 自動收集的資訊\n- **不收集**：我們**不**收集您的姓名、信箱、電話、位置、裝置唯一識別碼等任何個人資訊用於追蹤或廣告目的。\n\n## 2. 資料儲存\n\n- **本機優先**：您的資料預設儲存在您的裝置本機。\n- **iCloud 同步（可選）**：如果您啟用，資料將透過 iCloud 在您的 Apple 裝置間同步。Apple 的 iCloud 服務遵循 Apple 自身的隱私權政策。\n- **不與第三方共享**：我們**不**會將您的資料出售、出租或以任何方式分享給第三方。\n\n## 3. 通知權限\n\n如果您啟用了提醒功能，我們會請求通知權限。通知內容僅包含您自己設定的事件提醒，不會包含任何追蹤程式碼。\n\n## 4. 第三方服務\n\n本應用使用以下系統級服務（由 Apple 提供）：\n- **iCloud 同步**：僅在您啟用時使用\n- **UserNotifications**：僅在您啟用提醒時使用\n\n我們**不**使用任何第三方分析、廣告或追蹤 SDK。\n\n## 5. 兒童隱私\n\n本應用不面向 13 歲以下兒童。我們不會故意收集 13 歲以下兒童的任何資訊。\n\n## 6. 您的權利\n\n您對自己的資料擁有完全的權利：\n- **存取**：所有資料均在應用內可查看\n- **匯出**：可在設定中匯出為 CSV / JSON 格式\n- **刪除**：可隨時在「封存」中刪除或清空所有資料\n- **註銷**：本應用無帳號系統，無需註銷\n\n## 7. 資料安全\n\n我們採用 Apple 平台的安全機制保護您的資料：\n- 裝置資料受 iOS 系統沙盒保護\n- iCloud 同步採用端對端加密（由 Apple 提供）\n\n## 8. 政策變更\n\n我們可能會更新本政策。更新後的政策將在應用內公佈。繼續使用本應用即視為接受更新後的政策。\n\n## 9. 聯絡我們\n\n如對本政策有任何疑問、建議或投訴，請透過以下電子郵件聯絡我們：\n\n📧 **mingzhaoluw@gmail.com**\n\n我們會在收到郵件後的 7 個工作日內回覆您。", "en": "# Lastly Privacy Policy\n\n**Last Updated: July 17, 2026**\n\n\"Since\" respects and protects your privacy. This policy explains how we collect, use, and safeguard your personal information.\n\n## 1. Information We Collect\n\n### 1.1 Information You Provide\n- Event records you create (title, type, icon, frequency, dates, etc.)\n- Your notes\n- Family groups you join (if enabled)\n\n### 1.2 Automatically Collected Information\n- **We collect nothing**: We do **not** collect your name, email, phone number, location, device identifiers, or any other personal information for tracking or advertising purposes.\n\n## 2. Data Storage\n\n- **Local-first**: Your data is stored locally on your device by default.\n- **iCloud Sync (optional)**: If you enable it, your data is synchronized across your Apple devices via iCloud. Apple's iCloud service follows Apple's own privacy policy.\n- **No third-party sharing**: We do **not** sell, rent, or share your data with any third party in any way.\n\n## 3. Notification Permission\n\nIf you enable the reminder feature, we will request notification permission. Notification content only includes event reminders you set, and contains no tracking code.\n\n## 4. Third-Party Services\n\nThis app uses the following system-level services (provided by Apple):\n- **iCloud Sync**: Used only when you enable it\n- **UserNotifications**: Used only when you enable reminders\n\nWe do **not** use any third-party analytics, advertising, or tracking SDKs.\n\n## 5. Children's Privacy\n\nThis app is not intended for children under 13. We do not knowingly collect any information from children under 13.\n\n## 6. Your Rights\n\nYou have full rights over your data:\n- **Access**: All data is viewable within the app\n- **Export**: Can be exported as CSV / JSON in Settings\n- **Delete**: Can be deleted or cleared anytime via \"Archive\"\n- **Account Deletion**: The app has no account system, no deletion needed\n\n## 7. Data Security\n\nWe use Apple platform security mechanisms to protect your data:\n- Device data is protected by iOS system sandbox\n- iCloud sync uses end-to-end encryption (provided by Apple)\n\n## 8. Changes to This Policy\n\nWe may update this policy. Updated policy will be published within the app. Continued use of the app constitutes acceptance of the updated policy.\n\n## 9. Contact Us\n\nIf you have any questions, suggestions, or complaints about this policy, please contact us at:\n\n📧 **mingzhaoluw@gmail.com**\n\nWe will respond within 7 business days of receiving your email.", "ja": "# Lastly プライバシーポリシー\n\n**最終更新日：2026年7月17日**\n\n「さいご」はお客様のプライバシーを尊重し、保護します。本ポリシーでは、当社がお客様の個人情報をどのように収集、使用、保護するかを説明します。\n\n## 1. 収集する情報\n\n### 1.1 お客様が提供する情報\n- お客様が作成するイベント記録（タイトル、種類、アイコン、頻度、日付など）\n- お客様のメモ内容\n- お客様が参加する家族グループ（有効な場合）\n\n### 1.2 自動収集される情報\n- **収集しません**：当社は、追跡や広告目的でお客様の名前、メールアドレス、電話番号、位置情報、デバイス識別子、その他の個人情報を一切収集**しません**。\n\n## 2. データの保存\n\n- **ローカルファースト**：データはお使いのデバイス上にローカル保存されます。\n- **iCloud 同期（オプション）**：有効にした場合、データは iCloud 経由で Apple デバイス間で同期されます。Apple の iCloud サービスは Apple 自身のプライバシーポリシーに従います。\n- **第三者との共有なし**：当社は、お客様のデータをいかなる第三者にも販売、賃貸、または共有**しません**。\n\n## 3. 通知権限\n\nリマインダー機能を有効にすると、通知権限をリクエストします。通知の内容にはお客様が設定したイベントリマインダーのみが含まれ、追跡コードは含まれません。\n\n## 4. 第三者サービス\n\n本アプリは以下のシステムレベルのサービス（Apple 提供）を使用します：\n- **iCloud 同期**：お客様が有効にした場合のみ使用\n- **UserNotifications**：リマインダーを有効にした場合のみ使用\n\n当社は第三者分析、広告、追跡 SDK を一切使用**しません**。\n\n## 5. 子供のプライバシー\n\n本アプリは 13 歳未満の子供を対象としていません。当社は 13 歳未満の子供から意図的に情報を収集することはありません。\n\n## 6. お客様の権利\n\nお客様はデータに対して完全な権利を持ちます：\n- **アクセス**：すべてのデータはアプリ内で閲覧可能\n- **エクスポート**：設定で CSV / JSON としてエクスポート可能\n- **削除**：「アーカイブ」でいつでも削除またはクリア可能\n- **アカウント削除**：本アプリにはアカウントシステムがないため、削除は不要\n\n## 7. データセキュリティ\n\nApple プラットフォームのセキュリティメカニズムを使用してデータを保護します：\n- デバイスデータは iOS システムのサンドボックスによって保護されます\n- iCloud 同期はエンドツーエンド暗号化を使用（Apple 提供）\n\n## 8. 本ポリシーの変更\n\n本ポリシーを更新する場合があります。更新されたポリシーはアプリ内に掲載されます。本アプリの継続使用は、更新されたポリシーへの同意とみなされます。\n\n## 9. お問い合わせ\n\n本ポリシーに関するご質問、ご提案、ご苦情がございましたら、以下のメールアドレスまでお問い合わせください：\n\n📧 **mingzhaoluw@gmail.com**\n\nメール受領後 7 営業日以内にご返信いたします。", "ko": "# Lastly 개인정보 처리방침\n\n**최종 업데이트: 2026년 7월 17일**\n\n\"마지막\"은 사용자의 개인정보를 존중하고 보호합니다. 본 정책은 당사가 사용자의 개인정보를 어떻게 수집, 사용 및 보호하는지 설명합니다.\n\n## 1. 수집하는 정보\n\n### 1.1 사용자가 제공하는 정보\n- 사용자가 생성한 이벤트 기록(제목, 유형, 아이콘, 빈도, 날짜 등)\n- 사용자의 메모 내용\n- 사용자가 참여하는 가족 그룹(활성화된 경우)\n\n### 1.2 자동으로 수집되는 정보\n- **수집하지 않음**: 당사는 추적이나 광고 목적으로 사용자의 이름, 이메일, 전화번호, 위치, 기기 식별자 또는 기타 개인정보를 수집하지 **않습니다**.\n\n## 2. 데이터 저장\n\n- **로컬 우선**: 데이터는 기본적으로 사용자의 기기에 로컬로 저장됩니다.\n- **iCloud 동기화(선택사항)**: 활성화하면 iCloud를 통해 Apple 기기 간에 데이터가 동기화됩니다. Apple의 iCloud 서비스는 Apple 자체 개인정보 처리방침을 따릅니다.\n- **제3자와 공유하지 않음**: 당사는 사용자의 데이터를 어떤 제3자에게도 판매, 대여 또는 공유하지 **않습니다**.\n\n## 3. 알림 권한\n\n알림 기능을 활성화하면 알림 권한을 요청합니다. 알림 내용에는 사용자가 설정한 이벤트 알림만 포함되며 추적 코드는 포함되지 않습니다.\n\n## 4. 제3자 서비스\n\n본 앱은 다음 시스템 수준 서비스(Apple 제공)를 사용합니다:\n- **iCloud 동기화**: 사용자가 활성화한 경우에만 사용\n- **UserNotifications**: 알림을 활성화한 경우에만 사용\n\n당사는 제3자 분석, 광고 또는 추적 SDK를 사용하지 **않습니다**.\n\n## 5. 아동 개인정보\n\n본 앱은 13세 미만의 아동을 대상으로 하지 않습니다. 당사는 13세 미만 아동의 정보를 고의로 수집하지 않습니다.\n\n## 6. 사용자의 권리\n\n사용자는 데이터에 대한 완전한 권리를 가집니다:\n- **접근**: 모든 데이터는 앱 내에서 볼 수 있음\n- **내보내기**: 설정에서 CSV / JSON으로 내보내기 가능\n- **삭제**: \"보관\"에서 언제든지 삭제 또는 비우기 가능\n- **계정 삭제**: 본 앱에는 계정 시스템이 없으므로 삭제가 필요하지 않음\n\n## 7. 데이터 보안\n\nApple 플랫폼의 보안 메커니즘을 사용하여 데이터를 보호합니다:\n- 기기 데이터는 iOS 시스템 샌드박스로 보호됨\n- iCloud 동기화는 종단간 암호화 사용(Apple 제공)\n\n## 8. 본 정책의 변경\n\n본 정책을 업데이트할 수 있습니다. 업데이트된 정책은 앱 내에 게시됩니다. 본 앱의 계속 사용은 업데이트된 정책에 대한 동의로 간주됩니다.\n\n## 9. 연락처\n\n본 정책에 대한 질문, 제안 또는 불만이 있으시면 다음 이메일로 연락 주세요:\n\n📧 **mingzhaoluw@gmail.com**\n\n이메일을 받은 후 7영업일 이내에 회신 드리겠습니다.", "es": "# Lastly Política de Privacidad\n\n**Última actualización: 17 de julio de 2026**\n\n\"Última\" respeta y protege su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal.\n\n## 1. Información que Recopilamos\n\n### 1.1 Información que Usted Proporciona\n- Registros de eventos que crea (título, tipo, icono, frecuencia, fechas, etc.)\n- Sus notas\n- Grupos familiares a los que se une (si está habilitado)\n\n### 1.2 Información Recopilada Automáticamente\n- **No recopilamos nada**: **No** recopilamos su nombre, correo electrónico, número de teléfono, ubicación, identificadores de dispositivo ni ninguna otra información personal con fines de seguimiento o publicidad.\n\n## 2. Almacenamiento de Datos\n\n- **Local primero**: Sus datos se almacenan localmente en su dispositivo por defecto.\n- **Sincronización con iCloud (opcional)**: Si la habilita, sus datos se sincronizan entre sus dispositivos Apple a través de iCloud. El servicio iCloud de Apple sigue la política de privacidad propia de Apple.\n- **Sin compartir con terceros**: **No** vendemos, alquilamos ni compartimos sus datos con terceros de ninguna manera.\n\n## 3. Permiso de Notificaciones\n\nSi habilita la función de recordatorios, solicitaremos permiso de notificación. El contenido de las notificaciones solo incluye los recordatorios de eventos que usted configure y no contiene código de seguimiento.\n\n## 4. Servicios de Terceros\n\nEsta aplicación utiliza los siguientes servicios a nivel del sistema (proporcionados por Apple):\n- **Sincronización con iCloud**: Solo se usa si usted lo habilita\n- **UserNotifications**: Solo se usa si habilita los recordatorios\n\n**No** utilizamos ningún SDK de análisis, publicidad o seguimiento de terceros.\n\n## 5. Privacidad de los Niños\n\nEsta aplicación no está dirigida a niños menores de 13 años. No recopilamos conscientemente ninguna información de niños menores de 13 años.\n\n## 6. Sus Derechos\n\nUsted tiene plenos derechos sobre sus datos:\n- **Acceso**: Todos los datos son visibles dentro de la aplicación\n- **Exportar**: Se puede exportar como CSV / JSON en Configuración\n- **Eliminar**: Se puede eliminar o borrar en cualquier momento desde \"Archivo\"\n- **Eliminación de cuenta**: La aplicación no tiene sistema de cuentas, no es necesaria la eliminación\n\n## 7. Seguridad de los Datos\n\nUtilizamos los mecanismos de seguridad de la plataforma Apple para proteger sus datos:\n- Los datos del dispositivo están protegidos por el sandbox del sistema iOS\n- La sincronización con iCloud utiliza cifrado de extremo a extremo (proporcionado por Apple)\n\n## 8. Cambios en esta Política\n\nPodemos actualizar esta política. La política actualizada se publicará dentro de la aplicación. El uso continuo de la aplicación constituye la aceptación de la política actualizada.\n\n## 9. Contáctenos\n\nSi tiene alguna pregunta, sugerencia o queja sobre esta política, contáctenos en:\n\n📧 **mingzhaoluw@gmail.com**\n\nResponderemos dentro de los 7 días hábiles posteriores a la recepción de su correo electrónico.", "pt-br": "# Lastly Política de Privacidade\n\n**Última atualização: 17 de julho de 2026**\n\nO \"Última\" respeita e protege sua privacidade. Esta política explica como coletamos, usamos e protegemos suas informações pessoais.\n\n## 1. Informações que Coletamos\n\n### 1.1 Informações que Você Fornece\n- Registros de eventos que você cria (título, tipo, ícone, frequência, datas, etc.)\n- Suas anotações\n- Grupos familiares que você ingressa (se habilitado)\n\n### 1.2 Informações Coletadas Automaticamente\n- **Não coletamos nada**: **Não** coletamos seu nome, e-mail, número de telefone, localização, identificadores de dispositivo ou qualquer outra informação pessoal para fins de rastreamento ou publicidade.\n\n## 2. Armazenamento de Dados\n\n- **Local primeiro**: Seus dados são armazenados localmente no seu dispositivo por padrão.\n- **Sincronização do iCloud (opcional)**: Se você ativar, seus dados são sincronizados entre seus dispositivos Apple via iCloud. O serviço iCloud da Apple segue a política de privacidade da própria Apple.\n- **Sem compartilhamento com terceiros**: **Não** vendemos, alugamos ou compartilhamos seus dados com terceiros de forma alguma.\n\n## 3. Permissão de Notificação\n\nSe você ativar o recurso de lembretes, solicitaremos permissão de notificação. O conteúdo da notificação inclui apenas os lembretes de eventos que você configurou e não contém código de rastreamento.\n\n## 4. Serviços de Terceiros\n\nEste aplicativo usa os seguintes serviços de nível de sistema (fornecidos pela Apple):\n- **Sincronização do iCloud**: Usado apenas quando você ativa\n- **UserNotifications**: Usado apenas quando você ativa lembretes\n\n**Não** usamos nenhum SDK de análise, publicidade ou rastreamento de terceiros.\n\n## 5. Privacidade Infantil\n\nEste aplicativo não é destinado a crianças menores de 13 anos. Não coletamos intencionalmente nenhuma informação de crianças menores de 13 anos.\n\n## 6. Seus Direitos\n\nVocê tem direitos totais sobre seus dados:\n- **Acesso**: Todos os dados são visualizáveis dentro do aplicativo\n- **Exportar**: Pode ser exportado como CSV / JSON em Configurações\n- **Excluir**: Pode ser excluído ou limpo a qualquer momento em \"Arquivo\"\n- **Exclusão de conta**: O aplicativo não possui sistema de contas, não é necessária exclusão\n\n## 7. Segurança dos Dados\n\nUsamos os mecanismos de segurança da plataforma Apple para proteger seus dados:\n- Os dados do dispositivo são protegidos pelo sandbox do sistema iOS\n- A sincronização do iCloud usa criptografia de ponta a ponta (fornecida pela Apple)\n\n## 8. Alterações nesta Política\n\nPodemos atualizar esta política. A política atualizada será publicada dentro do aplicativo. O uso contínuo do aplicativo constitui aceitação da política atualizada.\n\n## 9. Fale Conosco\n\nSe você tiver dúvidas, sugestões ou reclamações sobre esta política, entre em contato conosco em:\n\n📧 **mingzhaoluw@gmail.com**\n\nResponderemos dentro de 7 dias úteis após o recebimento do seu e-mail.", "fr": "# Lastly Politique de Confidentialité\n\n**Dernière mise à jour : 17 juillet 2026**\n\n\"Dernière\" respecte et protège votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles.\n\n## 1. Informations que Nous Collectons\n\n### 1.1 Informations que Vous Fournissez\n- Les enregistrements d'événements que vous créez (titre, type, icône, fréquence, dates, etc.)\n- Vos notes\n- Les groupes familiaux que vous rejoignez (si activé)\n\n### 1.2 Informations Collectées Automatiquement\n- **Nous ne collectons rien** : Nous **ne** collectons **pas** votre nom, e-mail, numéro de téléphone, localisation, identifiants d'appareil ou toute autre information personnelle à des fins de suivi ou de publicité.\n\n## 2. Stockage des Données\n\n- **Local d'abord** : Vos données sont stockées localement sur votre appareil par défaut.\n- **Synchronisation iCloud (optionnel)** : Si vous l'activez, vos données sont synchronisées entre vos appareils Apple via iCloud. Le service iCloud d'Apple suit la politique de confidentialité d'Apple.\n- **Pas de partage avec des tiers** : Nous **ne** vendons, louons ou partageons **pas** vos données avec des tiers de quelque manière que ce soit.\n\n## 3. Autorisation de Notification\n\nSi vous activez la fonction de rappels, nous demanderons l'autorisation de notification. Le contenu des notifications inclut uniquement les rappels d'événements que vous avez définis et ne contient aucun code de suivi.\n\n## 4. Services Tiers\n\nCette application utilise les services système suivants (fournis par Apple) :\n- **Synchronisation iCloud** : Utilisé uniquement si vous l'activez\n- **UserNotifications** : Utilisé uniquement si vous activez les rappels\n\nNous **n'**utilisons **aucun** SDK d'analyse, de publicité ou de suivi tiers.\n\n## 5. Confidentialité des Enfants\n\nCette application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations auprès d'enfants de moins de 13 ans.\n\n## 6. Vos Droits\n\nVous avez des droits complets sur vos données :\n- **Accès** : Toutes les données sont visibles dans l'application\n- **Exporter** : Peut être exporté en CSV / JSON dans Paramètres\n- **Supprimer** : Peut être supprimé ou effacé à tout moment via \"Archive\"\n- **Suppression de compte** : L'application n'a pas de système de compte, aucune suppression n'est nécessaire\n\n## 7. Sécurité des Données\n\nNous utilisons les mécanismes de sécurité de la plateforme Apple pour protéger vos données :\n- Les données de l'appareil sont protégées par le sandbox du système iOS\n- La synchronisation iCloud utilise le chiffrement de bout en bout (fourni par Apple)\n\n## 8. Modifications de cette Politique\n\nNous pouvons mettre à jour cette politique. La politique mise à jour sera publiée dans l'application. L'utilisation continue de l'application constitue l'acceptation de la politique mise à jour.\n\n## 9. Contactez-nous\n\nSi vous avez des questions, suggestions ou plaintes concernant cette politique, veuillez nous contacter à :\n\n📧 **mingzhaoluw@gmail.com**\n\nNous répondrons dans les 7 jours ouvrables suivant la réception de votre e-mail.", "de": "# Lastly Datenschutzrichtlinie\n\n**Letzte Aktualisierung: 17. Juli 2026**\n\n\"Zuletzt\" respektiert und schützt Ihre Privatsphäre. Diese Richtlinie erklärt, wie wir Ihre persönlichen Informationen sammeln, verwenden und schützen.\n\n## 1. Informationen, die Wir Sammeln\n\n### 1.1 Informationen, die Sie Bereitstellen\n- Von Ihnen erstellte Ereignisaufzeichnungen (Titel, Typ, Symbol, Häufigkeit, Daten usw.)\n- Ihre Notizen\n- Familiengruppen, denen Sie beitreten (falls aktiviert)\n\n### 1.2 Automatisch Gesammelte Informationen\n- **Wir sammeln nichts**: Wir sammeln **keinen** Namen, E-Mail, Telefonnummer, Standort, Gerätekennungen oder andere persönliche Informationen zu Tracking- oder Werbezwecken.\n\n## 2. Datenspeicherung\n\n- **Lokal zuerst**: Ihre Daten werden standardmäßig lokal auf Ihrem Gerät gespeichert.\n- **iCloud-Synchronisierung (optional)**: Wenn Sie sie aktivieren, werden Ihre Daten über iCloud zwischen Ihren Apple-Geräten synchronisiert. Apples iCloud-Dienst folgt Apples eigener Datenschutzrichtlinie.\n- **Keine Weitergabe an Dritte**: Wir **verkaufen, vermieten oder teilen** Ihre Daten **nicht** mit Dritten.\n\n## 3. Benachrichtigungsberechtigung\n\nWenn Sie die Erinnerungsfunktion aktivieren, fordern wir die Benachrichtigungsberechtigung an. Benachrichtigungsinhalte enthalten nur die von Ihnen festgelegten Ereigniserinnerungen und keinen Tracking-Code.\n\n## 4. Drittanbieterdienste\n\nDiese App verwendet die folgenden Systemdienste (von Apple bereitgestellt):\n- **iCloud-Synchronisierung**: Wird nur verwendet, wenn Sie sie aktivieren\n- **UserNotifications**: Wird nur verwendet, wenn Sie Erinnerungen aktivieren\n\nWir verwenden **keine** Drittanbieter-Analyse-, Werbe- oder Tracking-SDKs.\n\n## 5. Kinderdatenschutz\n\nDiese App richtet sich nicht an Kinder unter 13 Jahren. Wir sammeln wissentlich keine Informationen von Kindern unter 13 Jahren.\n\n## 6. Ihre Rechte\n\nSie haben vollständige Rechte an Ihren Daten:\n- **Zugriff**: Alle Daten sind in der App einsehbar\n- **Exportieren**: Kann in den Einstellungen als CSV / JSON exportiert werden\n- **Löschen**: Kann jederzeit über \"Archiv\" gelöscht oder geleert werden\n- **Kontolöschung**: Die App hat kein Kontosystem, keine Löschung erforderlich\n\n## 7. Datensicherheit\n\nWir verwenden die Sicherheitsmechanismen der Apple-Plattform, um Ihre Daten zu schützen:\n- Gerätedaten sind durch die iOS-System-Sandbox geschützt\n- iCloud-Synchronisierung verwendet Ende-zu-Ende-Verschlüsselung (von Apple bereitgestellt)\n\n## 8. Änderungen dieser Richtlinie\n\nWir können diese Richtlinie aktualisieren. Die aktualisierte Richtlinie wird in der App veröffentlicht. Die fortgesetzte Nutzung der App gilt als Annahme der aktualisierten Richtlinie.\n\n## 9. Kontaktieren Sie Uns\n\nWenn Sie Fragen, Vorschläge oder Beschwerden zu dieser Richtlinie haben, kontaktieren Sie uns bitte unter:\n\n📧 **mingzhaoluw@gmail.com**\n\nWir antworten innerhalb von 7 Werktagen nach Erhalt Ihrer E-Mail."};
+  doc.innerHTML = mdToHtml(privacy[lang] || privacy['en']);
+})();
+</script>
+</body>
+
+</html>
